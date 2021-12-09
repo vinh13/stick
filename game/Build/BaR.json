@@ -1,0 +1,13 @@
+{
+"companyName": "CyForce",
+"productName": "Stickman Battle",
+"dataUrl": "BaR.data.unityweb",
+"wasmCodeUrl": "BaR.wasm.code.unityweb",
+"wasmFrameworkUrl": "BaR.wasm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Light",
+"backgroundColor": "#000000",
+"cacheControl": {"default": "must-revalidate"}
+}
