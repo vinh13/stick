@@ -1,7 +1,7 @@
-/* Template Name: Neloz - Responsive Bootstrap 4 Landing Page Template
-   Author: Themesdesign
+/*
+   Author: Cyforce
    Version: 1.0.0
-   Created: Jan 2019
+   Created: Dec 2021
    File Description: Main js file
 */
 
@@ -10,30 +10,21 @@
     'use strict';
 	// STICKY
 	$(window).scroll(function() {
-	    var scroll = $(window).scrollTop();
-		 
-	    if (scroll >= 50) {
-	        $(".sticky").addClass("nav-sticky");
-	    } else {
-	        $(".sticky").removeClass("nav-sticky");
-	    }
+		onScrollHandle();
 	});
-
 
 	// SmoothLink
 	$('.nav-item a, .mouse-down a').on('click', function(event) {
-		 
-	    var $anchor = $(this);
-	    $('html, body').stop().animate({
-	        scrollTop: $($anchor.attr('href')).offset().top - 0
-	    }, 1500, 'easeInOutExpo');
-	    event.preventDefault();
+		var anchor = $(this);
+		$('html, body').stop().animate({
+			scrollTop: $(anchor.attr('href')).offset().top - 0
+		}, 1000, 'easeInOutExpo');
+		event.preventDefault();
 	});
-
 
 	// scrollspy
 	$(".navbar-nav").scrollspy({
-	    offset: 70
+		offset: 70
 	});
 
 
@@ -55,44 +46,9 @@
 	            items:3
 	        }
 	    }
-	})
+	});
 
-	// contact
-
-	// $('#contact-form').submit(function() {
-
-	//     var action = $(this).attr('action');
-
-	//     $("#message").slideUp(750, function() {
-	//         $('#message').hide();
-
-	//         $('#submit')
-	//             .before('')
-	//             .attr('disabled', 'disabled');
-
-	//         $.post(action, {
-	//                 name: $('#name').val(),
-	//                 email: $('#email').val(),
-	//                 comments: $('#comments').val(),
-	//             },
-	//             function(data) {
-	//                 document.getElementById('message').innerHTML = data;
-	//                 $('#message').slideDown('slow');
-	//                 $('#cform img.contact-loader').fadeOut('slow', function() {
-	//                     $(this).remove()
-	//                 });
-	//                 $('#submit').removeAttr('disabled');
-	//                 if (data.match('success') != null) $('#cform').slideUp('slow');
-	//             }
-	//         );
-
-	//     });
-
-	//     return false;
-
-	// });
-
-	// loader
+	// Loader
 	$(window).on('load', function() {
 	    $('#status').fadeOut();
 	    $('#preloader').delay(350).fadeOut('slow');
@@ -100,5 +56,36 @@
 	        'overflow': 'visible'
 	    });
 	});
-	
+
+	// Scroll one page
+	$.scrollify({
+		section : "section",
+		sectionName : "section-name",
+		interstitialSection:".header,.footer",
+		easing: "easeOutExpo",
+		scrollSpeed: 1000,
+		offset : 0,
+		scrollbars: false,
+		standardScrollElements: "",
+		setHeights: true,
+		overflowScroll: true,
+		updateHash: false,
+		touchScroll:true
+	});
+
+	function onScrollHandle() {
+		var scroll = $(window).scrollTop();
+		$(".navbar").toggleClass("nav-sticky", scroll > 50);
+
+		$('#navbarCollapse > ul > li > a').each(function () {
+			var curLink = $(this);
+			var refElem = $(curLink.attr('href'));
+			if (refElem.position().top <= scroll && refElem.position().top + refElem.height() > scroll) {
+				$('#navbarCollapse > ul > li').removeClass("active");
+				curLink.parent().addClass("active");
+			} else {
+				curLink.parent().removeClass("active");
+			}
+		});
+	}
 })(jQuery)
