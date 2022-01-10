@@ -2,516 +2,698 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <title>Neloz - Responsive Bootstrap 4 Landing Page Template</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Premium Bootstrap 4 Landing Page Template" />
-    <meta name="keywords" content="bootstrap 4, premium, marketing, multipurpose" />
-    <meta content="Themesdesign" name="author" />
-    <!-- favicon -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+    <title>Meta StickMan</title>
+    <meta name="description" content="Meta StickMan is the first StickMan game NFT in the world. Play for free, now!">
+
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="Meta StickMan">
+    <meta itemprop="description" content="Meta StickMan is the first StickMan game NFT in the world. Play for free, now!">
+    <meta itemprop="image" content="images/favicon.ico">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://www.metastickman.com">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Meta StickMan">
+    <meta property="og:description" content="Meta StickMan is the first StickMan game NFT in the world. Play for free, now!">
+    <meta property="og:image" content="images/favicon.ico">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Meta StickMan">
+    <meta name="twitter:description" content="Meta StickMan is the first StickMan game NFT in the world. Play for free, now!">
+    <meta name="twitter:image" content="images/favicon.ico">
+
     <link rel="shortcut icon" href="images/favicon.ico">
 
     <!--Slider-->
-    <link rel="stylesheet" href="css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="css/owl.theme.default.min.css"/>
 
     <!-- css -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
-    <link href="css/style.min.css" rel="stylesheet" type="text/css" />
-    <link href="css/theme.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/materialdesignicons.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/style1.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/theme.css" rel="stylesheet" type="text/css"/>
+    <link href="css/aos.css" rel="stylesheet">
 
     <!-- Unity game -->
-    <!-- <link rel="shortcut icon" href="game/TemplateData/favicon.ico">
+     <link rel="shortcut icon" href="game/TemplateData/favicon.ico">
     <link rel="stylesheet" href="game/TemplateData/style.css">
     <script src="game/TemplateData/UnityProgress.js"></script>
     <script src="game/Build/UnityLoader.js"></script>
     <script>
       var gameInstance = UnityLoader.instantiate("gameContainer", "game/Build/WebGL3.json", {onProgress: UnityProgress});
-    </script> -->
+    </script>  
     <!-- end game -->
 </head>
 
 <body>
-    <!-- Loader -->
-    <div id="preloader">
-        <div id="status">
-            <div class="sk-chase">
-                <div class="sk-chase-dot"></div>
-                <div class="sk-chase-dot"></div>
-                <div class="sk-chase-dot"></div>
-                <div class="sk-chase-dot"></div>
-                <div class="sk-chase-dot"></div>
-                <div class="sk-chase-dot"></div>
+<!-- Loader -->
+<div id="preloader">
+    <div id="status">
+        <div class="sk-chase">
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+        </div>
+    </div>
+</div>
+
+<!--Navbar Start-->
+<nav class="navbar navbar-expand-lg fixed-top navbar-custom sticky sticky-dark nav-dark">
+    <div class="container">
+        <!-- LOGO -->
+        <!-- <a class="navbar-brand logo" href="#home">
+            <img src="images/logo-dark.png" alt="" class="" height="21">
+        </a> -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="mdi mdi-menu"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-center" id="mySidenav">
+                <li class="nav-item active">
+                    <a href="#home" class="nav-link">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#video" class="nav-link">VIDEO</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#gameplay" class="nav-link">GAMEPLAY</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#nfts" class="nav-link">NFT ITEMS</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#roadmap" class="nav-link">ROADMAP</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#team" class="nav-link">TEAM</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#partner" class="nav-link">PARTNER</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#token" class="nav-link">TOKEN</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Navbar End -->
+
+<!-- About Start -->
+<section class="section section-home position-relative " data-section-name="home">
+    <div class="container">
+        <div class="logo-center">
+            <img src="images/logo/logo-stickman.png" alt="" class="logo-content">
+            <img src="images/logo/light.png" alt="" class="light">
+            <!-- <img src="images/logo/effect2.png" alt=""> -->
+        </div>
+        <div class="person jocker">
+            <img src="images/logo/jocker.png" alt="" class="img-person">
+        </div>
+        <div class="person singer">
+            <img src="images/logo/girl.png" alt="" class="img-person">
+        </div>
+        <div class="person oldman">
+            <img src="images/logo/oldboy.png" alt="" class="img-person">
+        </div>
+        <div class="person youngboy">
+            <img src="images/logo/youngboy.png" alt="" class="img-person">
+        </div>
+        <div class="person caption">
+            <img src="images/logo/caption.png" alt="" class="img-person">
+        </div>
+        <div class="person nurse">
+            <img src="images/logo/nurse.png" alt="" class="img-person">
+        </div>
+        <div class="sologan">
+            <img src="images/logo/sologan.png" alt="" >
+        </div>
+        <div class="mobile-icon">
+            <div class="mobile-item window">
+                <img src="images/logo/window.png" alt="" >
+            </div>
+            <div class="mobile-item ios">
+                <img src="images/logo/ios.png" alt="" >
+            </div>
+            <div class="mobile-item androi">
+                <img src="images/logo/androi.png" alt="" >
             </div>
         </div>
     </div>
-
-    <!--Navbar Start-->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-custom sticky sticky-dark nav-dark">
-        <div class="container">
-            <!-- LOGO -->
-            <a class="navbar-brand logo" href="#">
-                <img src="images/logo-dark.png" alt="" class="" height="21">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="mdi mdi-menu"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav ml-auto navbar-center" id="mySidenav">
-                    <li class="nav-item active">
-                        <a href="#home" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#video" class="nav-link">Video</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#gameplay" class="nav-link">Gameplay</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#nfts" class="nav-link">NFTs item</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#partner" class="nav-link">Partner</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#roadmap" class="nav-link">Roadmap</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#team" class="nav-link">Our Team</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- Navbar End -->
-
-    <!-- About Start -->
-    <section class="section hero-7-bg position-relative bg-gradient-primary bg-back" data-section-name="home">
-        <div class="container">
-            <!-- <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="hero-title">
-                        <p class="text-uppercase hero-small-title title font-weight-bold f-14 mb-4">Cretive Marketing</p>
-                        <h1 class="font-weight-bold main-title mb-4">We Craft Digital, Graphic and Dimensional Thinking</h1>
-                        <p class="text-muted mb-4 pb-2">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate.</p>
-                        <a href="" class="btn btn-primary rounded-pill">Find Out How <span class="ml-2 right-icon">&#8594;</span></a>
-                    </div>
-                </div>
-            </div> -->
-        </div>
-    </section>
-    <!-- About End -->
-
-    <!-- Video Start -->
-    <section class="section bg-back" data-section-name="video">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-8">
-                    <div class="text-center mb-5">
-                        <h4 class="text-uppercase mb-0 txt-title">VIDEO</h4>
-                        <div class="my-3">
-                            <img src="images/title-border.png" alt="" class="img-fluid mx-auto d-block">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row align-items-center">
-                <div class="col-lg-5">
-                    <div class="youtube">
-<!--                             <iframe  src="video/Stickman.mp4" frameborder="0" allowfullscreen></iframe>-->
-<!--                            <iframe width="560" height="315" src="https://www.youtube.com/embed/1ZhW85DzW8U?start=8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
-                    </div>
-                </div>
-                <div class="col-lg-6 offset-lg-1">
-                    <div class="text-muted mt-5 mt-lg-0">
-                        <h2 class="title font-weight-medium mb-4">We help startups launch their products.</h2>
-                        <p class="mb-4 f-15">At vero eos et accusamus a iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.</p>
-                        <p class="mb-4 f-15">Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis.</p>
-                        <a href="" class="more-info f-15">See More Information <span class="ml-2 right-icon">&#8594;</span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Video End -->
-
-    <!-- Gameplay -->
-    <section class="section bg-light bg-back" data-section-name="gameplay" style="background: url(images/background/5.png)">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-8">
-                    <div class="text-center mb-5">
-                        <h4 class="text-uppercase mb-0 txt-title">GAMEPLAY</h4>
-                        <div class="my-3">
-                            <img src="images/title-border.png" alt="" class="img-fluid mx-auto d-block">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row align-items-center">
-                <!-- <div class="webgl-content">
-                    <div id="gameContainer"></div>
-                </div> -->
-            </div>
-        </div>
-    </section>
-    <!-- Gameplay End -->
-
-    <!-- NFTs Start -->
-    <section class="section bg-light bg-back" data-section-name="nfts" style="background: url(images/background/2.jpg)">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-8">
-                    <div class="text-center mb-5">
-                        <h4 class="text-uppercase mb-0 txt-title">NFTs Item</h4>
-                        <div class="my-3">
-                            <img src="images/title-border.png" alt="" class="img-fluid mx-auto d-block">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="owl-carousel owl-theme">
-                    <div class="item">
-                        <div class="testi-content text-center m-3 p-4 position-relative">
-                            <div class="testi-icon"><i class="mdi mdi-format-quote-open"></i></div>
-                            <p class="text-muted mb-4 position-relative f-15">Et harum quidem that rerum facilis expedita distinctio nam at what libero tempore cum soluta nobis est eligendi.</p>
-                            <img src="images/users/1.jpg" alt="" class="img-fluid mx-auto d-block rounded-circle user-img">
-                            <h5 class="title mb-1 mt-4">Jane Banta</h5>
-                            <p class="text-muted mb-2 f-15">Web Developer</p>
-                            <ul class="list-unstyled f-15 text-warning mb-0">
-                                <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
-                                <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
-                                <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
-                                <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
-                                <li class="list-inline-item"><i class="mdi mdi-star"></i></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- owl item and -->
-                    <div class="item">
-                        <div class="testi-content text-center m-3 p-4 position-relative">
-                            <div class="testi-icon"><i class="mdi mdi-format-quote-open"></i></div>
-                            <p class="text-muted mb-4 position-relative f-15">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum. 😍</p>
-                            <img src="images/users/2.jpg" alt="" class="img-fluid mx-auto d-block rounded-circle user-img">
-                            <h5 class="title mb-1 mt-4">Manuel Allen</h5>
-                            <p class="text-muted mb-2 f-15">Graphic Designer</p>
-                            <ul class="list-unstyled f-15 text-warning mb-0">
-                                <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
-                                <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
-                                <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
-                                <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
-                                <li class="list-inline-item"><i class="mdi mdi-star-outline"></i></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- owl item and -->
-                    <div class="item">
-                        <div class="testi-content text-center m-3 p-4 position-relative">
-                            <div class="testi-icon"><i class="mdi mdi-format-quote-open"></i></div>
-                            <p class="text-muted mb-4 position-relative f-15">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
-                            <img src="images/users/3.jpg" alt="" class="img-fluid mx-auto d-block rounded-circle user-img">
-                            <h5 class="title mb-1 mt-4">Hattie Fuller</h5>
-                            <p class="text-muted mb-2 f-15">Web Designer</p>
-                            <ul class="list-unstyled f-15 text-warning mb-0">
-                                <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
-                                <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
-                                <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
-                                <li class="list-inline-item mr-1"><i class="mdi mdi-star-outline"></i></li>
-                                <li class="list-inline-item"><i class="mdi mdi-star-outline"></i></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- owl item and -->
-                    <div class="item">
-                        <div class="testi-content text-center m-3 p-4 position-relative">
-                            <div class="testi-icon"><i class="mdi mdi-format-quote-open"></i></div>
-                            <p class="text-muted mb-4 position-relative f-15">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores. 😘</p>
-                            <img src="images/users/4.jpg" alt="" class="img-fluid mx-auto d-block rounded-circle user-img">
-                            <h5 class="title mb-1 mt-4">James Clark</h5>
-                            <p class="text-muted mb-2 f-15">PHP Developer</p>
-                            <ul class="list-unstyled f-15 text-warning mb-0">
-                                <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
-                                <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
-                                <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
-                                <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
-                                <li class="list-inline-item"><i class="mdi mdi-star-outline"></i></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- owl item and -->
-                    <div class="item">
-                        <div class="testi-content text-center m-3 p-4 position-relative">
-                            <div class="testi-icon"><i class="mdi mdi-format-quote-open"></i></div>
-                            <p class="text-muted mb-4 position-relative f-15">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum.</p>
-                            <img src="images/users/5.jpg" alt="" class="img-fluid mx-auto d-block rounded-circle user-img">
-                            <h5 class="title mb-1 mt-4">Marie Perkins</h5>
-                            <p class="text-muted mb-2 f-15">UI/UX Designer</p>
-                            <ul class="list-unstyled f-15 text-warning mb-0">
-                                <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
-                                <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
-                                <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
-                                <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
-                                <li class="list-inline-item"><i class="mdi mdi-star-outline"></i></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- owl item and -->
-                    <div class="item">
-                        <div class="testi-content text-center m-3 p-4 position-relative">
-                            <div class="testi-icon"><i class="mdi mdi-format-quote-open"></i></div>
-                            <p class="text-muted mb-4 position-relative f-15">Et harum quidem that rerum facilis expedita distinctio nam at what libero tempore cum soluta nobis est eligendi. 😜</p>
-                            <img src="images/users/6.jpg" alt="" class="img-fluid mx-auto d-block rounded-circle user-img">
-                            <h5 class="title mb-1 mt-4">Daniel Clark</h5>
-                            <p class="text-muted mb-2 f-15">Graphic Designer</p>
-                            <ul class="list-unstyled f-15 text-warning mb-0">
-                                <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
-                                <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
-                                <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
-                                <li class="list-inline-item mr-1"><i class="mdi mdi-star-outline"></i></li>
-                                <li class="list-inline-item"><i class="mdi mdi-star-outline"></i></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- owl item and -->
-                    <div class="item">
-                        <div class="testi-content text-center m-3 p-4 position-relative">
-                            <div class="testi-icon"><i class="mdi mdi-format-quote-open"></i></div>
-                            <p class="text-muted mb-4 position-relative f-15">Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores that alias consequatur.</p>
-                            <img src="images/users/3.jpg" alt="" class="img-fluid mx-auto d-block rounded-circle user-img">
-                            <h5 class="title mb-1 mt-4">Helen Jones</h5>
-                            <p class="text-muted mb-2 f-15">Web Designer</p>
-                            <ul class="list-unstyled f-18 text-warning mb-0">
-                                <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
-                                <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
-                                <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
-                                <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
-                                <li class="list-inline-item"><i class="mdi mdi-star-outline"></i></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- owl item and -->
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Clients End -->
-
-    <!-- Partner Start -->
-    <section class="section bg-back" data-section-name="partner" style="background: url(images/background/6.jpg)">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-8">
-                    <div class="text-center mb-5">
-                        <h4 class="text-uppercase mb-0 txt-title">PARTNER</h4>
-                        <div class="my-3">
-                            <img src="images/title-border.png" alt="" class="img-fluid mx-auto d-block">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md client-logo mb-2 mb-lg-0">
-                    <img src="images/partner/anim.png" alt="" class="img-fluid mx-auto d-block p-4">
-                </div>
-                <div class="col-md client-logo mb-2 mb-lg-0">
-                    <img src="images/partner/au21.png" alt="" class="img-fluid mx-auto d-block p-4">
-                </div>
-                <div class="col-md client-logo mb-4 mb-lg-0">
-                    <img src="images/partner/axia.png" alt="" class="img-fluid mx-auto d-block p-4">
-                </div>
-                <div class="col-md client-logo mb-4 mb-lg-0">
-                    <img src="images/partner/k300.png" alt="" class="img-fluid mx-auto d-block p-4">
-                </div>
-                <div class="col-md client-logo mb-4 mb-lg-0">
-                    <img src="images/partner/kai.png" alt="" class="img-fluid mx-auto d-block p-4">
-                </div>
-                <div class="col-md client-logo mb-4 mb-lg-0">
-                    <img src="images/partner/kyros.png" alt="" class="img-fluid mx-auto d-block p-4">
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Partner End -->
-
-    <!-- Roadmap Start -->
-    <section class="section bg-back" data-section-name="roadmap" style="background: url(images/background/6.jpg)">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-8">
-                    <div class="text-center mb-5">
-                        <h4 class="text-uppercase mb-0 txt-title">ROADMAP</h4>
-                        <div class="my-3">
-                            <img src="images/title-border.png" alt="" class="img-fluid mx-auto d-block">
-                        </div>
-                        <p class="text-muted f-14">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Roadmap End -->
-
-    <!-- Team Start -->
-    <section class="section bg-back" data-section-name="team" style="background: url(images/background/2.jpg)">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-8">
-                    <div class="text-center mb-5">
-                        <h4 class="text-uppercase mb-0 txt-title">OUR TEAM</h4>
-                        <div class="my-3">
-                            <img src="images/title-border.png" alt="" class="img-fluid mx-auto d-block">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="owl-carousel owl-theme">
-                    <div class="item">
-                        <div class="testi-content text-center m-3 p-4 position-relative">
-                            <div class="testi-icon"><i class="mdi mdi-format-quote-open"></i></div>
-                            <img src="images/users/1.jpg" alt="" class="img-fluid mx-auto d-block rounded-circle user-img">
-                            <h5 class="title mb-1 mt-4">Jane Banta</h5>
-                            <p class="text-muted mb-2 f-15">Web Developer</p>
-                        </div>
-                    </div>
-                    <!-- owl item and -->
-                    <div class="item">
-                        <div class="testi-content text-center m-3 p-4 position-relative">
-                            <div class="testi-icon"><i class="mdi mdi-format-quote-open"></i></div>
-                            <img src="images/users/2.jpg" alt="" class="img-fluid mx-auto d-block rounded-circle user-img">
-                            <h5 class="title mb-1 mt-4">Manuel Allen</h5>
-                            <p class="text-muted mb-2 f-15">Graphic Designer</p>
-                        </div>
-                    </div>
-                    <!-- owl item and -->
-                    <div class="item">
-                        <div class="testi-content text-center m-3 p-4 position-relative">
-                            <div class="testi-icon"><i class="mdi mdi-format-quote-open"></i></div>
-                            <img src="images/users/3.jpg" alt="" class="img-fluid mx-auto d-block rounded-circle user-img">
-                            <h5 class="title mb-1 mt-4">Hattie Fuller</h5>
-                            <p class="text-muted mb-2 f-15">Web Designer</p>
-                        </div>
-                    </div>
-                    <!-- owl item and -->
-                    <div class="item">
-                        <div class="testi-content text-center m-3 p-4 position-relative">
-                            <div class="testi-icon"><i class="mdi mdi-format-quote-open"></i></div>
-                            <img src="images/users/4.jpg" alt="" class="img-fluid mx-auto d-block rounded-circle user-img">
-                            <h5 class="title mb-1 mt-4">James Clark</h5>
-                            <p class="text-muted mb-2 f-15">PHP Developer</p>
-                        </div>
-                    </div>
-                    <!-- owl item and -->
-                    <div class="item">
-                        <div class="testi-content text-center m-3 p-4 position-relative">
-                            <div class="testi-icon"><i class="mdi mdi-format-quote-open"></i></div>
-                            <img src="images/users/5.jpg" alt="" class="img-fluid mx-auto d-block rounded-circle user-img">
-                            <h5 class="title mb-1 mt-4">Marie Perkins</h5>
-                            <p class="text-muted mb-2 f-15">UI/UX Designer</p>
-                        </div>
-                    </div>
-                    <!-- owl item and -->
-                    <div class="item">
-                        <div class="testi-content text-center m-3 p-4 position-relative">
-                            <div class="testi-icon"><i class="mdi mdi-format-quote-open"></i></div>
-                            <img src="images/users/6.jpg" alt="" class="img-fluid mx-auto d-block rounded-circle user-img">
-                            <h5 class="title mb-1 mt-4">Daniel Clark</h5>
-                            <p class="text-muted mb-2 f-15">Graphic Designer</p>
-                        </div>
-                    </div>
-                    <!-- owl item and -->
-                    <div class="item">
-                        <div class="testi-content text-center m-3 p-4 position-relative">
-                            <div class="testi-icon"><i class="mdi mdi-format-quote-open"></i></div>
-                            <img src="images/users/3.jpg" alt="" class="img-fluid mx-auto d-block rounded-circle user-img">
-                            <h5 class="title mb-1 mt-4">Helen Jones</h5>
-                            <p class="text-muted mb-2 f-15">Web Designer</p>
-                        </div>
-                    </div>
-                    <!-- owl item and -->
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Team End -->
-
-    <!-- Social Start   -->
-    <div class="social-btn-group" style="display: flex;">
-        <a class="box-img-flex" href="#" target="_blank"><img src="images/solcial/fb.png" alt=""></a>
-        <a class="box-img-flex mobile-hidden" href="#" target="_blank"><img src="images/solcial/tw.png" alt=""></a>
-        <a class="box-img-flex" href="#" target="_blank"><img src="images/solcial/dis.png" alt=""></a>
-        <a class="box-img-flex mobile-hidden" href="#" target="_blank"><img src="images/solcial/te.png" alt=""></a>
+    <div class="container-fluid bg-shadow">
+        <img src="images/logo/sadow.png" alt="">
     </div>
-    <!-- Social End   -->
+</section>
+<!-- About End -->
 
-    <!-- Footer Start -->
-    <div class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-sm-6">
-                    <div class="mb-4">
-                        <a href="layout-one-1.html"><img src="images/logo-light.png" alt="" class="logo-light" height="22" /></a>
-                        <a href="layout-one-1.html"><img src="images/logo-dark.png" alt="" class="logo-dark" height="22" /></a>
-                    </div>
-                    <div class="mb-4">
-                        <div class="footer-alt my-3">
-                            <p class="mb-0 f-15">COPYRIGHT ©CYFORCE GAME2021</p>
-                        </div>
+<!-- Video Start -->
+<section class="section bg-back" data-section-name="video">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8">
+                <div class="text-center mb-5">
+                    <h4 class="text-uppercase mb-0 txt-title">VIDEO</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center">
+            <div class="col-lg-5">
+                <div class="youtube">
+                    <!--                             <iframe  src="video/Stickman.mp4" frameborder="0" allowfullscreen></iframe>-->
+                    <!--                            <iframe width="560" height="315" src="https://www.youtube.com/embed/1ZhW85DzW8U?start=8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+                </div>
+            </div>
+            <div class="col-lg-6 offset-lg-1">
+                <div class="text-muted mt-5 mt-lg-0">
+                    <h2 class="title font-weight-medium mb-4">We help startups launch their products.</h2>
+                    <p class="mb-4 f-15">At vero eos et accusamus a iusto odio dignissimos ducimus qui blanditiis
+                        praesentium voluptatum deleniti atque corrupti quos dolores.</p>
+                    <p class="mb-4 f-15">Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis
+                        voluptatibus maiores alias consequatur aut perferendis.</p>
+                    <a href="" class="more-info f-15">See More Information <span class="ml-2 right-icon">&#8594;</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Video End -->
+
+<!-- Gameplay -->
+<section class="section bg-light bg-back" data-section-name="gameplay" style="background: url(images/gameplay/gameplay.png)">
+    <div class="container">
+        <div class="row justify-content-center">
+            <img src="images/gameplay/iframe.png" alt="" >
+        </div>
+
+        <div class="ladies">
+            <img src="images/gameplay/ladies.png" alt="" >
+        </div>
+        <div class="docter-strange">
+            <img src="images/gameplay/drstrange.png" alt="" >
+        </div>
+
+        <div class="row align-items-center">
+            <div class="webgl-content">
+                <!-- <div id="gameContainer"></div> -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Gameplay End -->
+
+<!-- NFTs Start -->
+<section class="section bg-light bg-back" data-section-name="nfts" style="background: url(images/background/2.jpg)">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8">
+                <div class="text-center mb-5">
+                    <h4 class="text-uppercase mb-0 txt-title">NFTs Item</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <div class="testi-content text-center m-3 p-4 position-relative">
+                        <div class="testi-icon"><i class="mdi mdi-format-quote-open"></i></div>
+                        <p class="text-muted mb-4 position-relative f-15">Et harum quidem that rerum facilis expedita
+                            distinctio nam at what libero tempore cum soluta nobis est eligendi.</p>
+                        <img src="images/users/1.jpg" alt="" class="img-fluid mx-auto d-block rounded-circle user-img">
+                        <h5 class="title mb-1 mt-4">Jane Banta</h5>
+                        <p class="text-muted mb-2 f-15">Web Developer</p>
+                        <ul class="list-unstyled f-15 text-warning mb-0">
+                            <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
+                            <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
+                            <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
+                            <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
+                            <li class="list-inline-item"><i class="mdi mdi-star"></i></li>
+                        </ul>
                     </div>
                 </div>
-                <div class="col-lg-7 offset-lg-1">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <h5 class="footer-list-title f-18 font-weight-normal mb-3">About</h5>
-                            <ul class="list-unstyled company-sub-menu">
-                                <li><a href="">HOME</a></li>
-                                <li><a href="">VIDEO</a></li>
-                                <li><a href="">GAMEPLAY</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4">
-                            <h5 class="footer-list-title f-18 font-weight-normal mb-3">FAQ</h5>
-                            <ul class="list-unstyled company-sub-menu">
-                                <li><a href="">NFTs ITEM</a></li>
-                                <li><a href="">PARTNER</a></li>
-                                <li><a href="">ROADMAP</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4">
-                            <h5 class="footer-list-title f-18 font-weight-normal mb-3">Social</h5>
-                            <ul class="footer-icons list-inline f-20 mt-4">
-                                <li class="list-inline-item mr-3"><a href="#" class=""><i class="mdi mdi-facebook"></i></a></li>
-                                <li class="list-inline-item mr-3"><a href="#" class=""><i class="mdi mdi-twitter"></i></a></li>
-                                <li class="list-inline-item mr-3"><a href="#" class=""><i class="mdi mdi-instagram"></i></a></li>
-                                <li class="list-inline-item"><a href="#" class=""><i class="mdi mdi-linkedin"></i></a></li>
-                            </ul>
+                <!-- owl item and -->
+                <div class="item">
+                    <div class="testi-content text-center m-3 p-4 position-relative">
+                        <div class="testi-icon"><i class="mdi mdi-format-quote-open"></i></div>
+                        <p class="text-muted mb-4 position-relative f-15">At vero eos et accusamus et iusto odio
+                            dignissimos ducimus qui blanditiis praesentium voluptatum. 😍</p>
+                        <img src="images/users/2.jpg" alt="" class="img-fluid mx-auto d-block rounded-circle user-img">
+                        <h5 class="title mb-1 mt-4">Manuel Allen</h5>
+                        <p class="text-muted mb-2 f-15">Graphic Designer</p>
+                        <ul class="list-unstyled f-15 text-warning mb-0">
+                            <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
+                            <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
+                            <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
+                            <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
+                            <li class="list-inline-item"><i class="mdi mdi-star-outline"></i></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- owl item and -->
+                <div class="item">
+                    <div class="testi-content text-center m-3 p-4 position-relative">
+                        <div class="testi-icon"><i class="mdi mdi-format-quote-open"></i></div>
+                        <p class="text-muted mb-4 position-relative f-15">Temporibus autem quibusdam et aut officiis
+                            debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
+                        <img src="images/users/3.jpg" alt="" class="img-fluid mx-auto d-block rounded-circle user-img">
+                        <h5 class="title mb-1 mt-4">Hattie Fuller</h5>
+                        <p class="text-muted mb-2 f-15">Web Designer</p>
+                        <ul class="list-unstyled f-15 text-warning mb-0">
+                            <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
+                            <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
+                            <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
+                            <li class="list-inline-item mr-1"><i class="mdi mdi-star-outline"></i></li>
+                            <li class="list-inline-item"><i class="mdi mdi-star-outline"></i></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- owl item and -->
+                <div class="item">
+                    <div class="testi-content text-center m-3 p-4 position-relative">
+                        <div class="testi-icon"><i class="mdi mdi-format-quote-open"></i></div>
+                        <p class="text-muted mb-4 position-relative f-15">Nemo enim ipsam voluptatem quia voluptas sit
+                            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores. 😘</p>
+                        <img src="images/users/4.jpg" alt="" class="img-fluid mx-auto d-block rounded-circle user-img">
+                        <h5 class="title mb-1 mt-4">James Clark</h5>
+                        <p class="text-muted mb-2 f-15">PHP Developer</p>
+                        <ul class="list-unstyled f-15 text-warning mb-0">
+                            <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
+                            <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
+                            <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
+                            <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
+                            <li class="list-inline-item"><i class="mdi mdi-star-outline"></i></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- owl item and -->
+                <div class="item">
+                    <div class="testi-content text-center m-3 p-4 position-relative">
+                        <div class="testi-icon"><i class="mdi mdi-format-quote-open"></i></div>
+                        <p class="text-muted mb-4 position-relative f-15">Quis autem vel eum iure reprehenderit qui in
+                            ea voluptate velit esse quam nihil molestiae consequatur vel illum.</p>
+                        <img src="images/users/5.jpg" alt="" class="img-fluid mx-auto d-block rounded-circle user-img">
+                        <h5 class="title mb-1 mt-4">Marie Perkins</h5>
+                        <p class="text-muted mb-2 f-15">UI/UX Designer</p>
+                        <ul class="list-unstyled f-15 text-warning mb-0">
+                            <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
+                            <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
+                            <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
+                            <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
+                            <li class="list-inline-item"><i class="mdi mdi-star-outline"></i></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- owl item and -->
+                <div class="item">
+                    <div class="testi-content text-center m-3 p-4 position-relative">
+                        <div class="testi-icon"><i class="mdi mdi-format-quote-open"></i></div>
+                        <p class="text-muted mb-4 position-relative f-15">Et harum quidem that rerum facilis expedita
+                            distinctio nam at what libero tempore cum soluta nobis est eligendi. 😜</p>
+                        <img src="images/users/6.jpg" alt="" class="img-fluid mx-auto d-block rounded-circle user-img">
+                        <h5 class="title mb-1 mt-4">Daniel Clark</h5>
+                        <p class="text-muted mb-2 f-15">Graphic Designer</p>
+                        <ul class="list-unstyled f-15 text-warning mb-0">
+                            <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
+                            <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
+                            <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
+                            <li class="list-inline-item mr-1"><i class="mdi mdi-star-outline"></i></li>
+                            <li class="list-inline-item"><i class="mdi mdi-star-outline"></i></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- owl item and -->
+                <div class="item">
+                    <div class="testi-content text-center m-3 p-4 position-relative">
+                        <div class="testi-icon"><i class="mdi mdi-format-quote-open"></i></div>
+                        <p class="text-muted mb-4 position-relative f-15">Itaque earum rerum hic tenetur a sapiente
+                            delectus, ut aut reiciendis voluptatibus maiores that alias consequatur.</p>
+                        <img src="images/users/3.jpg" alt="" class="img-fluid mx-auto d-block rounded-circle user-img">
+                        <h5 class="title mb-1 mt-4">Helen Jones</h5>
+                        <p class="text-muted mb-2 f-15">Web Designer</p>
+                        <ul class="list-unstyled f-18 text-warning mb-0">
+                            <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
+                            <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
+                            <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
+                            <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
+                            <li class="list-inline-item"><i class="mdi mdi-star-outline"></i></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- owl item and -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Clients End -->
+
+<!-- Partner Start -->
+<section class="section bg-back" data-section-name="partner" style="background: url(images/background/6.jpg)">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8">
+                <div class="text-center mb-5">
+                    <h4 class="text-uppercase mb-0 txt-title">PARTNER</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md client-logo mb-2 mb-lg-0">
+                <img src="images/partner/anim.png" alt="" class="img-fluid mx-auto d-block p-4">
+            </div>
+            <div class="col-md client-logo mb-2 mb-lg-0">
+                <img src="images/partner/au21.png" alt="" class="img-fluid mx-auto d-block p-4">
+            </div>
+            <div class="col-md client-logo mb-4 mb-lg-0">
+                <img src="images/partner/axia.png" alt="" class="img-fluid mx-auto d-block p-4">
+            </div>
+            <div class="col-md client-logo mb-4 mb-lg-0">
+                <img src="images/partner/k300.png" alt="" class="img-fluid mx-auto d-block p-4">
+            </div>
+            <div class="col-md client-logo mb-4 mb-lg-0">
+                <img src="images/partner/kai.png" alt="" class="img-fluid mx-auto d-block p-4">
+            </div>
+            <div class="col-md client-logo mb-4 mb-lg-0">
+                <img src="images/partner/kyros.png" alt="" class="img-fluid mx-auto d-block p-4">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Partner End -->
+
+<!-- Roadmap Start -->
+<section class="section roadmap-section bg-back" data-section-name="roadmap">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8">
+                <div class="text-center mb-5">
+                    <h4 class="text-uppercase mb-0 txt-title">ROADMAP</h4>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="bg-road-map" style="width: 100%; height: 100%; text-align: center; margin-top: 50px">
+                    <div class="road-map-holder">
+                        <div class="road-map-bar">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-8 road-map-partation" data-aos-delay="200"
+                                      data-aos="fade-up"
+                                     data-aos-anchor-placement="center-center">
+                                    <div class="road">
+                                        <div class="road-map-content">
+                                            <span style="color: #f29d0b;"> 16/11/2021: </span>Launching<br>Announcement <br >
+                                            <span style="color: #f29d0b;"> END OF 11/2021: </span>IDO Launching<br >Pancakeswap listing <br>
+                                            <span style="color: #f29d0b;"> 12/2021: </span>Alpha
+                                            Test<br >Heroes TD Marketplace Launching, CGC Listing, NFT
+                                            Staking to Earn CGC
+                                        </div>
+                                        <img src="images/roadmap/roadmap_point.png" alt="" class="road-map-point">
+                                        <img src="images/roadmap/roadmap_line.png" alt="" class="road-map-line">
+                                        <div class="road-map-time">Q4/2021</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-8 road-map-partation" data-aos-delay="600"
+                                       data-aos="fade-up"
+                                     data-aos-anchor-placement="center-center">
+                                    <div class="road">
+                                        <div class="road-map-content">
+                                            <span style="color: #f29d0b;"> 16/11/2021: </span>Launching<br>Announcement <br >
+                                            <span style="color: #f29d0b;"> END OF 11/2021: </span>IDO Launching<br >Pancakeswap listing <br>
+                                            <span style="color: #f29d0b;"> 12/2021: </span>Alpha
+                                            Test<br >Heroes TD Marketplace Launching, CGC Listing, NFT
+                                            Staking to Earn CGC
+                                        </div>
+                                        <img src="images/roadmap/roadmap_point.png" alt="" class="road-map-point">
+                                        <img src="images/roadmap/roadmap_line.png" alt="" class="road-map-line">
+                                        <div class="road-map-time">Q4/2021</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-8 road-map-partation" data-aos-delay="1000" data-aos="fade-up"
+                                     data-aos-anchor-placement="center-center">
+                                    <div class="road">
+                                        <div class="road-map-content">
+                                            <span style="color: #f29d0b;"> 16/11/2021: </span>Launching<br>Announcement <br >
+                                            <span style="color: #f29d0b;"> END OF 11/2021: </span>IDO Launching<br >Pancakeswap listing <br>
+                                            <span style="color: #f29d0b;"> 12/2021: </span>Alpha
+                                            Test<br >Heroes TD Marketplace Launching, CGC Listing, NFT
+                                            Staking to Earn CGC
+                                        </div>
+                                        <img src="images/roadmap/roadmap_point.png" alt="" class="road-map-point">
+                                        <img src="images/roadmap/roadmap_line.png" alt="" class="road-map-line">
+                                        <div class="road-map-time">Q4/2021</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Footer End -->
+</section>
+<!-- Roadmap End -->
 
-    <!-- javascript -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <!-- Main Js -->
-    <script src="js/jquery.scrollify.js"></script>
-    <script src="js/app.js"></script>
+<!-- Token Start -->
+<section class="section bg-back" data-section-name="token" style="background: black">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8">
+                <div class="text-center mb-5">
+                    <h4 class="text-uppercase mb-0 txt-title">TOKEN METRIC</h4>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" id="token-metric" style="height: 521px; background-color: transparent !important;">
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Token End -->
+
+<!-- Team Start -->
+<section class="section bg-back" data-section-name="team" style="background: url(images/background/2.jpg)">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8">
+                <div class="text-center mb-5">
+                    <h4 class="text-uppercase mb-0 txt-title">OUR TEAM</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <div class="testi-content text-center m-3 p-4 position-relative">
+                        <div class="testi-icon"><i class="mdi mdi-format-quote-open"></i></div>
+                        <img src="images/users/1.jpg" alt="" class="img-fluid mx-auto d-block rounded-circle user-img">
+                        <h5 class="title mb-1 mt-4">Jane Banta</h5>
+                        <p class="text-muted mb-2 f-15">Web Developer</p>
+                    </div>
+                </div>
+                <!-- owl item and -->
+                <div class="item">
+                    <div class="testi-content text-center m-3 p-4 position-relative">
+                        <div class="testi-icon"><i class="mdi mdi-format-quote-open"></i></div>
+                        <img src="images/users/2.jpg" alt="" class="img-fluid mx-auto d-block rounded-circle user-img">
+                        <h5 class="title mb-1 mt-4">Manuel Allen</h5>
+                        <p class="text-muted mb-2 f-15">Graphic Designer</p>
+                    </div>
+                </div>
+                <!-- owl item and -->
+                <div class="item">
+                    <div class="testi-content text-center m-3 p-4 position-relative">
+                        <div class="testi-icon"><i class="mdi mdi-format-quote-open"></i></div>
+                        <img src="images/users/3.jpg" alt="" class="img-fluid mx-auto d-block rounded-circle user-img">
+                        <h5 class="title mb-1 mt-4">Hattie Fuller</h5>
+                        <p class="text-muted mb-2 f-15">Web Designer</p>
+                    </div>
+                </div>
+                <!-- owl item and -->
+                <div class="item">
+                    <div class="testi-content text-center m-3 p-4 position-relative">
+                        <div class="testi-icon"><i class="mdi mdi-format-quote-open"></i></div>
+                        <img src="images/users/4.jpg" alt="" class="img-fluid mx-auto d-block rounded-circle user-img">
+                        <h5 class="title mb-1 mt-4">James Clark</h5>
+                        <p class="text-muted mb-2 f-15">PHP Developer</p>
+                    </div>
+                </div>
+                <!-- owl item and -->
+                <div class="item">
+                    <div class="testi-content text-center m-3 p-4 position-relative">
+                        <div class="testi-icon"><i class="mdi mdi-format-quote-open"></i></div>
+                        <img src="images/users/5.jpg" alt="" class="img-fluid mx-auto d-block rounded-circle user-img">
+                        <h5 class="title mb-1 mt-4">Marie Perkins</h5>
+                        <p class="text-muted mb-2 f-15">UI/UX Designer</p>
+                    </div>
+                </div>
+                <!-- owl item and -->
+                <div class="item">
+                    <div class="testi-content text-center m-3 p-4 position-relative">
+                        <div class="testi-icon"><i class="mdi mdi-format-quote-open"></i></div>
+                        <img src="images/users/6.jpg" alt="" class="img-fluid mx-auto d-block rounded-circle user-img">
+                        <h5 class="title mb-1 mt-4">Daniel Clark</h5>
+                        <p class="text-muted mb-2 f-15">Graphic Designer</p>
+                    </div>
+                </div>
+                <!-- owl item and -->
+                <div class="item">
+                    <div class="testi-content text-center m-3 p-4 position-relative">
+                        <div class="testi-icon"><i class="mdi mdi-format-quote-open"></i></div>
+                        <img src="images/users/3.jpg" alt="" class="img-fluid mx-auto d-block rounded-circle user-img">
+                        <h5 class="title mb-1 mt-4">Helen Jones</h5>
+                        <p class="text-muted mb-2 f-15">Web Designer</p>
+                    </div>
+                </div>
+                <!-- owl item and -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Team End -->
+
+<!-- Social Start   -->
+<div class="social-btn-group" style="display: flex;">
+    <a class="box-img-flex" href="#" target="_blank"><img src="images/solcial/fb.png" alt=""></a>
+    <a class="box-img-flex mobile-hidden" href="#" target="_blank"><img src="images/solcial/tw.png" alt=""></a>
+    <a class="box-img-flex" href="#" target="_blank"><img src="images/solcial/dis.png" alt=""></a>
+    <a class="box-img-flex mobile-hidden" href="#" target="_blank"><img src="images/solcial/te.png" alt=""></a>
+</div>
+<!-- Social End   -->
+
+<!-- Footer Start -->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-sm-6">
+                <div class="mb-4">
+                    <a href="layout-one-1.html"><img src="images/logo-light.png" alt="" class="logo-light" height="22"/></a>
+                    <a href="layout-one-1.html"><img src="images/logo-dark.png" alt="" class="logo-dark"
+                                                     height="22"/></a>
+                </div>
+                <div class="mb-4">
+                    <div class="footer-alt my-3">
+                        <p class="mb-0 f-15">COPYRIGHT ©CYFORCE GAME2021</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 offset-lg-1">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5 class="footer-list-title f-18 font-weight-normal mb-3">About</h5>
+                        <ul class="list-unstyled company-sub-menu">
+                            <li><a href="">HOME</a></li>
+                            <li><a href="">VIDEO</a></li>
+                            <li><a href="">GAMEPLAY</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h5 class="footer-list-title f-18 font-weight-normal mb-3">FAQ</h5>
+                        <ul class="list-unstyled company-sub-menu">
+                            <li><a href="">NFTs ITEM</a></li>
+                            <li><a href="">PARTNER</a></li>
+                            <li><a href="">ROADMAP</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h5 class="footer-list-title f-18 font-weight-normal mb-3">Social</h5>
+                        <ul class="footer-icons list-inline f-20 mt-4">
+                            <li class="list-inline-item mr-3"><a href="#" class=""><i class="mdi mdi-facebook"></i></a>
+                            </li>
+                            <li class="list-inline-item mr-3"><a href="#" class=""><i class="mdi mdi-twitter"></i></a>
+                            </li>
+                            <li class="list-inline-item mr-3"><a href="#" class=""><i class="mdi mdi-instagram"></i></a>
+                            </li>
+                            <li class="list-inline-item"><a href="#" class=""><i class="mdi mdi-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+<!-- javascript -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+
+<!-- full page scroll Js -->
+<script src="js/jquery.scrollify.js"></script>
+<!-- end full page scroll Js -->
+
+<!-- Main Js -->
+<script src="js/app.js"></script>
+<!-- End Main Js -->
+
+<!--gg chart-->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    google.charts.load("current", {packages: ["corechart"]});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Task', 'Hours per Day'],
+            ['Game Ecosystem', 30],
+            ['Income From Operations (IFO)', 25],
+            ['Project Operation', 10],
+            ['Marketing', 10],
+            ['Team', 10],
+            ['Partners & Advisors', 8],
+            ['Private Sale', 5],
+            ['First Liquidity', 2]
+        ]);
+
+        var options = {
+            pieHole: 0.4,
+            // backgroundColor: 'transparent',
+            pieStartAngle: 100,
+            slices: {
+                0: {offset: 0.1}
+            },
+            pieSliceText: "percentage",
+            tooltip: {
+                text: "percentage",
+                trigger: "focus",
+            },
+            legend: {
+                position: 'right',
+                textStyle: {
+                    color: 'blue',
+                    fontSize: 16
+                },
+                alignment: "center"
+            }
+            // slices: {0: {color: 'black'}, 3: {color: 'red'}}
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('token-metric'));
+        chart.draw(data, options);
+    }
+</script>
+<!--end gg chart-->
+
+<!--data ao.js-->
+<script src="js/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<!--end data ao.js-->
 </body>
 </html>

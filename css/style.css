@@ -177,7 +177,8 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 200px) and (max-width: 768px) {
   .navbar-custom {
     margin-top: 0px;
-    background-color: #ffffff !important;
+    background-color: #481f65 !important;
+    /*background-color: #ffffff !important;*/
     -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
     color: #ffffff !important;
