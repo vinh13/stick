@@ -1,5 +1,3 @@
-/*Body Start*/
-
 body, html {
   margin: 0;
   padding: 0;
@@ -9,33 +7,27 @@ body, html {
 }
 
 body {
-    /*background-image: url("../images/background/bg.png");*/
     background-size: contain;
     background-repeat: repeat-y;
-    background-color: #000;
-    overflow-x: hidden;
+    background-color: #232357;
 }
-/*Body End*/
-
 
 /*Header Navbar*/
 .navbar-custom {
     padding: 20px 0 12px 0;
     width: 100%;
     border-radius: 0;
-    z-index: 20;
+    z-index: 30;
     margin-bottom: 0;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
     background-color: #140000;
-    border-bottom: 1px solid #fec24f;
+    -webkit-box-shadow:  0 1px 3px #fa9419;
+    box-shadow: 0 1px 3px #fa9419;
 }
 
 .nav-sticky.navbar-custom {
-    background: rgba(0, 0, 0, .84);
-    -webkit-box-shadow: 0 1px 5px rgb(0 0 0 / 25%);
-    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
-    box-shadow: 0 1px 5px rgb(0 0 0 / 25%);
+  background-color: rgba(30,18,49,.8);
 }
 
 .navbar-collapse  {
@@ -55,7 +47,7 @@ body {
     }
 
     .navbar-custom .navbar-nav li a:hover{
-      border-bottom: 1px solid #ffa712;
+      /* border-bottom: 1px solid #ffa712; */
     }
 
     .navbar-custom .navbar-nav li.active a:hover{
@@ -63,7 +55,10 @@ body {
     }
 
     li.nav-item.active {
+      box-sizing: border-box;
       border: 2px solid #fa9419;
+      border-radius: 3px;
+      /* transform: skewX(-6deg); */
     }
   /* End Menu */
 
@@ -106,26 +101,39 @@ body {
 /*Section End*/
 
 /* Section Home */
-.section-home {
+.home-section {
   background-image: url(../images/background/bg1.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%; 
+  background-position: center;
+}
+
+.home-section::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-image: url(../images/logo/sadow.png);
+  background-repeat: no-repeat;
   background-size: cover;
-   background-repeat: round;
-   background-origin: border-box;
-   /* background-position: center center; */
-}
-
-.logo-content {
-  position: absolute;
-  height: 10em;
   z-index: 10;
-  left: 46%;
 }
 
-.light {
+.logo-center {
+  display: flex;
+}
+
+.logo-center .logo-content {
+  width: 25%;
+  z-index: 10;
+}
+
+.logo-center .light {
   position: absolute;
-  height: 30em;
-  top: 2%;
-  left: 35.5%;
+  top: 5%;
+  width: 40%;
 }
 
 .person {
@@ -188,12 +196,38 @@ body {
 }
 
 .mobile-item {
+  display: flex;
+  justify-content: center;
   width: 12em;
   height: auto;
 }
 
 .mobile-item img {
   width: 80%;
+}
+
+.box-download {
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  display: grid;
+    vertical-align: middle;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    z-index: 20;
+}
+
+.box-content {
+  position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.btn-download {
+    display: flex;
+    justify-content: center;
 }
 
   /* Shadow */
@@ -229,11 +263,46 @@ body {
 /*End Iframe yt*/
 
 /*Gamplay Start*/
+.gameplay-section {
+  background-image: url(../images/gameplay/gameplay.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%; 
+}
+
+.gameplay-section::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-image: url(../images/logo/sadow.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.gameplay-iframe {
+  position: relative;
+  background-image: url(../images/gameplay/iframe.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.gameplay-iframe img{
+  z-index: 0;
+}
+
+.gameplay-content {
+  /* position: absolute;
+    top: 28%;
+    left: 30%; */
+}
+
 .webgl-content {
-  width: 80%;
-  max-width: 960px;
-  margin: 0 auto;
-  height: auto;
+  width: 800px;
+  height: 420px;
+  background-color: black;
 }
 
 #gameContainer {
@@ -244,95 +313,494 @@ body {
 .ladies {
   position: absolute;
   left: 0;
-  top: 11%;
+  bottom: 0;
+}
+
+.ladies img,
+.docter-strange img {
+  width: 80%;
+  height: auto;
 }
 
 .docter-strange {
+  display: flex;
+  justify-content: right;
   position: absolute;
   right: 0;
-  top: 13%;
+  bottom: 0;
 }
 
-.webgl-content {
-  top: 48%;
-    width: 800px;
-    height: 400px;
-    background-color: black;
-}
+
 /*Gameplay End*/
+
+/* NFT Start */
+.nft-section {
+  height: 100%;
+  background-image: url(../images/nft/nft_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.nft-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  background-image: url(../images/logo/sadow.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.info {
+  padding-top: 10%;
+  width: 100%;
+  height: 100%;
+  background: url(../images/nft/info.png) no-repeat center;
+  background-size: contain;
+}
+
+.info-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40%;
+  width: 100%;
+  background: url(../images/nft/title.png) no-repeat center;
+  background-size: contain;
+}
+
+.info-head h5{
+  margin-top: -6%;
+  font-size: 20px;
+  line-height: 56px;
+  font-family: "PT Sans Caption", sans-serif;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  text-shadow: rgb(23 175 255 / 49%) 0px 0px 6px;
+  position: relative;
+  font-weight: 700;
+}
+
+.info-body {
+  height: 50%;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+}
+
+.carousel-nft-wrap {
+  width: 1000px;
+  margin: auto;
+  position: relative;
+}
+
+.carousel-nft-wrap::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX( -50%);
+    height: 100%;
+    width: 100vw;
+    background-image: url(../images/nft/owl_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.nft-carousel {
+  padding: 20px 0;
+}
+
+.nft-carousel .owl-nav{
+  overflow: hidden;
+  height: 0px;
+  display: block !important;
+}
+
+.nft-carousel.owl-theme .owl-dots .owl-dot.active span, 
+.nft-carousel.owl-theme .owl-dots .owl-dot:hover span {
+  background: #2caae1;
+}
+
+.nft-carousel .item {
+  text-align: center;
+  padding: 10px 16px 15px 10px;
+}
+
+.nft-carousel .nav-btn{
+  height: 80px;
+  position: absolute;
+  width: 80px;
+  cursor: pointer;
+  top: 160px !important;
+}
+
+.nft-carousel .owl-prev.disabled,
+.nft-carousel .owl-next.disabled{
+  pointer-events: none;
+  opacity: 0.2;
+}
+
+.nft-carousel .prev-slide{
+  background: url(../images/nft/arr-left.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: -100px;
+}
+
+.nft-carousel .next-slide{
+  background: url(../images/nft/arr_right.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  right: -100px;
+}
+
+/* .nft-carousel .owl-item.active.first::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url(../images/nft/border_card.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+} */
+
+.nft-carousel .owl-item.active.first {
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/nft/border_card.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: 100;
+}
+
+
+/* END NFT */
 
 
 /*Roadmap Start*/
-.timeline1 {
-    margin: 50px 0;
-    list-style-type: none;
-    display: flex;
-    padding: 0;
-    text-align: center;
-  }
-  .timeline1 li {
-    transition: all 200ms ease-in;
-  }
-  .timestamp {
-    width: 100%;  
-    margin-bottom: 20px;
-    padding: 0px 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-weight: 100; 
-  }
-  
-  .status {
-    padding: 0px 40px;
-    display: flex;
-    justify-content: center;
-    border-top: 4px solid #3e70ff;
-    position: relative;
-    transition: all 200ms ease-in ;
-  }
-    
-  .status span {
-    font-weight: 600;
-    padding-top: 20px;
-  }
-  .status span:before {
-    content: '';
-    width: 25px;
-    height: 25px;
-    background-color: #e8eeff;
-    border-radius: 25px;
-    border: 4px solid #3e70ff;
-    position: absolute;
-    top: -15px;
-    left: calc(50% - 85px);  
-    transition: all 200ms ease-in;
-  }
-  
-  .swiper-control {
-    text-align: right;
-  }
-  
-  .swiper-container {
-    width: 100%;
-    height: 250px;
-    margin: 50px 0;
-    overflow: hidden;
-    padding: 0 20px 30px 20px;
-  }
-  .swiper-slide {
-    width: 200px;
-    text-align: center;
-    font-size: 18px;
-  }
-  .swiper-slide:nth-child(2n) {
-    width: 40%;
-  }
-  .swiper-slide:nth-child(3n) {
-    width: 20%;
-  }
+.roadmap-section {
+    background: url(../images/roadmap/bg_roadmap.png) no-repeat center;
+    background-size: cover;
+}
+
+.roadmap-section::after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/roadmap/rocket.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+ 
+.road-map-holder {
+  transform: none;
+  margin: auto;
+  position: relative
+}
+
+.road-map-bar {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  margin: auto;
+}
+
+.road-map-content {
+  color: #fff;
+  font-size: 12px;
+  width: 100%;
+}
+
+.road-map-content span {
+  font-size: 1em;
+  color: #f29d0b;
+}
+
+.road-map-time {
+  font-weight: 1000;
+  font-size: 1.2em;
+  color: #f29d0b;
+}
+
+.road-map-partation {
+  margin-right: 20px;
+}
+
+.road-map-bar .list-item {
+  display: flex;
+  flex-wrap: wrap;
+  transform: skewY(-17deg);
+  position: absolute;
+  top: 15em;
+  left: -5em;
+  width: 100%;
+  height: auto;
+}
+
+.list-item .road {
+  position: absolute;
+  padding: 10px 10px 60px 15px;
+  background: url(../images/roadmap/mark.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  transform: skewY(17deg) translateY(35px);
+}
+
 /* Roadmap End*/
+
+/* Team Start */
+  .team-section {
+    background-image: url(../images/team/bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .team-section::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-image: url(../images/logo/sadow.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2;
+  }
+
+  .team-board::before {
+    position: absolute;
+    content: "";
+    top: 2%;
+    left: 13%;
+    width: 100%;
+    height: 91%;
+    background-image: url(../images/team/board.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  } 
+
+  .team-header .txt-title {
+    padding: 0.3em;
+    background: url(../images/team/btn_core.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .carousel-wrap {
+    width: 1000px;
+    margin: auto;
+    position: relative;
+  }
+  .team-carousel .owl-nav{
+    overflow: hidden;
+    height: 0px;
+    display: block !important;
+  }
+
+  .owl-theme .owl-dots .owl-dot.active span, 
+  .owl-theme .owl-dots .owl-dot:hover span {
+    background: #2caae1;
+  }
+
+  .team-carousel .item {
+    text-align: center;
+  }
+
+  .team-carousel .nav-btn{
+    height: 80px;
+    position: absolute;
+    width: 50px;
+    cursor: pointer;
+    top: 180px !important;
+  }
+
+  .team-carousel .owl-prev.disabled,
+  .team-carousel .owl-next.disabled{
+    pointer-events: none;
+    opacity: 0.2;
+  }
+
+  .team-carousel .prev-slide{
+    background: url(../images/team/arrow-left.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: -60px;
+  }
+
+  .team-carousel .next-slide{
+    background: url(../images/team/arrow-right.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    right: -60px;
+  }
+
+  span.img-text {
+    color: white;
+    text-decoration: none;
+    outline: none;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    cursor: pointer;
+    width: 100%;
+    font-size: 23px;
+    display: block;
+    text-transform: capitalize;
+  }
+ 
+.team-carousel .item {
+    padding: 10px;
+}
+
+.team-carousel .item .role {
+    top: 3px;
+    left: -3px;
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    background: url(../images/team/role.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.role-text {
+  margin-top: 30px;
+}
+
+.team-carousel .item  .img-item {
+  margin-top: 20px;
+}
+ 
+.team-carousel .item .item-content {
+  padding: 10px;
+  background: url(../images/team/item_bg.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/* End Team */
+
+
+/* Partner Start */
+.partner-section {
+  background-image: url(../images/partner/partner_bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.partner-section::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-image: url(../images/partner/shadow.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.partner-board {
+  position: relative;
+  background-image: url(../images/partner/board.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.partner-board img{
+  width: 100%;
+}
+
+.partner-title {
+  position: absolute;
+  margin-left: 27%;
+  margin-top: 7.5%;
+}
+
+
+/* End Partner */
+
+/* Token Start */
+.token-section {
+  background-image: url(../images/token/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.token-section::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-image: url(../images/logo/sadow.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 2;
+}
+
+.token-box {
+  position: relative;
+  background-image: url(../images/token/board.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  z-index: 1;
+}
+
+.token-board {
+  width: 50%;
+}
+
+.msm-head {
+  margin-top: 10%;
+}
+
+.msm-title.txt-title {
+  padding: 0;
+  margin: 0;
+  text-align: left !important;
+}
+
+.msm-coin {
+  text-align: center;
+}
+.msm-coin img {
+  width: 80%;
+}
+
+.art-left {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.art-right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+/* End Token */
 
 /*Social Start*/
 .social-btn-group {
@@ -373,123 +841,3 @@ body {
     margin: 7px 5px;
 }
 /*Social End*/
-
-
-/*Footer Start*/
-.footer {
-  color: rgba(255, 255, 255, 0.82);
-  padding: 60px;
-}
-
-.footer-logo {
-  margin: auto;
-}
-
-.txt-right {
-  text-align: right;
-}
-
-.txt-left {
-  text-align: left;
-}
-
-.copy_rights ul li a {
-  color: rgba(255, 255, 255, 0.82);
-}
-
-.list-social {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-}
-
-.list-social li {
-    list-style: none;
-    padding: 0 10px;
-}
-
-.footer .box-section a {
-    color: #fff;
-}
-
-.list-social li a {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    height: 50px;
-}
-
-.box-img-flex img {
-    width: auto!important;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
-}
-/*Footer End*/
-
-/* Road Map Start*/
-.road-map-background {
-    /*width: 1920px;*/
-    /*height: 841px;*/
-    /*bottom: -126px;*/
-    /*position: absolute;*/
-    left: -320px;
-    background-position: 100%;
-    background-repeat: no-repeat;
-    background-image: url(../images/roadmap/bg_roadmap_big.png);
-    background-size: auto
-}
-
-.road-map-holder {
-    transform: none;
-    margin: auto;
-    position: relative
-}
-
-.road-map-bar {
-    width: 90%;
-    height: 100%;
-    align-items: center;
-    display: flex;
-    margin: auto;
-}
-
-.road-map-partation {
-    /*margin-right: 100px;*/
-    text-align: left;
-}
-
-.road {
-    position: relative;
-    width: 100%;
-    min-width: 125px;
-}
-
-.road-map-content {
-    color: #fff;
-    font-size: 12px;
-    width: 100%;
-}
-
-.road-map-point {
-    height: 128px;
-    vertical-align: middle;
-}
-
-.road-map-line {
-    position: absolute;
-    top: 190px;
-    max-width: 150px;
-    vertical-align: middle;
-}
-
-.road-map-time {
-    color: #f29d0b;
-    font-weight: bold;
-}
-
-
-/* Road Map End*/

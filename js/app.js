@@ -30,12 +30,14 @@
 	});
 
 	//OwlCarousel
-	$('.owl-carousel').owlCarousel({
-		autoplay:true,
-		autoplayTimeout:3000,
+	$('.team-carousel').owlCarousel({
 		loop:true,
-		margin:10,
-		nav:true,
+		margin:20,
+		dots: false,
+		navigation:true,
+		autoHeight: true,
+		nav: true,
+    	navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
 		responsive:{
 			0:{
 				items:1
@@ -45,6 +47,34 @@
 			},
 			1000:{
 				items:3
+			}
+		}
+	});
+
+	$('.nft-carousel')
+	.on('changed.owl.carousel initialized.owl.carousel', function(event) {
+		$(event.target)
+		.find('.owl-item').removeClass('first')
+        .eq(event.item.index + 1).addClass('first');
+	  })
+	.owlCarousel({
+		loop:true,
+		margin:20,
+		padding:20,
+		dots: false,
+		navigation:true,
+		autoHeight: false,
+		nav: true,
+    	navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
+		responsive:{
+			0:{
+				items:1
+			},
+			600:{
+				items:2
+			},
+			1000:{
+				items:4
 			}
 		}
 	});
