@@ -109,10 +109,12 @@
 				e.preventDefault();
 				$.scrollify.move($(this).attr("href"));
 
-				//Toggle mobile menu
-				const menuToggle = document.getElementById('navbarCollapse');
-				const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle:false});
-				bsCollapse.toggle();
+				// Toggle mobile menu
+				if($(".navbar-collapse").hasClass("show")) {
+					const menuToggle = document.getElementById('navbarCollapse');
+					const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle:false});
+					bsCollapse.toggle();
+				}
 			});
 
 			$(".navbar .navbar-brand").on("click",function(e) {
