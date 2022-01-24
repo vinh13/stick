@@ -11,6 +11,80 @@ body {
     background-repeat: repeat-y;
     background-color: #232357;
 }
+@media (max-width: 576px) {
+  .gameplay-section .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .gameplay-iframe {
+    width: 100%;
+    z-index: 1;
+  }
+  .webgl-content {
+    width: 75% !important;
+    height: 23% !important;
+  }
+}
+
+@media (min-width: 576px) {
+  .gameplay-section .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .gameplay-iframe {
+    width: 100%;
+    z-index: 1;
+  }
+  .webgl-content {
+    width: 75% !important;
+    height: 30% !important;
+  }
+}
+@media (min-width: 768px) {
+  .gameplay-section .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .gameplay-iframe {
+    width: 100%;
+    z-index: 1;
+  }
+  .webgl-content {
+    width: 75% !important;
+    height: 35% !important;
+  }
+}
+@media (min-width: 992px) {
+  .gameplay-section .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .gameplay-iframe {
+    width: 100%;
+    z-index: 1;
+  }
+  .webgl-content {
+    width: 75% !important;
+    height: 50% !important;
+  }
+}
+@media (min-width: 1200px) {
+  .gameplay-iframe {
+    width: 100%;
+    z-index: 1;
+  }
+  .webgl-content {
+    width: 70% !important;
+    height: 55% !important;
+  }
+}
+@media (min-width: 1400px) {
+   
+}
 
 /*Header Navbar*/
 .navbar-custom {
