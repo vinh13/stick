@@ -4,14 +4,16 @@ body, html {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  font-family: sans-serif;
 }
 
 body {
     background-size: contain;
     background-repeat: repeat-y;
     background-color: #232357;
+    color: #fff;
 }
-@media (max-width: 576px) {
+@media (min-width: 320px) {
   .gameplay-section .container {
     display: flex;
     justify-content: center;
@@ -19,12 +21,59 @@ body {
 
   .gameplay-iframe {
     width: 100%;
-    z-index: 1;
+    background-image: none !important;
+  }
+  .webgl-content {
+    width: 100% !important;
+    height: 30% !important;
+  }
+  .ladies {
+    display: none;
+  }
+
+  .docter-strange {
+    display: none;
+  } 
+}
+@media (min-width: 390px) {
+  .gameplay-section .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .gameplay-iframe {
+    width: 100%;
+    background-image: url(../images/gameplay/iframe.png) !important;
   }
   .webgl-content {
     width: 75% !important;
-    height: 23% !important;
+    height: 30% !important;
   }
+
+  .ladies {
+    display: block !important;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  .docter-strange {
+    display: flex;
+    justify-content: right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  .ladies img {
+    width: 43% !important;
+    height: auto;
+  }
+
+  .docter-strange img {
+    width: 70% !important;
+    height: auto;
+  } 
 }
 
 @media (min-width: 576px) {
@@ -35,14 +84,39 @@ body {
 
   .gameplay-iframe {
     width: 100%;
-    z-index: 1;
+    background-image: url(../images/gameplay/iframe.png) !important;
   }
   .webgl-content {
     width: 75% !important;
     height: 30% !important;
   }
+  .ladies {
+    display: block !important;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  .docter-strange {
+    display: flex !important;
+    justify-content: right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  .ladies img {
+    width: 43% !important;
+    height: auto;
+  }
+
+  .docter-strange img {
+    width: 53% !important;
+    height: auto;
+  } 
 }
 @media (min-width: 768px) {
+  /* game play */
   .gameplay-section .container {
     display: flex;
     justify-content: center;
@@ -50,14 +124,193 @@ body {
 
   .gameplay-iframe {
     width: 100%;
-    z-index: 1;
+    background-image: url(../images/gameplay/iframe.png) !important;
   }
+
   .webgl-content {
     width: 75% !important;
     height: 35% !important;
   }
+
+  .ladies {
+    display: block !important;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+  }
+
+  .docter-strange {
+    display: flex !important;
+    justify-content: right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  .ladies img, 
+  .docter-strange img {
+      width: 50% !important;
+      height: auto;
+  }
 }
 @media (min-width: 992px) {
+  /* Section Home */
+  /* .home-section {
+    background-image: url(../images/background/bg1.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%; 
+    background-position: center;
+  } */
+  .home-section .container {
+    height: 50%;
+  }
+
+  /* .home-section::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-image: url(../images/logo/sadow.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 10;
+  } */
+
+  .home-box {
+    display: flex;
+    flex-direction: column;
+  }
+  .home-logo {
+    text-align: center;
+  }
+
+  .logo-content img{
+    width: 200px;
+    height: auto;
+  }
+  .box-download {
+    display: grid;
+    vertical-align: middle;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    z-index: 20;
+  }
+
+  .box-content {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .btn-download {
+    display: flex;
+    justify-content: center;
+    z-index: 20;
+  }
+
+  .sologan {
+    text-align: center;
+    z-index: 20;
+  }
+
+  .sologan img{
+    padding: 20px;
+    width: 60%;
+    height: auto;
+  }
+
+  .token-address {
+    width: 100%;
+    margin-top: 20px;
+    display: grid;
+    justify-content: center;
+  }
+
+  .token-address table {
+    border-collapse: collapse;
+      border-spacing: 0;
+      background-color: rgba(111,66,193,.3);
+      box-shadow: 0 0 100px 3px #b690fc;
+      width: 80%;
+  }
+
+  .token-address table tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+  }
+
+  .token-address table td {
+    vertical-align: top;
+    text-shadow: 1px 1px #6610f2;
+    padding: 0 5px;
+    border-color: #c7a0f7;
+      border-style: solid;
+      border-width: 0.5px;
+  }
+
+  .video-box {
+    position: relative;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    top: 20px
+  }
+
+  .video-box video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .logo-center {
+    display: flex;
+  }
+
+  .logo-center .logo-content {
+    width: 25%;
+    z-index: 10;
+  }
+
+  .logo-center .light {
+    position: absolute;
+    top: 5%;
+    width: 40%;
+  }
+
+  .mobile-item {
+    display: flex;
+    width: 12em;
+    height: auto;
+  }
+
+  .mobile-item img {
+    width: 60%;
+  }
+
+  .window {
+    justify-content: right;
+  }
+
+  .ios {
+    justify-content: center;
+  }
+
+  .bg-shadow {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    z-index: 15;
+  }
+  /* End section Home */
+
+   /* game play */
   .gameplay-section .container {
     display: flex;
     justify-content: center;
@@ -65,21 +318,208 @@ body {
 
   .gameplay-iframe {
     width: 100%;
-    z-index: 1;
+     background-image: url(../images/gameplay/iframe.png) !important;
   }
   .webgl-content {
     width: 75% !important;
     height: 50% !important;
   }
+
+  .ladies {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+  }
+
+  .docter-strange {
+    display: flex !important;
+    justify-content: right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  .ladies img, 
+  .docter-strange img {
+      width: 50% !important;
+      height: auto;
+  }
 }
 @media (min-width: 1200px) {
+  /* Section Home */
+  /* .home-section {
+    background-image: url(../images/background/bg1.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%; 
+    background-position: center;
+  } */
+
+  .home-section::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-image: url(../images/logo/sadow.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 10;
+  }
+
+  .home-box {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .box-download {
+    display: grid;
+    vertical-align: middle;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    z-index: 20;
+    margin-top: auto;
+  }
+
+  .box-content {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .btn-download {
+    display: flex;
+    justify-content: center;
+    z-index: 20;
+  }
+
+  .token-address {
+    display: grid;
+    justify-content: center;
+  }
+
+  .token-address table {
+    border-collapse: collapse;
+      border-spacing: 0;
+      background-color: rgba(111,66,193,.3);
+      box-shadow: 0 0 100px 3px #b690fc;
+      width: 70%;
+  }
+
+  .token-address table tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+  }
+
+  .token-address table td {
+    vertical-align: top;
+    text-shadow: 1px 1px #6610f2;
+    padding: 0 5px;
+    border-color: #c7a0f7;
+      border-style: solid;
+      border-width: 0.5px;
+  }
+
+
+  .video-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+  }
+
+  .video-box video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .home-logo {
+    display: flex;
+    width: 100%;
+    height: auto;
+  }
+
+  .home-logo .logo-content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 10;
+  }
+
+  .home-logo .light {
+    position: absolute;
+    top: 5%;
+    width: 40%;
+  }
+
+  .sologan {
+    display: flex;
+    justify-content: center;
+   
+    z-index: 20;
+  }
+
+  .sologan img {
+    width: 85%;
+    padding: 15px;
+  }
+
+  .mobile-item {
+    display: flex;
+    justify-content: center;
+    width: 12em;
+    height: auto;
+  }
+
+  .mobile-item img {
+    width: 80%;
+  }
+
+  
+  .bg-shadow {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    z-index: 15;
+  }
+  /* End section Home */
+
+   /* Game play */
   .gameplay-iframe {
     width: 100%;
-    z-index: 1;
+    background-image: url(../images/gameplay/iframe.png) !important;
   }
   .webgl-content {
     width: 70% !important;
     height: 55% !important;
+  }
+
+  .ladies {
+    display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+  }
+
+  .docter-strange {
+    display: flex;
+    justify-content: right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  .ladies img, 
+  .docter-strange img {
+      width: 80% !important;
+      height: auto;
   }
 }
 @media (min-width: 1400px) {
@@ -95,13 +535,13 @@ body {
     margin-bottom: 0;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
-    background-color: #140000;
-    -webkit-box-shadow:  0 1px 3px #fa9419;
-    box-shadow: 0 1px 3px #fa9419;
+    /* background-color: rgb(31, 15, 53,.5); */
+    /* -webkit-box-shadow:  0 1px 3px #fa9419;
+    box-shadow: 0 1px 3px #fa9419; */
 }
 
 .nav-sticky.navbar-custom {
-  background-color: rgba(30,18,49,.8);
+  background-color: rgb(31, 15, 53,.5)
 }
 
 .navbar-collapse  {
@@ -111,17 +551,18 @@ body {
   /* Menu */
     .navbar-custom .navbar-nav li a {
       color: #dcb81f;
-      font-weight: 1000;
+      /* font-weight: 1000; */
+      display: block;
+      text-align: center;
+      font-size: 15px;
+      /* color: #fff; */
+      padding: 5px 15px;
     }
 
     .navbar-custom .navbar-nav li.active a, 
     .navbar-custom .navbar-nav li a:active, 
     .navbar-custom .navbar-nav li a:hover{
       color: #ffa712 !important;
-    }
-
-    .navbar-custom .navbar-nav li a:hover{
-      /* border-bottom: 1px solid #ffa712; */
     }
 
     .navbar-custom .navbar-nav li.active a:hover{
@@ -152,7 +593,12 @@ body {
 .scroll-container section {
   width: 100%;
   height: 100%;
-  /*min-height: 100vh;*/
+  min-height: 100vh;
+}
+
+.section .container-fluid {
+  margin: 0;
+  padding: 0;
 }
 
 .bg-back {
@@ -173,150 +619,6 @@ body {
     font-weight: 700;
 }
 /*Section End*/
-
-/* Section Home */
-.home-section {
-  background-image: url(../images/background/bg1.png);
-  background-repeat: no-repeat;
-  background-size: 100% 100%; 
-  background-position: center;
-}
-
-.home-section::after {
-  position: absolute;
-  content: "";
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  background-image: url(../images/logo/sadow.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 10;
-}
-
-.logo-center {
-  display: flex;
-}
-
-.logo-center .logo-content {
-  width: 25%;
-  z-index: 10;
-}
-
-.logo-center .light {
-  position: absolute;
-  top: 5%;
-  width: 40%;
-}
-
-.person {
-  position: absolute;
-  z-index: 1;
-}
-
-.img-person {
-  height: 25em;
-}
-
-.jocker {
-  left: 23%;
-  top: 30%;
-}
-
-.singer {
-  right: 14%;
-  top: 30%;
-}
-
-.oldman {
-  left: 0;
-  top: 38%;
-  z-index: 5;
-}
-
-.youngboy {
-  right: 0;
-  top: 38%;
-  z-index: 5;
-}
-
-.caption {
-  bottom: 0;
-  left: 5%;
-  z-index: 10;
-}
-
-.nurse {
-  bottom: 0;
-  right: 5%;
-  z-index: 10;
-}
-
-.sologan {
-  position: absolute;
-    top: 70%;
-    left: 33%;
-    z-index: 20;
-}
-
-.mobile-icon {
-  position: absolute;
-  left: 36%;
-  bottom: 10%;
-  display: flex;
-  z-index: 20;
-  text-align: center;
-}
-
-.mobile-item {
-  display: flex;
-  justify-content: center;
-  width: 12em;
-  height: auto;
-}
-
-.mobile-item img {
-  width: 80%;
-}
-
-.box-download {
-  position: absolute;
-  bottom: 10%;
-  left: 0;
-  display: grid;
-    vertical-align: middle;
-    width: 100%;
-    height: auto;
-    justify-content: center;
-    z-index: 20;
-}
-
-.box-content {
-  position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.btn-download {
-    display: flex;
-    justify-content: center;
-}
-
-  /* Shadow */
-  .bg-shadow {
-    padding: 0;
-    margin: 0;
-    position: absolute;
-    bottom: 0;
-    z-index: 15;
-  }
-  /* End Shadow */
-
-
- 
-/* End section Home */
 
 /*Iframe yt Start*/
 .youtube {
@@ -397,7 +699,6 @@ body {
 }
 
 .docter-strange {
-  display: flex;
   justify-content: right;
   position: absolute;
   right: 0;
@@ -565,7 +866,7 @@ body {
     background-size: cover;
 }
 
-.roadmap-section::after{
+/* .roadmap-section::after{
   position: absolute;
   content: "";
   top: 0;
@@ -575,6 +876,19 @@ body {
   background-image: url(../images/roadmap/rocket.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
+} */
+
+.bg-road-map::after {
+  position: absolute;
+  content: "";
+  bottom: -25px;
+  left: -60px;
+  width: 125%;
+  height: 100%;
+  background-image: url(../images/roadmap/rocket.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: bottom;
 }
  
 .road-map-holder {
@@ -615,7 +929,7 @@ body {
 .road-map-bar .list-item {
   display: flex;
   flex-wrap: wrap;
-  transform: skewY(-17deg);
+  transform: skewY(-15deg);
   position: absolute;
   top: 15em;
   left: -5em;
@@ -629,13 +943,15 @@ body {
   background: url(../images/roadmap/mark.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  transform: skewY(17deg) translateY(35px);
+  transform: skewY(15deg) translateY(35px);
 }
 
 /* Roadmap End*/
 
 /* Team Start */
   .team-section {
+    width: 100%;
+    height: 100%;
     background-image: url(../images/team/bg.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -654,16 +970,14 @@ body {
     z-index: 2;
   }
 
-  .team-board::before {
-    position: absolute;
-    content: "";
-    top: 2%;
-    left: 13%;
+  .team-board {
     width: 100%;
-    height: 91%;
+    height: 100%;
     background-image: url(../images/team/board.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 100% 100%;
+    background-position: center;
+    padding-top: 3%;
   } 
 
   .team-header .txt-title {
@@ -674,8 +988,9 @@ body {
   }
 
   .carousel-wrap {
-    width: 1000px;
+    width: 70%;
     margin: auto;
+    padding-top: 5%;
     position: relative;
   }
   .team-carousel .owl-nav{
@@ -731,7 +1046,7 @@ body {
     -o-transition: all 0.4s ease;
     cursor: pointer;
     width: 100%;
-    font-size: 23px;
+    font-size: 21px;
     display: block;
     text-transform: capitalize;
   }
@@ -742,7 +1057,7 @@ body {
 
 .team-carousel .item .role {
     top: 3px;
-    left: -3px;
+    left: 0;
     position: absolute;
     width: 25%;
     height: 25%;
@@ -752,7 +1067,7 @@ body {
 }
 
 .role-text {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .team-carousel .item  .img-item {

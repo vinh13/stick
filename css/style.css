@@ -157,10 +157,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #5e62ff !important;
 }
 
-@media (min-width: 200px) and (max-width: 768px) {
+@media (min-width: 200px) and (max-width: 990px) {
   .navbar-custom {
     margin-top: 0px;
-    background-color: #481f65 !important;
+    background-color: #064172 !important;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
     color: #ffffff !important;
   }
@@ -195,7 +195,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 24px;
     margin-top: 0px;
     margin-bottom: 0px;
-    color: #343a40;
+    color: #ffffff;
   }
 
   .navbar-collapse {
