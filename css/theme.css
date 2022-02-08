@@ -21,11 +21,11 @@ body {
 
   .gameplay-iframe {
     width: 100%;
-    background-image: none !important;
+    background-image: none;
   }
   .webgl-content {
-    width: 100% !important;
-    height: 30% !important;
+    width: 100%;
+    height: 30%;
   }
   .ladies {
     display: none;
@@ -42,12 +42,16 @@ body {
   }
 
   .gameplay-iframe {
-    width: 100%;
-    background-image: url(../images/gameplay/iframe.png) !important;
+    position: relative;
+    background-image: url(../images/gameplay/iframe.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
   }
+
   .webgl-content {
-    width: 75% !important;
-    height: 30% !important;
+    width: 75%;
+    height: 30%;
   }
 
   .ladies {
@@ -82,13 +86,9 @@ body {
     justify-content: center;
   }
 
-  .gameplay-iframe {
-    width: 100%;
-    background-image: url(../images/gameplay/iframe.png) !important;
-  }
   .webgl-content {
-    width: 75% !important;
-    height: 30% !important;
+    width: 75%;
+    height: 30%;
   }
   .ladies {
     display: block !important;
@@ -123,13 +123,16 @@ body {
   }
 
   .gameplay-iframe {
-    width: 100%;
-    background-image: url(../images/gameplay/iframe.png) !important;
+    position: relative;
+    background-image: url(../images/gameplay/iframe.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
   }
 
-  .webgl-content {
-    width: 75% !important;
-    height: 35% !important;
+   .webgl-content {
+    width: 75%;
+    height: 35%;
   }
 
   .ladies {
@@ -155,28 +158,9 @@ body {
 }
 @media (min-width: 992px) {
   /* Section Home */
-  /* .home-section {
-    background-image: url(../images/background/bg1.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%; 
-    background-position: center;
-  } */
   .home-section .container {
     height: 50%;
   }
-
-  /* .home-section::after {
-    position: absolute;
-    content: "";
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    background-image: url(../images/logo/sadow.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 10;
-  } */
 
   .home-box {
     display: flex;
@@ -259,7 +243,6 @@ body {
     height: auto;
     bottom: 0;
     right: 0;
-    top: 20px
   }
 
   .video-box video {
@@ -317,12 +300,16 @@ body {
   }
 
   .gameplay-iframe {
-    width: 100%;
-     background-image: url(../images/gameplay/iframe.png) !important;
+    position: relative;
+    background-image: url(../images/gameplay/iframe.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
   }
+
   .webgl-content {
-    width: 75% !important;
-    height: 50% !important;
+    width: 75%;
+    height: 50%;
   }
 
   .ladies {
@@ -461,7 +448,6 @@ body {
   .sologan {
     display: flex;
     justify-content: center;
-   
     z-index: 20;
   }
 
@@ -492,13 +478,17 @@ body {
   /* End section Home */
 
    /* Game play */
-  .gameplay-iframe {
-    width: 100%;
-    background-image: url(../images/gameplay/iframe.png) !important;
+   .gameplay-iframe {
+    position: relative;
+    background-image: url(../images/gameplay/iframe.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
   }
+
   .webgl-content {
-    width: 70% !important;
-    height: 55% !important;
+    width: 70%;
+    height: 55%;
   }
 
   .ladies {
@@ -518,7 +508,7 @@ body {
 
   .ladies img, 
   .docter-strange img {
-      width: 80% !important;
+      width: 80%;
       height: auto;
   }
 }
@@ -657,13 +647,7 @@ body {
   background-size: cover;
 }
 
-.gameplay-iframe {
-  position: relative;
-  background-image: url(../images/gameplay/iframe.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
+
 
 .gameplay-iframe img{
   z-index: 0;
@@ -676,8 +660,6 @@ body {
 }
 
 .webgl-content {
-  width: 800px;
-  height: 420px;
   background-color: black;
 }
 
