@@ -55,7 +55,7 @@ body {
   }
 
   .ladies {
-    display: block !important;
+    display: block;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -70,12 +70,12 @@ body {
   }
 
   .ladies img {
-    width: 43% !important;
+    width: 43%;
     height: auto;
   }
 
   .docter-strange img {
-    width: 70% !important;
+    width: 70%;
     height: auto;
   } 
 }
@@ -91,14 +91,14 @@ body {
     height: 30%;
   }
   .ladies {
-    display: block !important;
+    display: block;
     position: absolute;
     left: 0;
     bottom: 0;
   }
 
   .docter-strange {
-    display: flex !important;
+    display: flex;
     justify-content: right;
     position: absolute;
     right: 0;
@@ -106,12 +106,12 @@ body {
   }
 
   .ladies img {
-    width: 43% !important;
+    width: 43%;
     height: auto;
   }
 
   .docter-strange img {
-    width: 53% !important;
+    width: 53%;
     height: auto;
   } 
 }
@@ -136,14 +136,14 @@ body {
   }
 
   .ladies {
-    display: block !important;
+    display: block;
       position: absolute;
       left: 0;
       bottom: 0;
   }
 
   .docter-strange {
-    display: flex !important;
+    display: flex;
     justify-content: right;
     position: absolute;
     right: 0;
@@ -152,7 +152,7 @@ body {
 
   .ladies img, 
   .docter-strange img {
-      width: 50% !important;
+      width: 50%;
       height: auto;
   }
 }
@@ -319,7 +319,7 @@ body {
   }
 
   .docter-strange {
-    display: flex !important;
+    display: flex;
     justify-content: right;
     position: absolute;
     right: 0;
@@ -328,19 +328,12 @@ body {
 
   .ladies img, 
   .docter-strange img {
-      width: 50% !important;
+      width: 50%;
       height: auto;
   }
 }
 @media (min-width: 1200px) {
   /* Section Home */
-  /* .home-section {
-    background-image: url(../images/background/bg1.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%; 
-    background-position: center;
-  } */
-
   .home-section::after {
     position: absolute;
     content: "";
@@ -411,7 +404,6 @@ body {
       border-width: 0.5px;
   }
 
-
   .video-box {
     position: absolute;
     width: 100%;
@@ -467,7 +459,6 @@ body {
     width: 80%;
   }
 
-  
   .bg-shadow {
     padding: 0;
     margin: 0;
@@ -506,10 +497,14 @@ body {
     bottom: 0;
   }
 
-  .ladies img, 
+  .ladies img {
+    width: 80%;
+    height: auto;
+  }
+
   .docter-strange img {
-      width: 80%;
-      height: auto;
+    width: 80%;
+    height: auto;
   }
 }
 @media (min-width: 1400px) {
@@ -647,8 +642,6 @@ body {
   background-size: cover;
 }
 
-
-
 .gameplay-iframe img{
   z-index: 0;
 }
@@ -674,17 +667,10 @@ body {
   bottom: 0;
 }
 
-.ladies img,
-.docter-strange img {
-  width: 80%;
-  height: auto;
-}
-
 .docter-strange {
-  justify-content: right;
-  position: absolute;
   right: 0;
   bottom: 0;
+  position: absolute;
 }
 
 
