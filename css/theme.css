@@ -116,48 +116,7 @@ body {
   } 
 }
 @media (min-width: 768px) {
-  /* game play */
-  .gameplay-section .container {
-    display: flex;
-    justify-content: center;
-  }
-
-  .gameplay-iframe {
-    position: relative;
-    background-image: url(../images/gameplay/iframe.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-  }
-
-   .webgl-content {
-    width: 75%;
-    height: 35%;
-  }
-
-  .ladies {
-    display: block;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-  }
-
-  .docter-strange {
-    display: flex;
-    justify-content: right;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-  }
-
-  .ladies img, 
-  .docter-strange img {
-      width: 50%;
-      height: auto;
-  }
-}
-@media (min-width: 992px) {
-  /* Section Home */
+  /* Home  */
   .home-section .container {
     height: 50%;
   }
@@ -166,6 +125,7 @@ body {
     display: flex;
     flex-direction: column;
   }
+
   .home-logo {
     text-align: center;
   }
@@ -174,6 +134,7 @@ body {
     width: 200px;
     height: auto;
   }
+
   .box-download {
     display: grid;
     vertical-align: middle;
@@ -202,7 +163,7 @@ body {
   }
 
   .sologan img{
-    padding: 20px;
+    padding: 10px 0;
     width: 60%;
     height: auto;
   }
@@ -238,11 +199,10 @@ body {
   }
 
   .video-box {
+    margin-top: 20px;
     position: relative;
     width: 100%;
     height: auto;
-    bottom: 0;
-    right: 0;
   }
 
   .video-box video {
@@ -293,7 +253,231 @@ body {
   }
   /* End section Home */
 
-   /* game play */
+  /* Video */
+  .video-section .container-fluid {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .video-section-box {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .video-section-box video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  /* End video */
+  
+  /* Game Play */
+  .gameplay-section .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .gameplay-iframe {
+    position: relative;
+    background-image: url(../images/gameplay/iframe.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+   .webgl-content {
+    width: 75%;
+    height: 35%;
+  }
+
+  .ladies,
+  .docter-strange {
+    display: none;
+  }
+  /* NFT */
+  .nft-section .carousel-wrap-nft{
+    width: 70%;
+    margin: auto;
+    position: relative;
+  }
+
+  .nft-section .carousel-wrap-nft::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX( -50%);
+    height: 95%;
+    width: 100vw;
+    background-image: url(../images/nft/owl_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* End NFT */
+}
+@media (min-width: 992px) {
+  /* Section Home */
+  .home-section .container {
+    height: 50%;
+  }
+
+  .home-box {
+    display: flex;
+    flex-direction: column;
+  }
+  .home-logo {
+    text-align: center;
+  }
+
+  .logo-content img{
+    width: 200px;
+    height: auto;
+  }
+  .box-download {
+    display: grid;
+    vertical-align: middle;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    z-index: 20;
+  }
+
+  .box-content {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .btn-download {
+    display: flex;
+    justify-content: center;
+    z-index: 20;
+  }
+
+  .sologan {
+    text-align: center;
+    z-index: 20;
+  }
+
+  .sologan img{
+    padding: 10px 0;
+    width: 60%;
+    height: auto;
+  }
+
+  .token-address {
+    width: 100%;
+    margin-top: 20px;
+    display: grid;
+    justify-content: center;
+  }
+
+  .token-address table {
+    border-collapse: collapse;
+      border-spacing: 0;
+      background-color: rgba(111,66,193,.3);
+      box-shadow: 0 0 100px 3px #b690fc;
+      width: 80%;
+  }
+
+  .token-address table tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+  }
+
+  .token-address table td {
+    vertical-align: top;
+    text-shadow: 1px 1px #6610f2;
+    padding: 0 5px;
+    border-color: #c7a0f7;
+      border-style: solid;
+      border-width: 0.5px;
+  }
+
+  .video-box {
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .video-box video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .logo-center {
+    display: flex;
+  }
+
+  .logo-center .logo-content {
+    width: 25%;
+    z-index: 10;
+  }
+
+  .logo-center .light {
+    position: absolute;
+    top: 5%;
+    width: 40%;
+  }
+
+  .mobile-item {
+    display: flex;
+    width: 12em;
+    height: auto;
+  }
+
+  .mobile-item img {
+    width: 60%;
+  }
+
+  .window {
+    justify-content: right;
+  }
+
+  .ios {
+    justify-content: center;
+  }
+
+  .bg-shadow {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    z-index: 15;
+  }
+  /* End section Home */
+
+  /* Video */
+  .video-section .container-fluid {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .video-section-box {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .video-section-box video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  /* End video */
+
+   /* Game Play */
   .gameplay-section .container {
     display: flex;
     justify-content: center;
@@ -331,6 +515,30 @@ body {
       width: 50%;
       height: auto;
   }
+  /* End Game Play */
+
+  /* NFT */
+  .nft-section .carousel-wrap-nft{
+    width: 70%;
+    margin: auto;
+    position: relative;
+  }
+
+  .nft-section .carousel-wrap-nft::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX( -50%);
+    height: 95%;
+    width: 100vw;
+    background-image: url(../images/nft/owl_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* End NFT */
 }
 @media (min-width: 1200px) {
   /* Section Home */
@@ -468,7 +676,28 @@ body {
   }
   /* End section Home */
 
-   /* Game play */
+   /* Video */
+   .video-section .container-fluid {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .video-section-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .video-section-box video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  /* End video */
+
+  /* GamePlay */
    .gameplay-iframe {
     position: relative;
     background-image: url(../images/gameplay/iframe.png);
@@ -506,6 +735,33 @@ body {
     width: 80%;
     height: auto;
   }
+  /* End GamePlay */
+
+  /* NFT */
+  .nft-section .carousel-wrap-nft{
+    width: 70%;
+    margin-top: 20px;
+    position: relative;
+  }
+
+  .nft-section .carousel-wrap-nft::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX( -50%);
+    height: 100%;
+    width: 100vw;
+    background-image: url(../images/nft/owl_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .nft-carousel {
+    padding: 2.5em 0;
+  }
+  /* End NFT */
 }
 @media (min-width: 1400px) {
    
@@ -735,30 +991,6 @@ body {
   text-align: center;
 }
 
-.carousel-nft-wrap {
-  width: 1000px;
-  margin: auto;
-  position: relative;
-}
-
-.carousel-nft-wrap::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX( -50%);
-    height: 100%;
-    width: 100vw;
-    background-image: url(../images/nft/owl_bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-.nft-carousel {
-  padding: 20px 0;
-}
-
 .nft-carousel .owl-nav{
   overflow: hidden;
   height: 0px;
@@ -780,7 +1012,7 @@ body {
   position: absolute;
   width: 80px;
   cursor: pointer;
-  top: 160px !important;
+  top: 130px !important;
 }
 
 .nft-carousel .owl-prev.disabled,
@@ -919,7 +1151,6 @@ body {
 /* Team Start */
   .team-section {
     width: 100%;
-    height: 100%;
     background-image: url(../images/team/bg.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
