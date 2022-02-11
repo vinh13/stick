@@ -114,6 +114,17 @@ body {
     width: 53%;
     height: auto;
   } 
+
+  /* Roadmap */
+  .road-map-bar .list-item {
+    height: 100%;
+  }
+
+  .road-map-partation:not(:first-child) {
+    margin-top: 170px;
+  }
+
+  /* End Roadmap */
 }
 @media (min-width: 768px) {
   /* Home  */
@@ -312,8 +323,8 @@ body {
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translateX( -50%);
-    height: 95%;
+    transform: translateX(-50%);
+    height: 105%;
     width: 100vw;
     background-image: url(../images/nft/owl_bg.png);
     background-repeat: no-repeat;
@@ -321,7 +332,68 @@ body {
     background-position: center;
   }
 
+  .nft-section .carousel-wrap-nft .nft-carousel {
+    padding-top: 15px;
+  }
+
+  .nft-info {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .info-head {
+    margin-top: 5%;
+    height: 30%;
+  }
+
+  .info-head h5 {
+    margin-top: -3%;
+    font-size: 1.1em;
+  }
+
+  .info {
+    width: auto;
+    height: 200px;
+  }
+
+  .info-txt {
+    width: 40%;
+    font-size: 1.2em;
+  }
+
+  .nft-carousel .nav-btn{
+    top: 170px;
+  }
+
   /* End NFT */
+
+  /* Team */
+  .team-header {
+    margin-top: 4%;
+  }
+  /* End Team */
+
+   /* Road map */
+   .road-map-bar .list-item {
+    height: auto;
+    top: 15em;
+    left: -3em;
+    transform: skewY(-25deg);
+  }
+
+  .list-item .road {
+    padding: 10px 10px 60px 15px;
+    transform: skewY(25deg) translateY(-50px);
+  }
+
+  .bg-road-map::after {
+    bottom: -50px;
+    left: -60px;
+    width: 130%;
+    height: 100%;
+  }
+  /* End Road map */
+
 }
 @media (min-width: 992px) {
   /* Section Home */
@@ -337,10 +409,11 @@ body {
     text-align: center;
   }
 
-  .logo-content img{
+  .logo-content img {
     width: 200px;
     height: auto;
   }
+
   .box-download {
     display: grid;
     vertical-align: middle;
@@ -549,7 +622,34 @@ body {
   .nft-carousel .nav-btn{
     top: 190px;
   }
-  
+
+  .info-head {
+    margin-top: 10%;
+    height: 30%;
+  }
+
+  .info-head h5 {
+    margin-top: -6%;
+    font-size: 20px;
+    line-height: 56px;
+  }
+
+  .info {
+    width: auto;
+    height: 300px;
+  }
+
+  .info-txt {
+    width: 80%;
+    font-size: 1.2em;
+  }
+
+  .bg-road-map::after {
+    bottom: -25px;
+    left: -60px;
+    width: 125%;
+    height: 100%;
+  }
   /* End NFT */
 
    /* Road map */
@@ -564,6 +664,62 @@ body {
     transform: skewY(20deg) translateY(-50px);
   }
   /* End Road map */
+
+   /* Team */
+   .carousel-wrap {
+    top: 20%;
+  }
+
+   .team-header {
+    margin-top: 5%;
+  }
+
+  .role-text {
+    margin-top: 1.2em;
+  }
+
+  span.img-text {
+    font-size: 1.5em;
+  }
+
+  .team-carousel .nav-btn{
+    height: 80px;
+    width: 50px;
+    top: 180px;
+  }
+  /* End Team */
+
+  /* Partner */
+  .partner-title {
+    margin-left: 27%;
+    margin-top: 12.5%;
+  }
+  /* End Partner */
+
+  /* Token */
+  .token-box {
+    background-size: 60%;
+    background-position: bottom;
+  }
+
+  .token-board {
+    width: 36%;
+    margin-top: 30%;
+  }
+
+  .art-left img {
+    width: 50%;
+  }
+
+  .art-right {
+    display: flex;
+    justify-content: right;
+  }
+
+  .art-right img {
+    width: 50%;
+  }
+  /* End token */
 }
 @media (min-width: 1200px) {
   /* Section Home */
@@ -727,13 +883,13 @@ body {
     position: relative;
     background-image: url(../images/gameplay/iframe.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 80%;
     background-position: center;
   }
 
   .webgl-content {
-    width: 70%;
-    height: 55%;
+    width: 60%;
+    height: 50%;
   }
 
   .ladies {
@@ -752,12 +908,12 @@ body {
   }
 
   .ladies img {
-    width: 80%;
+    width: 54%;
     height: auto;
   }
 
   .docter-strange img {
-    width: 80%;
+    width: 55%;
     height: auto;
   }
   /* End GamePlay */
@@ -781,6 +937,16 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+  }
+
+  .info-head {
+    margin: 0;
+    height: 40%;
+  }
+
+  .info-txt {
+    width: 85%;
+    font-size: 1.5em;
   }
 
   .nft-carousel {
@@ -809,6 +975,63 @@ body {
     transform: skewY(15deg) translateY(35px);
   }
   /* End Road map */
+
+   /* Team */
+   .carousel-wrap {
+    top: 25%;
+  }
+
+   .team-header {
+    margin-top: 5%;
+  }
+
+  .role-text {
+    margin-top: 1.5em;
+  }
+
+  span.img-text {
+    font-size: 1em;
+  }
+
+  .team-carousel .nav-btn{
+    height: 80px;
+    width: 50px;
+    top: 140px;
+  }
+  /* End Team */
+
+  /* Partner */
+  .partner-title {
+    margin-left: 27%;
+    margin-top: 7.5%;
+  }
+  /* End Partner */
+
+  /* Token */
+  .token-box {
+    background-size: 50%;
+    background-position: bottom;
+  }
+
+  .art-left img {
+    width: 70%;
+  }
+
+  .art-right {
+    display: flex;
+    justify-content: right;
+  }
+
+  .art-right img {
+    width: 70%;
+  }
+
+  .token-board {
+    width: 33%;
+    margin-top: 27%;
+  }
+
+  /* End token */
 }
 @media (min-width: 1400px) {
      /* Road map */
@@ -823,6 +1046,63 @@ body {
     transform: skewY(18deg) translateY(35px);
   }
   /* End Road map */
+
+  /* Gameplay */
+  .gameplay-iframe {
+    position: relative;
+    background-image: url(../images/gameplay/iframe.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .webgl-content {
+    width: 70%;
+    height: 55%;
+  }
+
+  .ladies img {
+    width: 80%;
+    height: auto;
+  }
+
+  .docter-strange img {
+    width: 80%;
+    height: auto;
+  }
+  /* End Gameplay */
+  
+  /* Team */
+  .team-header {
+    margin-top: 3%
+  }
+  /* End Team */
+
+  /* Token */
+  .token-box {
+    background-size: contain;
+    background-position: center;
+  }
+
+  .art-left img {
+    width: 100%;
+  }
+
+  .art-right {
+    display: flex;
+    justify-content: right;
+  }
+
+  .art-right img {
+    width: 100%;
+  }
+
+  .token-board {
+    width: 50%;
+    margin-top: 0;
+  }
+ 
+  /* End token */
 }
 
 /*Header Navbar*/
@@ -847,34 +1127,34 @@ body {
   justify-content: center;
 }
 
-  /* Menu */
-    .navbar-custom .navbar-nav li a {
-      color: #dcb81f;
-      /* font-weight: 1000; */
-      display: block;
-      text-align: center;
-      font-size: 15px;
-      /* color: #fff; */
-      padding: 5px 15px;
-    }
+/* Menu */
+  .navbar-custom .navbar-nav li a {
+    color: #dcb81f;
+    /* font-weight: 1000; */
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    /* color: #fff; */
+    padding: 5px 15px;
+  }
 
-    .navbar-custom .navbar-nav li.active a, 
-    .navbar-custom .navbar-nav li a:active, 
-    .navbar-custom .navbar-nav li a:hover{
-      color: #ffa712 !important;
-    }
+  .navbar-custom .navbar-nav li.active a, 
+  .navbar-custom .navbar-nav li a:active, 
+  .navbar-custom .navbar-nav li a:hover{
+    color: #ffa712 !important;
+  }
 
-    .navbar-custom .navbar-nav li.active a:hover{
-      border: none;
-    }
+  .navbar-custom .navbar-nav li.active a:hover{
+    border: none;
+  }
 
-    li.nav-item.active {
-      box-sizing: border-box;
-      border: 2px solid #fa9419;
-      border-radius: 3px;
-      /* transform: skewX(-6deg); */
-    }
-  /* End Menu */
+  li.nav-item.active {
+    box-sizing: border-box;
+    border: 2px solid #fa9419;
+    border-radius: 3px;
+    /* transform: skewX(-6deg); */
+  }
+/* End Menu */
 
 /*End Header*/
 
@@ -908,7 +1188,7 @@ body {
 }
 
 .txt-title {
-   font-size: 32px;
+   font-size: 2em;
     line-height: 56px;
     font-family: "PT Sans Caption", sans-serif;
     text-align: center;
@@ -1013,9 +1293,6 @@ body {
 }
 
 .info {
-  padding-top: 10%;
-  width: 100%;
-  height: 100%;
   background: url(../images/nft/info.png) no-repeat center;
   background-size: contain;
 }
@@ -1024,16 +1301,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 40%;
   width: 100%;
   background: url(../images/nft/title.png) no-repeat center;
   background-size: contain;
 }
 
 .info-head h5{
-  margin-top: -6%;
-  font-size: 20px;
-  line-height: 56px;
   font-family: "PT Sans Caption", sans-serif;
   text-align: center;
   color: rgb(255, 255, 255);
@@ -1043,10 +1316,10 @@ body {
 }
 
 .info-body {
-  height: 50%;
   color: #fff;
-  font-size: 20px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nft-carousel .owl-nav{
@@ -1125,10 +1398,6 @@ body {
 .bg-road-map::after {
   position: absolute;
   content: "";
-  bottom: -25px;
-  left: -60px;
-  width: 125%;
-  height: 100%;
   background-image: url(../images/roadmap/rocket.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -1175,7 +1444,6 @@ body {
   flex-wrap: wrap;
   position: absolute;
   width: 100%;
-  height: auto;
 }
 
 .list-item .road {
@@ -1215,8 +1483,11 @@ body {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
-    padding-top: 3%;
   } 
+
+  .team-header {
+    position: absolute;
+  }
 
   .team-header .txt-title {
     padding: 0.3em;
@@ -1228,9 +1499,9 @@ body {
   .carousel-wrap {
     width: 70%;
     margin: auto;
-    padding-top: 5%;
     position: relative;
   }
+
   .team-carousel .owl-nav{
     overflow: hidden;
     height: 0px;
@@ -1247,11 +1518,8 @@ body {
   }
 
   .team-carousel .nav-btn{
-    height: 80px;
     position: absolute;
-    width: 50px;
     cursor: pointer;
-    top: 180px !important;
   }
 
   .team-carousel .owl-prev.disabled,
@@ -1284,7 +1552,6 @@ body {
     -o-transition: all 0.4s ease;
     cursor: pointer;
     width: 100%;
-    font-size: 21px;
     display: block;
     text-transform: capitalize;
   }
@@ -1302,10 +1569,6 @@ body {
     background: url(../images/team/role.png);
     background-repeat: no-repeat;
     background-size: contain;
-}
-
-.role-text {
-  margin-top: 20px;
 }
 
 .team-carousel .item  .img-item {
@@ -1356,11 +1619,7 @@ body {
 
 .partner-title {
   position: absolute;
-  margin-left: 27%;
-  margin-top: 7.5%;
 }
-
-
 /* End Partner */
 
 /* Token Start */
@@ -1389,13 +1648,7 @@ body {
   position: relative;
   background-image: url(../images/token/board.png);
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
   z-index: 1;
-}
-
-.token-board {
-  width: 50%;
 }
 
 .msm-head {
