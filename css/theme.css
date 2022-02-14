@@ -869,7 +869,31 @@ body {
     font-size: 1.7em;
   }
   /* End partner */
+  
+  /* Token */
+  .token-box {
+    background-size: 60%;
+    background-position: bottom;
+  }
 
+  .token-board {
+    width: 36%;
+    margin-top: 30%;
+  }
+
+  .art-left img {
+    width: 50%;
+  }
+
+  .art-right {
+    display: flex;
+    justify-content: right;
+  }
+
+  .art-right img {
+    width: 50%;
+  }
+  /* End token */
 }
 @media (min-width: 992px) {
   /* Section Home */
