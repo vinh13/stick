@@ -1407,8 +1407,8 @@ body {
   }
 
   .webgl-content {
-    width: 60%;
-    height: 50%;
+    width: 55%;
+    height: 55%;
   }
 
   .ladies {
@@ -1538,9 +1538,10 @@ body {
   .token-section {
     padding: 100px 0;
   }
+
   .token-box {
     background-size: 50%;
-    background-position: bottom;
+    background-position: center;
   }
 
   .art-left img {
@@ -1557,8 +1558,7 @@ body {
   }
 
   .token-board {
-    width: 33%;
-    margin-top: 27%;
+    width: 30%;
   }
 
   /* End token */
@@ -1615,7 +1615,7 @@ body {
   }
 
   .art-left img {
-    width: 100%;
+    width: 80%;
   }
 
   .art-right {
@@ -1624,16 +1624,104 @@ body {
   }
 
   .art-right img {
-    width: 100%;
+    width: 80%;
   }
 
   .token-board {
     width: 50%;
-    margin-top: 0;
+    align-items: flex-start;
+  }
+
+  .token-content {
+    padding-top: 100px;
   }
  
   /* End token */
 }
+
+
+@media (min-width: 1600px) {
+  /* Road map */
+.road-map-bar .list-item {
+ top: 18em;
+ left: -5em;
+ transform: skewY(-18deg);
+}
+
+.list-item .road {
+ padding: 20px 20px 60px 20px;
+ transform: skewY(18deg) translateY(35px);
+}
+/* End Road map */
+
+/* Gameplay */
+.gameplay-iframe {
+ position: relative;
+ background-image: url(../images/gameplay/iframe.png);
+ background-repeat: no-repeat;
+ background-size: contain;
+ background-position: center;
+}
+
+.webgl-content {
+ width: 40%;
+ height: 58%;
+}
+
+.ladies img {
+ width: 80%;
+ height: auto;
+}
+
+.docter-strange img {
+ width: 80%;
+ height: auto;
+}
+/* End Gameplay */
+
+/* Team */
+.team-header {
+ margin-top: 3%
+}
+/* End Team */
+
+/* Partner */
+.partner-title {
+  margin-top: 8%;
+}
+/* End Partner */
+
+/* Token */
+.token-box {
+ background-size: contain;
+ background-position: center;
+}
+
+.art-left img {
+ width: 100%;
+}
+
+.art-right {
+ display: flex;
+ justify-content: right;
+}
+
+.art-right img {
+ width: 100%;
+}
+
+.token-board {
+ width: 45%;
+ align-items: flex-start;
+}
+
+.msm-title {
+  font-size: 2em;
+}
+
+/* End token */
+}
+/* End 1600 */
 
 /*Header Navbar*/
 .navbar-custom {
