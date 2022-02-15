@@ -878,7 +878,6 @@ body {
 
   .token-board {
     width: 36%;
-    margin-top: 30%;
   }
 
   .art-left img {
@@ -897,21 +896,23 @@ body {
 }
 @media only screen and (min-width: 992px) {
   /* Section Home */
-  .home-section .container {
+  .home-section::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
     height: 50%;
+    background-image: url(../images/logo/sadow.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 10;
   }
 
   .home-box {
+    height: 100%;
     display: flex;
     flex-direction: column;
-  }
-  .home-logo {
-    text-align: center;
-  }
-
-  .logo-content img {
-    width: 200px;
-    height: auto;
   }
 
   .box-download {
@@ -921,6 +922,8 @@ body {
     height: auto;
     justify-content: center;
     z-index: 20;
+    margin-top: auto;
+    padding-bottom: 100px;
   }
 
   .box-content {
@@ -936,20 +939,7 @@ body {
     z-index: 20;
   }
 
-  .sologan {
-    text-align: center;
-    z-index: 20;
-  }
-
-  .sologan img{
-    padding: 10px 0;
-    width: 60%;
-    height: auto;
-  }
-
   .token-address {
-    width: 100%;
-    margin-top: 20px;
     display: grid;
     justify-content: center;
   }
@@ -959,7 +949,7 @@ body {
     border-spacing: 0;
     background-color: rgba(111,66,193,.3);
     box-shadow: 0 0 100px 3px #b690fc;
-    width: 80%;
+    width: 70%;
   }
 
   .token-address table tbody {
@@ -978,10 +968,11 @@ body {
   }
 
   .video-box {
-    margin-top: 20px;
-    position: relative;
+    position: absolute;
     width: 100%;
-    height: auto;
+    height: 100%;
+    bottom: 0;
+    right: 0;
   }
 
   .video-box video {
@@ -990,37 +981,46 @@ body {
     height: 100%;
   }
 
-  .logo-center {
+  .home-logo {
     display: flex;
+    width: 100%;
+    height: auto;
+    padding-top: 100px;
   }
 
-  .logo-center .logo-content {
-    width: 25%;
+  .home-logo .logo-content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
     z-index: 10;
   }
 
-  .logo-center .light {
+  .home-logo .light {
     position: absolute;
     top: 5%;
     width: 40%;
   }
 
+  .sologan {
+    display: flex;
+    justify-content: center;
+    z-index: 20;
+  }
+
+  .sologan img {
+    width: 85%;
+    padding: 15px;
+  }
+
   .mobile-item {
     display: flex;
+    justify-content: center;
     width: 12em;
     height: auto;
   }
 
   .mobile-item img {
-    width: 60%;
-  }
-
-  .window {
-    justify-content: right;
-  }
-
-  .ios {
-    justify-content: center;
+    width: 80%;
   }
 
   .bg-shadow {
@@ -1041,9 +1041,9 @@ body {
   }
 
   .video-section-box {
-    position: relative;
+    position: absolute;
     width: 100%;
-    height: auto;
+    height: 100%;
   }
 
   .video-section-box video {
@@ -1054,6 +1054,10 @@ body {
   /* End video */
 
    /* Game Play */
+  .gameplay-section {
+    padding: 100px; 
+  }
+
   .gameplay-section .container {
     display: flex;
     justify-content: center;
@@ -1069,7 +1073,7 @@ body {
 
   .webgl-content {
     width: 75%;
-    height: 50%;
+    height: 45%;
   }
 
   .ladies {
@@ -1089,13 +1093,17 @@ body {
 
   .ladies img, 
   .docter-strange img {
-      width: 35%;
+      width: 40%;
       height: auto;
   }
   /* End Game Play */
 
   /* NFT */
-  .nft-section .carousel-wrap-nft{
+  .nft-section {
+    padding: 100px 0;
+  }
+
+  .nft-section .carousel-wrap-nft { 
     width: 70%;
     margin: auto;
     position: relative;
@@ -1161,11 +1169,15 @@ body {
 
   .list-item .road {
     padding: 10px 10px 60px 15px;
-    transform: skewY(20deg) translateY(-50px);
+    transform: skewY(20deg) translateY(50px);
   }
   /* End Road map */
 
    /* Team */
+   .team-section {
+     padding: 100px 0;
+   }
+
    .carousel-wrap {
     top: 20%;
   }
@@ -1188,19 +1200,24 @@ body {
   /* Partner */
   .partner-title {
     margin-left: 27%;
-    margin-top: 3.5%;
+    margin-top: 20%;
   }
   /* End Partner */
 
   /* Token */
   .token-box {
     background-size: 60%;
-    background-position: bottom;
+    background-position: center;
   }
 
   .token-board {
-    width: 36%;
-    margin-top: 30%;
+    width: 35%;
+    display: flex;
+    align-items: center;
+  }
+
+  .msm-title {
+    font-size: 28px;
   }
 
   .art-left img {
@@ -1473,12 +1490,12 @@ body {
   .road-map-bar .list-item {
     top: 13em;
     left: -5em;
-    transform: skewY(-15deg);
+    transform: skewY(-20deg);
   }
 
   .list-item .road {
     padding: 20px 20px 60px 20px;
-    transform: skewY(15deg) translateY(35px);
+    transform: skewY(20deg) translateY(120px);
   }
   /* End Road map */
 
@@ -1513,7 +1530,7 @@ body {
 
   .partner-title {
     margin-left: 27%;
-    margin-top: 3.5%;
+    margin-top: 4%;
   }
   /* End Partner */
 
@@ -1570,17 +1587,17 @@ body {
   }
 
   .webgl-content {
-    width: 40%;
+    width: 50%;
     height: 55%;
   }
 
   .ladies img {
-    width: 80%;
+    width: 60%;
     height: auto;
   }
 
   .docter-strange img {
-    width: 80%;
+    width: 62%;
     height: auto;
   }
   /* End Gameplay */
@@ -2125,7 +2142,7 @@ body {
   position: relative;
   background-image: url(../images/partner/board.png);
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: 100%;
   background-position: center;
 }
 
@@ -2181,14 +2198,20 @@ body {
   z-index: 1;
 }
 
-.msm-head {
+/* .msm-head {
   margin-top: 10%;
-}
+} */
 
-.msm-title.txt-title {
+.msm-title {
   padding: 0;
   margin: 0;
-  text-align: left !important;
+  line-height: 56px;
+  font-family: "PT Sans Caption", sans-serif;
+  text-align: left;
+  color: rgb(255, 255, 255);
+  text-shadow: rgb(23 175 255 / 49%) 0px 0px 6px;
+  position: relative;
+  font-weight: 700;
 }
 
 .msm-coin {

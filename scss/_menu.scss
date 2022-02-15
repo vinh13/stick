@@ -199,17 +199,17 @@
     }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
-    .nav-dark {
-        .navbar-nav {
-            li {
-                a {
-                    color: darken($muted, 4%) !important;
-                }
-            }
-            li.active a, li a:hover, li a:active {
-                color: $primary !important;
-            }
-        }
-    }
-}
+// @media (min-width: 769px) and (max-width: 1024px) {
+//     .nav-dark {
+//         .navbar-nav {
+//             li {
+//                 a {
+//                     color: darken($muted, 4%) !important;
+//                 }
+//             }
+//             li.active a, li a:hover, li a:active {
+//                 color: $primary !important;
+//             }
+//         }
+//     }
+// }
