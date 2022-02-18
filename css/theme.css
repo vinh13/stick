@@ -253,6 +253,12 @@ body {
   }
   /* End partner */
 
+  /* Team */
+  .carousel-wrap {
+    width: 50%;
+  }
+  /* End Team */
+
 }
 
 @media (min-width: 576px) {
@@ -516,7 +522,7 @@ body {
 
   /* Team */
   .carousel-wrap {
-    top: 30%;
+    width: 50%;
   }
 
   .team-header {
@@ -825,6 +831,10 @@ body {
   /* End NFT */
 
   /* Team */
+  .carousel-wrap {
+    width: 55%;
+  }
+
   .team-header {
     margin-top: 8%;
   }
@@ -1188,9 +1198,9 @@ body {
      padding: 100px 0;
    }
 
-   .carousel-wrap {
+   /* .carousel-wrap {
     top: 20%;
-  }
+  } */
 
    .team-header {
     margin-top: 7%;
@@ -1514,11 +1524,11 @@ body {
     padding: 100px 0;
   }
 
-   .carousel-wrap {
-    top: 25%;
+  .carousel-wrap {
+    width: 50%;
   }
 
-   .team-header {
+  .team-header {
     margin-top: 5%;
   }
 
@@ -1692,6 +1702,10 @@ body {
 /* Team */
 .team-header {
  margin-top: 3%
+}
+
+.carousel-wrap {
+  width: 45%;
 }
 /* End Team */
 
@@ -2052,9 +2066,12 @@ body {
 }
 
 .road-map-partation {
+  position: relative;
+  padding: 0 15px;
   margin-right: 20px;
   width: 16%;
   flex: 0 0 16%;
+  -ms-flex: 0 0 16%;
 }
 
 .road-map-bar .list-item {
@@ -2097,7 +2114,7 @@ body {
   .team-board {
     width: 100%;
     height: 100%;
-    background-image: url(../images/team/board.png);
+    background-image: url(../images/team/board1.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -2125,7 +2142,6 @@ body {
   }
 
   .carousel-wrap {
-    width: 50%;
     margin: auto;
     position: relative;
   }
@@ -2238,7 +2254,7 @@ body {
 
 .partner-board {
   position: relative;
-  background-image: url(../images/partner/board.png);
+  background-image: url(../images/partner/board1.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
