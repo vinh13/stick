@@ -839,6 +839,15 @@ body {
   /* End Team */
 
    /* Road map */
+   .timeline {
+     display: block;
+     height: 100%;
+   }
+
+   .timeline-mb {
+     display: none;
+   }
+   
    .road-map-bar .list-item {
     height: auto;
     top: 15em;
@@ -852,6 +861,7 @@ body {
   }
 
   .bg-road-map::after {
+    position: relative;
     bottom: -50px;
     left: -60px;
     width: 130%;
@@ -2001,18 +2011,6 @@ body {
     background-size: cover;
 }
 
-/* .roadmap-section::after{
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(../images/roadmap/rocket.png);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-} */
-
 .bg-road-map::after {
   position: absolute;
   content: "";
@@ -2055,6 +2053,8 @@ body {
 
 .road-map-partation {
   margin-right: 20px;
+  width: 16%;
+  flex: 0 0 16%;
 }
 
 .road-map-bar .list-item {
@@ -2099,7 +2099,7 @@ body {
     height: 100%;
     background-image: url(../images/team/board.png);
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: contain;
     background-position: center;
   } 
 
@@ -2114,8 +2114,18 @@ body {
     background-size: contain;
   }
 
+  .team-carousel-box {
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+  }
+
   .carousel-wrap {
-    width: 70%;
+    width: 50%;
     margin: auto;
     position: relative;
   }
@@ -2230,7 +2240,7 @@ body {
   position: relative;
   background-image: url(../images/partner/board.png);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: contain;
   background-position: center;
 }
 
@@ -2362,3 +2372,143 @@ body {
     margin: 7px 5px;
 }
 /*Social End*/
+
+/* Timeline */
+.timeline-mb {
+  position: relative;
+  padding: 100px 0;
+}
+
+.timeline-mb::before {
+	content: '';
+  background: #FFFFFF;
+  width: 5px;
+  height: 77%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+	width: 100%;
+	margin-bottom: 35px;
+}
+
+.timeline-item .timeline-content {
+  float: right;
+  padding: 40px 30px 10px 30px;
+}
+
+.timeline-item .timeline-content .date {
+  right: auto;
+  left: 0;
+}
+
+.timeline-item::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.timeline-content {
+	position: relative;
+	width: 45%;
+  padding: 20px 20px 15px;
+	border-radius: 4px;
+  background-color: #064172;
+	box-shadow: 0 20px 25px -15px rgba(0, 0, 0, .3);
+  cursor: pointer;
+}
+
+.timeline-content::before {
+	position: absolute;
+  content: "";
+  top: 0;
+  left: -16px;
+  right: initial;
+  border-left: 18px solid transparent;
+  border-right: 0;
+  border-top: 18px solid #064172;
+}
+
+.timeline-img {
+	width: 30px;
+	height: 30px;
+	background-image: url(../images/icon/icon-tl.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+	border-radius: 50%;
+	position: absolute;
+	/* left: 50%; */
+	margin-left: -15px;
+  margin-top: -15px;
+}
+ 
+.timeline-card {
+	padding: 0!important;
+}
+
+.timeline-card p {
+  padding: 0 20px;
+}
+
+.timeline-card a {
+  margin-left: 20px;
+}
+
+.timeline-item .timeline-img-header {
+  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('https://picsum.photos/1000/800/?random') center center no-repeat;
+  background-size: cover;
+}
+
+.timeline-img-header {
+	height: 200px;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.timeline-img-header h2 {
+  color: #FFFFFF;
+  position: absolute;
+  bottom: 5px;
+  left: 20px;
+}
+
+.date {
+	background: #FF4081;
+	display: inline-block;
+	color: #FFFFFF;
+	padding: 10px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .timeline {
+    display: none;
+  }
+
+  .timeline-mb {
+    display: block;
+  }
+
+  .timeline-mb::before {
+    left: 50px;
+  }
+
+  .timeline-mb .timeline-img {
+    left: 50px;
+  }
+
+  .timeline-mb .timeline-content {
+    max-width: 100%;
+    width: auto;
+    margin-left: 65px;
+  }
+
+  .timeline-mb .timeline-item:nth-child(even) .timeline-content{
+    float: none;
+  }
+}
+
