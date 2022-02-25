@@ -13,7 +13,797 @@ body {
     background-color: #232357;
     color: #fff;
 }
-@media (min-width: 320px) {
+
+/*Header Navbar*/
+.navbar-custom {
+    padding: 20px 0 12px 0;
+    width: 100%;
+    border-radius: 0;
+    z-index: 30;
+    margin-bottom: 0;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    background-color: rgb(31, 15, 53,.5);
+}
+
+.nav-sticky.navbar-custom {
+  background-color: rgb(31, 15, 53,.5)
+}
+
+.navbar-collapse  {
+  justify-content: center;
+}
+
+/* Menu */
+.navbar-custom .navbar-nav li a {
+  color: #dcb81f;
+  /* font-weight: 1000; */
+  display: block;
+  text-align: center;
+  font-size: 15px;
+  /* color: #fff; */
+  padding: 5px 15px;
+}
+
+.navbar-custom .navbar-nav li.active a, 
+.navbar-custom .navbar-nav li a:active, 
+.navbar-custom .navbar-nav li a:hover{
+  color: #ffa712 !important;
+}
+
+.navbar-custom .navbar-nav li.active a:hover{
+  border: none;
+}
+
+li.nav-item.active {
+  box-sizing: border-box;
+  border: 2px solid #fa9419;
+  border-radius: 3px;
+  /* transform: skewX(-6deg); */
+}
+
+/* End Menu */
+
+/* End Header*/
+
+/* Section */
+.section .container-fluid {
+  margin: 0;
+  padding: 0;
+}
+
+.txt-title {
+   font-size: 2em;
+    line-height: 56px;
+    font-family: "PT Sans Caption", sans-serif;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow: rgb(23 175 255 / 49%) 0px 0px 6px;
+    position: relative;
+    font-weight: 700;
+}
+
+/* END: Section */
+
+/* Iframe yt */
+.youtube {
+    position:relative;
+    padding-bottom:56.25%;
+    padding-top:30px;
+    height:0;
+    overflow:hidden;
+}
+
+.youtube iframe, .youtube object, .youtube embed {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+/* END: Iframe yt*/
+
+/* Home*/
+.logo-content {
+  max-width: 150px;
+  margin: 0 auto;
+}
+
+.logo-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.home-box {
+  position: relative;
+}
+
+.box-download {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  z-index: 20;
+  max-width: 445px;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, -15%);
+  position: absolute;
+}
+
+.token-address__ttl {
+  font-weight: bold;
+  text-align: center;
+}
+
+/* END: Home*/
+
+/* Gamplay */
+.gameplay-section {
+  background-image: url(../images/gameplay/gameplay.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%; 
+}
+
+.gameplay-section::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-image: url(../images/logo/sadow.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.gameplay-iframe img{
+  z-index: 0;
+}
+
+.webgl-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.webgl-content::before {
+  content: "";
+  position: absolute;
+  background-image: url(../images/gameplay/iframe.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  max-width: 580px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#gameContainer {
+  width: 100%;
+  max-width: 500px;
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#gameContainer video {
+  max-width: 100%;
+  height: auto;
+}
+
+.ladies {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.docter-strange {
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+/* END: Gameplay */
+
+/* NFT */
+.nft-section {
+  height: 100%;
+  background-image: url(../images/nft/nft_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.info {
+  background: url(../images/nft/info.png) no-repeat center;
+  background-size: contain;
+}
+
+.info-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: url(../images/nft/title.png) no-repeat center;
+  background-size: contain;
+}
+
+.info-head h5{
+  font-family: "PT Sans Caption", sans-serif;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  text-shadow: rgb(23 175 255 / 49%) 0 0 6px;
+  position: relative;
+  font-weight: 700;
+}
+
+.info-body {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nft-carousel .owl-nav{
+  overflow: hidden;
+  height: 0;
+  display: block !important;
+}
+
+.nft-carousel.owl-theme .owl-dots .owl-dot.active span, 
+.nft-carousel.owl-theme .owl-dots .owl-dot:hover span {
+  background: #2caae1;
+}
+
+.nft-carousel .item {
+  text-align: center;
+}
+
+.nft-carousel .nav-btn{
+  height: 80px;
+  position: absolute;
+  width: 80px;
+  cursor: pointer;
+}
+
+.nft-carousel .owl-prev.disabled,
+.nft-carousel .owl-next.disabled{
+  pointer-events: none;
+  opacity: 0.2;
+}
+
+.nft-carousel .prev-slide{
+  background: url(../images/nft/arr-left.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: -100px;
+}
+
+.nft-carousel .next-slide{
+  background: url(../images/nft/arr_right.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  right: -100px;
+}
+
+.nft-carousel .owl-item .item {
+  position: relative;
+}
+
+.nft-carousel .owl-item.item-active .item::after {
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/nft/border_card.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 100;
+  content: '';
+  display: block;
+}
+
+.nft-section .owl-carousel .owl-item img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  width: initial;
+}
+
+/* END NFT */
+
+/* Roadmap */
+.roadmap-section {
+    background: url(../images/roadmap/bg_roadmap.png) no-repeat center;
+    background-size: cover;
+}
+
+.bg-road-map {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.bg-road-map::after {
+  position: absolute;
+  content: "";
+  background-image: url(../images/roadmap/rocket.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: inline-block;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 50%;
+}
+
+.road-map-holder {
+  transform: none;
+  margin: auto;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.road-map-bar {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  margin: auto;
+}
+
+.road-map-content {
+  color: #fff;
+  font-size: 12px;
+  width: 100%;
+  max-height: 216px;
+  overflow: auto;
+}
+
+.road-map-content span {
+  font-size: 1em;
+  color: #f29d0b;
+}
+
+.road-map-time {
+  font-weight: 1000;
+  font-size: 1.2em;
+  color: #f29d0b;
+}
+
+.road-map-partation {
+  position: relative;
+  padding: 0 15px;
+  margin-right: 20px;
+  width: 16%;
+  flex: 0 0 16%;
+  -ms-flex: 0 0 16%;
+}
+
+.road-map-bar .list-item {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  width: 100%;
+}
+
+.list-item .road {
+  position: absolute;
+  background: url(../images/roadmap/mark.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/* END: Roadmap */
+
+/* Team */
+.team-section {
+  width: 100%;
+  background-image: url(../images/team/bg.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+}
+
+.team-board {
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/team/board1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  max-width: 1024px;
+} 
+
+.team-header {
+  position: absolute;
+}
+
+.team-header .txt-title {
+  padding: 0.3em;
+  background: url(../images/team/btn_core.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.team-carousel-box {
+  width: 100%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+}
+
+.carousel-wrap {
+  margin: auto;
+  position: relative;
+}
+
+.team-carousel .owl-nav {
+  overflow: hidden;
+  height: 0;
+  display: block !important;
+}
+
+.owl-theme .owl-dots .owl-dot.active span, 
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: #2caae1;
+}
+
+.team-carousel .item {
+  text-align: center;
+}
+
+.team-carousel .nav-btn{
+  position: absolute;
+  cursor: pointer;
+}
+
+.team-carousel .owl-prev.disabled,
+.team-carousel .owl-next.disabled{
+  pointer-events: none;
+  opacity: 0.2;
+}
+
+.team-carousel .prev-slide{
+  background: url(../images/team/arrow-left.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.team-carousel .next-slide{
+  background: url(../images/team/arrow-right.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  right: -60px;
+}
+
+span.img-text {
+  color: white;
+  text-decoration: none;
+  outline: none;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  text-transform: capitalize;
+}
+
+.team-carousel .item {
+    padding: 10px;
+}
+
+.team-carousel .item .role {
+    top: 3px;
+    left: 0;
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    background: url(../images/team/role.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.team-carousel .item .img-item {
+  margin-top: 20px;
+  max-width: 260px;
+  max-height: 190px;
+  overflow: hidden;
+}
+
+.team-carousel .item .img-item img:hover {
+  transform: scale(1.5);
+  transition: all 1s;
+  opacity: 0.8;
+}
+
+.team-carousel .item .item-content {
+  padding: 10px;
+  background: url(../images/team/item_bg.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  min-height: 102px;
+}
+
+/* End Team */
+
+/* Partner */
+.partner-section {
+  background-image: url(../images/partner/partner_bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.partner-section::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-image: url(../images/partner/shadow.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.partner-board {
+  position: relative;
+  background-image: url(../images/partner/board1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.partner-board img{
+  width: 100%;
+}
+
+.partner-title {
+  position: absolute;
+}
+
+/* End Partner */
+
+/* Token */
+.token-section {
+  background-image: url(../images/token/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+}
+
+.token-box {
+  position: relative;
+  background-image: url(../images/token/board.png);
+  background-repeat: no-repeat;
+  z-index: 1;
+  background-size: contain;
+}
+
+.msm-head, .msm-content {
+  margin: 0;
+}
+
+.msm-title {
+  padding: 0;
+  margin: 0;
+  line-height: 56px;
+  font-family: "PT Sans Caption", sans-serif;
+  text-align: left;
+  color: rgb(255, 255, 255);
+  text-shadow: rgb(23 175 255 / 49%) 0 0 6px;
+  position: relative;
+  font-weight: 700;
+}
+
+.msm-coin {
+  text-align: center;
+}
+.msm-coin img {
+  width: 80%;
+}
+
+.art-left {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.art-right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+/* End Token */
+
+/* Social */
+.social-btn-group {
+  position: fixed;
+  bottom: 1%;
+  right: 0;
+  width: 50px;
+  background-color: rgba(0,0,0,.6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 10px 0 0 10px;
+  padding: 10px 0 10px 2px;
+  z-index: 999;
+}
+
+.social-btn-group a {
+  width: 35px;
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+.social-btn-group a img {
+  width: 100%;
+  height: auto;
+  margin: 7px 5px;
+}
+
+/* End Social */
+
+/* Timeline */
+.timeline-mb {
+  position: relative;
+  padding: 100px 0;
+}
+
+.timeline-mb::before {
+	content: '';
+  background: #FFFFFF;
+  width: 5px;
+  height: 77%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+	width: 100%;
+	margin-bottom: 35px;
+}
+
+.timeline-item .timeline-content {
+  float: right;
+  padding: 40px 30px 10px;
+}
+
+.timeline-item .timeline-content .date {
+  right: auto;
+  left: 0;
+}
+
+.timeline-item::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.timeline-content {
+	position: relative;
+	width: 45%;
+  padding: 20px 20px 15px;
+	border-radius: 4px;
+  background-color: #064172;
+	box-shadow: 0 20px 25px -15px rgba(0, 0, 0, .3);
+  cursor: pointer;
+}
+
+.timeline-content::before {
+	position: absolute;
+  content: "";
+  top: 0;
+  left: -16px;
+  right: initial;
+  border-left: 18px solid transparent;
+  border-right: 0;
+  border-top: 18px solid #064172;
+}
+
+.timeline-img {
+	width: 30px;
+	height: 30px;
+	background-image: url(../images/icon/icon-tl.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+	border-radius: 50%;
+	position: absolute;
+	margin-left: -15px;
+  margin-top: -15px;
+}
+
+.timeline-card {
+	padding: 0!important;
+}
+
+.timeline-card p {
+  padding: 0 20px;
+}
+
+.timeline-card a {
+  margin-left: 20px;
+}
+
+.timeline-item .timeline-img-header {
+  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('https://picsum.photos/1000/800/?random') center center no-repeat;
+  background-size: cover;
+}
+
+.timeline-img-header {
+	height: 200px;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.timeline-img-header h2 {
+  color: #FFFFFF;
+  position: absolute;
+  bottom: 5px;
+  left: 20px;
+}
+
+.date {
+	background: #FF4081;
+	display: inline-block;
+	color: #FFFFFF;
+	padding: 10px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+/* Responsive */
+@media screen and (min-width: 320px) {
   .gameplay-section .container {
     display: flex;
     justify-content: center;
@@ -31,8 +821,7 @@ body {
     display: none;
   } 
 }
-
-@media (min-width: 390px) {
+@media screen and (min-width: 390px) {
   /* Home  */
   .home-section .container {
     height: 50%;
@@ -47,20 +836,6 @@ body {
     text-align: center;
   }
 
-  .logo-content img{
-    width: 200px;
-    height: auto;
-  }
-
-  .box-download {
-    display: grid;
-    vertical-align: middle;
-    width: 100%;
-    height: auto;
-    justify-content: center;
-    z-index: 20;
-  }
-
   .box-content {
     position: relative;
     display: flex;
@@ -72,17 +847,25 @@ body {
     display: flex;
     justify-content: center;
     z-index: 20;
+    max-width: 715px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
   }
 
   .sologan {
-    text-align: center;
+    display: flex;
+    justify-content: center;
     z-index: 20;
+    max-width: 715px;
+    width: 100%;
+    margin: 0 auto;
   }
 
-  .sologan img{
-    padding: 10px 0;
-    width: 60%;
+  .sologan img {
+    max-width: 100%;
     height: auto;
+    padding: 15px;
   }
 
   .token-address {
@@ -145,12 +928,15 @@ body {
 
   .mobile-item {
     display: flex;
-    width: 12em;
-    height: auto;
+    justify-content: center;
+    max-width: 162px;
+    margin: 0 13px;
+    width: 100%;
   }
 
   .mobile-item img {
-    width: 60%;
+    max-width: 100%;
+    height: auto;
   }
 
   .window {
@@ -241,34 +1027,18 @@ body {
   /* End Team */
 
 }
-
-@media (min-width: 576px) {
+@media screen and (min-width: 576px) {
   /* Home  */
   .home-section .container {
     height: 50%;
   }
 
   .home-box {
-    display: flex;
     flex-direction: column;
   }
 
   .home-logo {
     text-align: center;
-  }
-
-  .logo-content img{
-    width: 200px;
-    height: auto;
-  }
-
-  .box-download {
-    display: grid;
-    vertical-align: middle;
-    width: 100%;
-    height: auto;
-    justify-content: center;
-    z-index: 20;
   }
 
   .box-content {
@@ -282,17 +1052,19 @@ body {
     display: flex;
     justify-content: center;
     z-index: 20;
+    max-width: 715px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
   }
 
   .sologan {
-    text-align: center;
+    display: flex;
+    justify-content: center;
     z-index: 20;
-  }
-
-  .sologan img{
-    padding: 10px 0;
-    width: 60%;
-    height: auto;
+    max-width: 715px;
+    width: 100%;
+    margin: 0 auto;
   }
 
   .token-address {
@@ -355,12 +1127,15 @@ body {
 
   .mobile-item {
     display: flex;
-    width: 12em;
-    height: auto;
+    justify-content: center;
+    max-width: 162px;
+    margin: 0 13px;
+    width: 100%;
   }
 
   .mobile-item img {
-    width: 60%;
+    max-width: 100%;
+    height: auto;
   }
 
   .window {
@@ -489,10 +1264,6 @@ body {
   /* End NFT */
 
   /* Team */
-  .carousel-wrap {
-    width: 50%;
-  }
-
   .team-header {
     margin-top: 12%;
   }
@@ -539,7 +1310,7 @@ body {
   }
   /* End partner */
 }
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   /* Home  */
   .home-section .container {
     height: 50%;
@@ -554,20 +1325,6 @@ body {
     text-align: center;
   }
 
-  .logo-content img{
-    width: 200px;
-    height: auto;
-  }
-
-  .box-download {
-    display: grid;
-    vertical-align: middle;
-    width: 100%;
-    height: auto;
-    justify-content: center;
-    z-index: 20;
-  }
-
   .box-content {
     position: relative;
     display: flex;
@@ -579,17 +1336,19 @@ body {
     display: flex;
     justify-content: center;
     z-index: 20;
+    max-width: 715px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
   }
 
   .sologan {
-    text-align: center;
+    display: flex;
+    justify-content: center;
     z-index: 20;
-  }
-
-  .sologan img{
-    padding: 10px 0;
-    width: 60%;
-    height: auto;
+    max-width: 715px;
+    width: 100%;
+    margin: 0 auto;
   }
 
   .token-address {
@@ -652,12 +1411,15 @@ body {
 
   .mobile-item {
     display: flex;
-    width: 12em;
-    height: auto;
+    justify-content: center;
+    max-width: 162px;
+    margin: 0 13px;
+    width: 100%;
   }
 
   .mobile-item img {
-    width: 60%;
+    max-width: 100%;
+    height: auto;
   }
 
   .window {
@@ -732,11 +1494,6 @@ body {
   /* End Gameplay */
 
   /* NFT */
-  .nft-section .carousel-wrap-nft{
-    width: 70%;
-    margin: auto;
-    position: relative;
-  }
 
   .nft-section .carousel-wrap-nft::before {
     content: '';
@@ -752,15 +1509,6 @@ body {
     background-position: center;
   }
 
-  .nft-section .carousel-wrap-nft .nft-carousel {
-    padding-top: 15px;
-  }
-
-  .nft-info {
-    justify-content: center;
-    align-items: center;
-  }
-
   .info-head {
     margin-top: 5%;
     height: 30%;
@@ -769,11 +1517,6 @@ body {
   .info-head h5 {
     margin-top: -3%;
     font-size: 1.1em;
-  }
-
-  .info {
-    width: auto;
-    height: 200px;
   }
 
   .info-txt {
@@ -826,13 +1569,6 @@ body {
     transform: skewY(25deg) translateY(-50px);
   }
 
-  .bg-road-map::after {
-    position: relative;
-    bottom: -50px;
-    left: -60px;
-    width: 130%;
-    height: 100%;
-  }
   /* End Road map */
   
   /* Partner */
@@ -870,9 +1606,8 @@ body {
   }
   /* End token */
 }
-
-@media only screen and (min-width: 992px) {
-  /* Section Home */
+@media screen and (min-width: 992px) {
+  /* Home */
   .home-section::after {
     position: absolute;
     content: "";
@@ -892,17 +1627,6 @@ body {
     flex-direction: column;
   }
 
-  .box-download {
-    display: grid;
-    vertical-align: middle;
-    width: 100%;
-    height: auto;
-    justify-content: center;
-    z-index: 20;
-    margin-top: auto;
-    padding-bottom: 100px;
-  }
-
   .box-content {
     position: relative;
     display: flex;
@@ -914,6 +1638,10 @@ body {
     display: flex;
     justify-content: center;
     z-index: 20;
+    max-width: 715px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px 15px 0;
   }
 
   .token-address {
@@ -982,22 +1710,38 @@ body {
     display: flex;
     justify-content: center;
     z-index: 20;
+    max-width: 715px;
+    width: 100%;
+    margin: 0 auto;
   }
 
   .sologan img {
-    width: 85%;
-    padding: 15px;
+    padding: 0;
   }
 
+  .sologan figure:hover {
+    opacity: 0.8;
+  }
+  
   .mobile-item {
     display: flex;
     justify-content: center;
-    width: 12em;
-    height: auto;
+    max-width: 162px;
+    margin: 0 13px;
+    width: 100%;
   }
 
   .mobile-item img {
-    width: 80%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .mobile-item a {
+    display: inline-block;
+  }
+
+  .mobile-item a:hover {
+    opacity: 0.8;
   }
 
   .bg-shadow {
@@ -1007,7 +1751,411 @@ body {
     bottom: 0;
     z-index: 15;
   }
-  /* End section Home */
+
+  /* End Home */
+
+  /* Video */
+  .video-section .container-fluid {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .video-section-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .video-section-box video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* End video */
+
+  /* Game Play */
+  .gameplay-section .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .ladies {
+    display: flex;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  .docter-strange {
+    display: flex;
+    justify-content: right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  .ladies img, 
+  .docter-strange img {
+      width: 40%;
+      height: auto;
+  }
+  .webgl-content {
+    margin-top: 50px;
+  }
+  /* End Game Play */
+
+  /* NFT */
+  .nft-section {
+    padding: 72px 0 0;
+    position: relative;
+  }
+
+  .nft-section .nft-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto !important;
+    padding-top: 90px;
+  }
+
+  .nft-section .carousel-wrap-nft::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX( -50%);
+    height: 100%;
+    width: 100vw;
+    background-image: url(../images/nft/owl_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .nft-carousel .item {
+    padding: 0;
+  }
+
+  .nft-carousel .nav-btn{
+    top: 190px;
+  }
+
+  .info-head {
+    margin-top: 10%;
+    height: 30%;
+  }
+
+  .info-head h5 {
+    margin-top: -6%;
+    font-size: 20px;
+    line-height: 56px;
+  }
+
+  .info {
+    width: auto;
+    height: 225px;
+  }
+
+  .info-img {
+    max-width: 500px;
+  }
+
+  .info-img img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .info-txt {
+    width: 80%;
+    font-size: 1.2em;
+    text-align: center;
+    max-height: 115px;
+    overflow: auto;
+  }
+
+  .nft-carousel .owl-item.item-active .item::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(62px);
+  }
+
+  /* End NFT */
+
+  /* Road map */
+  .bg-road-map::after {
+    width: 112%;
+    transform: translate(-50%, 10%);
+  }
+
+  .road-map-bar .list-item {
+    top: 13em;
+    transform: skewY(-20deg);
+  }
+
+  .list-item .road {
+    padding: 10px 10px 60px 15px;
+    transform: skewY(20deg) translateY(35px);
+  }
+
+  .road-map-partation.aos-init.aos-animate:nth-child(1) {
+    transform: translateZ(0);
+  }
+  .road-map-partation.aos-init.aos-animate:nth-child(2) {
+    transform: translateZ(0) translateY(1.5em);
+  }
+  .road-map-partation.aos-init.aos-animate:nth-child(3) {
+    transform: translateZ(0) translateY(2em);
+  }
+  .road-map-partation.aos-init.aos-animate:nth-child(4) {
+    transform: translateZ(0) translateY(1em);
+  }
+  .road-map-partation.aos-init.aos-animate:nth-child(5) {
+    transform: translateZ(0) translateY(-1em);
+  }
+
+  /* End Road map */
+
+  /* Team */
+  .team-section {
+    padding: 60px 0 40px;
+  }
+
+  .team-header {
+    margin-top: 7%;
+  }
+
+  span.img-text {
+    font-size: 1.2em;
+  }
+
+  .item-title .img-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+
+  .team-carousel .nav-btn{
+    height: 80px;
+    width: 50px;
+    top: 180px;
+  }
+
+  .team-carousel-box {
+    transform: translate(-50%, -44%)
+  }
+
+  .carousel-wrap {
+    width: 62%;
+  }
+  /* End Team */
+
+  /* Partner */
+  .partner-title {
+    margin-left: 27%;
+    margin-top: 20%;
+  }
+
+  /* End Partner */
+
+  /* Token */
+  .token-box {
+    background-size: 60%;
+    background-position: center;
+  }
+
+  .token-board {
+    width: 40%;
+    display: flex;
+    align-items: center;
+  }
+
+  .msm-content {
+    padding-bottom: 20px;
+  }
+
+  .token-cover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 100%;
+  }
+
+  .msm-title {
+    font-size: 28px;
+  }
+
+  .art-left img {
+    width: 50%;
+  }
+
+  .art-right {
+    display: flex;
+    justify-content: right;
+  }
+
+  .art-right img {
+    width: 50%;
+  }
+  .msm-content__txt {
+    max-height: 240px;
+    overflow: auto;
+  }
+  .token-content {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    max-width: 400px;
+  }
+
+  /* End token */
+}
+@media screen and (min-width: 1024px) {
+  /* Road-map */
+  .bg-road-map::after {
+    width: 130%;
+    transform: translate(-42%, 8%)
+  }
+  .road-map-partation.aos-init.aos-animate:nth-child(1) {
+    transform: translateZ(0) translateY(-5.5em);
+  }
+  .road-map-partation.aos-init.aos-animate:nth-child(2) {
+    transform: translateZ(0) translateY(-3em);
+  }
+  .road-map-partation.aos-init.aos-animate:nth-child(3) {
+    transform: translateZ(0) translateY(-1em);
+  }
+  .road-map-partation.aos-init.aos-animate:nth-child(4) {
+    transform: translateZ(0) translateY(-1em);
+  }
+  .road-map-partation.aos-init.aos-animate:nth-child(5) {
+    transform: translateZ(0) translateY(-1.5em);
+  }
+
+  /* END: Road-map */
+}
+@media screen and (min-width: 1200px) {
+  /* Home */
+  .home-section::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-image: url(../images/logo/sadow.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 10;
+  }
+
+  .home-box {
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .box-content {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .token-address {
+    display: grid;
+    justify-content: center;
+  }
+
+  .token-address table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    background-color: rgba(111,66,193,.3);
+    box-shadow: 0 0 100px 3px #b690fc;
+    width: 70%;
+  }
+
+  .token-address table tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+  }
+
+  .token-address table td {
+    vertical-align: top;
+    text-shadow: 1px 1px #6610f2;
+    padding: 0 5px;
+    border-color: #c7a0f7;
+    border-style: solid;
+    border-width: 0.5px;
+  }
+
+  .video-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+  }
+
+  .video-box video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .home-logo {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding-top: 100px;
+  }
+
+  .home-logo .light {
+    position: absolute;
+    top: 5%;
+    width: 40%;
+  }
+
+  .sologan {
+    display: flex;
+    justify-content: center;
+    z-index: 20;
+    max-width: 715px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .mobile-item {
+    display: flex;
+    justify-content: center;
+    max-width: 162px;
+    margin: 0 13px;
+    width: 100%;
+  }
+
+  .mobile-item img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .bg-shadow {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    z-index: 15;
+  }
+
+  /* End Home */
 
   /* Video */
   .video-section .container-fluid {
@@ -1030,340 +2178,7 @@ body {
   }
   /* End video */
 
-   /* Game Play */
-  .gameplay-section {
-    padding: 100px; 
-  }
-
-  .gameplay-section .container {
-    display: flex;
-    justify-content: center;
-  }
-
-
-  .ladies {
-    display: flex;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-  }
-
-  .docter-strange {
-    display: flex;
-    justify-content: right;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-  }
-
-  .ladies img, 
-  .docter-strange img {
-      width: 40%;
-      height: auto;
-  }
-  /* End Game Play */
-
-  /* NFT */
-  .nft-section {
-    padding: 100px 0;
-  }
-
-  .nft-section .carousel-wrap-nft { 
-    width: 70%;
-    margin: auto;
-    position: relative;
-  }
-
-  .nft-section .carousel-wrap-nft::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX( -50%);
-    height: 100%;
-    width: 100vw;
-    background-image: url(../images/nft/owl_bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .nft-carousel .item {
-    padding: 1.5em;
-  }
-
-  .nft-carousel .nav-btn{
-    top: 190px;
-  }
-
-  .info-head {
-    margin-top: 10%;
-    height: 30%;
-  }
-
-  .info-head h5 {
-    margin-top: -6%;
-    font-size: 20px;
-    line-height: 56px;
-  }
-
-  .info {
-    width: auto;
-    height: 300px;
-  }
-
-  .info-txt {
-    width: 80%;
-    font-size: 1.2em;
-  }
-
-  .bg-road-map::after {
-    bottom: -25px;
-    left: -60px;
-    width: 125%;
-    height: 100%;
-  }
-  /* End NFT */
-
-   /* Road map */
-   .road-map-bar .list-item {
-    top: 15em;
-    left: -3em;
-    transform: skewY(-20deg);
-  }
-
-  .list-item .road {
-    padding: 10px 10px 60px 15px;
-    transform: skewY(20deg) translateY(50px);
-  }
-  /* End Road map */
-
-   /* Team */
-   .team-section {
-     padding: 100px 0;
-   }
-
-   /* .carousel-wrap {
-    top: 20%;
-  } */
-
-   .team-header {
-    margin-top: 7%;
-  }
-
-  span.img-text {
-    font-size: 1.2em;
-  }
-
-  .team-carousel .nav-btn{
-    height: 80px;
-    width: 50px;
-    top: 180px;
-  }
-  /* End Team */
-
-  /* Partner */
-  .partner-title {
-    margin-left: 27%;
-    margin-top: 20%;
-  }
-  /* End Partner */
-
-  /* Token */
-  .token-box {
-    background-size: 60%;
-    background-position: center;
-  }
-
-  .token-board {
-    width: 35%;
-    display: flex;
-    align-items: center;
-  }
-
-  .msm-title {
-    font-size: 28px;
-  }
-
-  .art-left img {
-    width: 50%;
-  }
-
-  .art-right {
-    display: flex;
-    justify-content: right;
-  }
-
-  .art-right img {
-    width: 50%;
-  }
-  /* End token */
-}
-
-@media only screen and (min-width: 1200px) {
-  /* Section Home */
-  .home-section::after {
-    position: absolute;
-    content: "";
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    background-image: url(../images/logo/sadow.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 10;
-  }
-
-  .home-box {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .box-download {
-    display: grid;
-    vertical-align: middle;
-    width: 100%;
-    height: auto;
-    justify-content: center;
-    z-index: 20;
-    margin-top: auto;
-    padding-bottom: 100px;
-  }
-
-  .box-content {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-
-  .btn-download {
-    display: flex;
-    justify-content: center;
-    z-index: 20;
-  }
-
-  .token-address {
-    display: grid;
-    justify-content: center;
-  }
-
-  .token-address table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    background-color: rgba(111,66,193,.3);
-    box-shadow: 0 0 100px 3px #b690fc;
-    width: 70%;
-  }
-
-  .token-address table tbody {
-    display: table-row-group;
-    vertical-align: middle;
-    border-color: inherit;
-  }
-
-  .token-address table td {
-    vertical-align: top;
-    text-shadow: 1px 1px #6610f2;
-    padding: 0 5px;
-    border-color: #c7a0f7;
-    border-style: solid;
-    border-width: 0.5px;
-  }
-
-  .video-box {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    bottom: 0;
-    right: 0;
-  }
-
-  .video-box video {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
-
-  .home-logo {
-    display: flex;
-    width: 100%;
-    height: auto;
-    padding-top: 100px;
-  }
-
-  .home-logo .logo-content {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    z-index: 10;
-  }
-
-  .home-logo .light {
-    position: absolute;
-    top: 5%;
-    width: 40%;
-  }
-
-  .sologan {
-    display: flex;
-    justify-content: center;
-    z-index: 20;
-  }
-
-  .sologan img {
-    width: 85%;
-    padding: 15px;
-  }
-
-  .mobile-item {
-    display: flex;
-    justify-content: center;
-    width: 12em;
-    height: auto;
-  }
-
-  .mobile-item img {
-    width: 80%;
-  }
-
-  .bg-shadow {
-    padding: 0;
-    margin: 0;
-    position: absolute;
-    bottom: 0;
-    z-index: 15;
-  }
-  /* End section Home */
-
-   /* Video */
-   .video-section .container-fluid {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .video-section-box {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-
-  .video-section-box video {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
-  /* End video */
-
   /* GamePlay */
-  .gameplay-section {
-    padding: 100px 0;
-  }
-
   .ladies {
     display: block;
     position: absolute;
@@ -1388,19 +2203,22 @@ body {
     width: 55%;
     height: auto;
   }
+
+  .webgl-content::before {
+    max-width: 660px;
+  }
+
+  #gameContainer {
+    max-width: 575px;
+  }
+
+  .webgl-content {
+    margin-top: initial;
+  }
+
   /* End GamePlay */
 
   /* NFT */
-  .nft-section {
-    padding: 100px 0;
-  }
-
-  .nft-section .carousel-wrap-nft{
-    width: 70%;
-    margin-top: 20px;
-    position: relative;
-  }
-
   .nft-section .carousel-wrap-nft::before {
     content: '';
     position: absolute;
@@ -1420,11 +2238,6 @@ body {
     height: 40%;
   }
 
-  .info-txt {
-    width: 85%;
-    font-size: 1.5em;
-  }
-
   .nft-carousel {
     padding: 2.5em 0;
   }
@@ -1433,32 +2246,37 @@ body {
     top: 130px;
   }
 
-  .nft-carousel .item {
-    padding: 0;
+  .nft-carousel .owl-item.item-active .item::after {
+    top: 0;
+    left: 0;
+    transform: translateX(0);
   }
-  
+
   /* End NFT */
 
   /* Road map */
   .road-map-bar .list-item {
-    top: 13em;
-    left: -5em;
-    transform: skewY(-20deg);
+    top: 14em;
+  }
+
+  .bg-road-map::after {
+    transform: translate(-42%, 3%);
   }
 
   .list-item .road {
     padding: 20px 20px 60px 20px;
-    transform: skewY(20deg) translateY(120px);
+    transform: skewY(20deg) translateY(100px);
   }
+
   /* End Road map */
 
-   /* Team */
-   .team-section {
+  /* Team */
+  .team-section {
     padding: 100px 0;
   }
 
   .carousel-wrap {
-    width: 50%;
+    width: 66%;
   }
 
   .team-header {
@@ -1474,6 +2292,7 @@ body {
     width: 50px;
     top: 140px;
   }
+
   /* End Team */
 
   /* Partner */
@@ -1485,6 +2304,7 @@ body {
     margin-left: 27%;
     margin-top: 4%;
   }
+
   /* End Partner */
 
   /* Token */
@@ -1493,8 +2313,7 @@ body {
   }
 
   .token-box {
-    background-size: 50%;
-    background-position: center;
+    background-size: 48%;
   }
 
   .art-left img {
@@ -1516,17 +2335,127 @@ body {
 
   /* End token */
 }
-@media (min-width: 1400px) {
-     /* Road map */
+@media (min-width: 1280px) and (max-width: 1300px) { 
+  /* NFT */
+  .nft-section {
+    padding: 115px 0 0;
+    position: relative;
+  }
+
+  .nft-content {
+    height: auto !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+  }
+
+  .info {
+    width: auto;
+    height: 285px;
+  }
+
+  .nft-info {
+    padding-bottom: 25px;
+  }
+
+  .info-img {
+    max-width: 645px;
+  }
+
+  .nft-section .carousel-wrap-nft {
+    padding: 35px 0 0;
+  }
+
+  .nft-section::after {
+    display: none;
+  }
+
+  /* END: NFT */
+
+  /* Roadmap */
+  .bg-road-map::after {
+    width: 120%;
+    transform: translate(-42%, 0);
+  }
+
   .road-map-bar .list-item {
-    top: 13em;
-    left: -5em;
+    top: 17em;
+  }
+  /* END: Roadmap */
+
+  /* Token */
+  .msm-content {
+    padding-bottom: 32px;
+  }
+
+  /* END: Token */
+}
+@media screen and (min-width: 1300px) {
+  /* Roadmap */
+  .road-map-bar .list-item {
+    top: 9em;
+  }
+
+  .bg-road-map::after {
+    transform: translate(-45%, 9%);
+  }
+
+  /* END: Roadmap */
+
+  /* Token */
+  .token-board {
+    width: 33%;
+  }
+
+  .msm-content {
+    padding-bottom: 35px;
+  }
+
+  /* END: Token */
+}
+@media screen and (min-width: 1400px) {
+  /* Home */
+  .logo-content {
+    max-width: 230px;
+  }
+
+  .box-download {
+    max-width: 600px;
+  }
+
+  /* END: Home */
+
+  /* Road map */
+  .road-map-bar .list-item {
+    top: 17em;
     transform: skewY(-18deg);
+  }
+
+  .bg-road-map::after {
+    transform: translate(-43%, 1%);
+    width: 115%;
   }
 
   .list-item .road {
     padding: 20px 20px 60px 20px;
-    transform: skewY(18deg) translateY(35px);
+    transform: skewY(18deg) translateY(95px);
+  }
+
+  .road-map-partation.aos-init.aos-animate:nth-child(1) {
+    transform: translateZ(0) translateY(-3em);
+  }
+  .road-map-partation.aos-init.aos-animate:nth-child(2) {
+    transform: translateZ(0) translateY(0);
+  }
+  .road-map-partation.aos-init.aos-animate:nth-child(3) {
+    transform: translateZ(0) translateY(1em);
+  }
+  .road-map-partation.aos-init.aos-animate:nth-child(4) {
+    transform: translateZ(0) translateY(1em);
+  }
+  .road-map-partation.aos-init.aos-animate:nth-child(5) {
+    transform: translateZ(0) translateY(-2.5em);
   }
   /* End Road map */
 
@@ -1540,18 +2469,63 @@ body {
     width: 62%;
     height: auto;
   }
+
+  .webgl-content::before {
+    max-width: 765px;
+  }
+
+  #gameContainer {
+    max-width: 675px;
+  }
   /* End Gameplay */
-  
+
+  /* NTF */
+  .nft-section {
+    padding: 115px 0 0;
+    position: relative;
+  }
+
+  .nft-content {
+    height: auto !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+  }
+
+  .info {
+    width: auto;
+    height: 285px;
+  }
+
+  .nft-info {
+    padding-bottom: 25px;
+  }
+
+  .info-img {
+    max-width: 645px;
+  }
+
+  .nft-section .carousel-wrap-nft {
+    padding: 35px 0 0;
+  }
+
+  .nft-section::after {
+    display: none;
+  }
+
+  /* END: NTF */
+
   /* Team */
   .team-header {
     margin-top: 3%
   }
+
   /* End Team */
 
   /* Token */
   .token-box {
-    background-size: contain;
-    background-position: center;
+    background-size: 70%;
   }
 
   .art-left img {
@@ -1573,875 +2547,118 @@ body {
   }
 
   .token-content {
-    padding-top: 100px;
+    max-width: initial;
   }
- 
+
   /* End token */
 }
-
-
-@media (min-width: 1600px) {
+@media screen and (min-width: 1600px) {
   /* Road map */
-.road-map-bar .list-item {
- top: 18em;
- left: -5em;
- transform: skewY(-18deg);
-}
+  .road-map-bar .list-item {
+    top: 14em;
+  }
 
-.list-item .road {
- padding: 20px 20px 60px 20px;
- transform: skewY(18deg) translateY(35px);
-}
-/* End Road map */
-
-/* Gameplay */
-.ladies img {
- width: 80%;
- height: auto;
-}
-
-.docter-strange img {
- width: 80%;
- height: auto;
-}
-/* End Gameplay */
-
-/* Team */
-.team-header {
- margin-top: 3%
-}
-
-.carousel-wrap {
-  width: 45%;
-}
-/* End Team */
-
-/* Partner */
-.partner-title {
-  margin-top: 8%;
-}
-/* End Partner */
-
-/* Token */
-.token-box {
- background-size: contain;
- background-position: center;
-}
-
-.art-left img {
- width: 100%;
-}
-
-.art-right {
- display: flex;
- justify-content: right;
-}
-
-.art-right img {
- width: 100%;
-}
-
-.token-board {
- width: 45%;
- align-items: flex-start;
-}
-
-.msm-title {
-  font-size: 2em;
-}
-
-/* End token */
-}
-/* End 1600 */
-
-/*Header Navbar*/
-.navbar-custom {
-    padding: 20px 0 12px 0;
+  .bg-road-map::after {
+    transform: translate(-43%, 1%);
     width: 100%;
-    border-radius: 0;
-    z-index: 30;
-    margin-bottom: 0;
-    -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-    /* background-color: rgb(31, 15, 53,.5); */
-    /* -webkit-box-shadow:  0 1px 3px #fa9419;
-    box-shadow: 0 1px 3px #fa9419; */
-}
-
-.nav-sticky.navbar-custom {
-  background-color: rgb(31, 15, 53,.5)
-}
-
-.navbar-collapse  {
-  justify-content: center;
-}
-
-/* Menu */
-  .navbar-custom .navbar-nav li a {
-    color: #dcb81f;
-    /* font-weight: 1000; */
-    display: block;
-    text-align: center;
-    font-size: 15px;
-    /* color: #fff; */
-    padding: 5px 15px;
   }
 
-  .navbar-custom .navbar-nav li.active a, 
-  .navbar-custom .navbar-nav li a:active, 
-  .navbar-custom .navbar-nav li a:hover{
-    color: #ffa712 !important;
+  .list-item .road {
+    padding: 20px 20px 60px 20px;
+    transform: skewY(18deg) translateY(25px);
   }
 
-  .navbar-custom .navbar-nav li.active a:hover{
-    border: none;
-  }
-
-  li.nav-item.active {
-    box-sizing: border-box;
-    border: 2px solid #fa9419;
-    border-radius: 3px;
-    /* transform: skewX(-6deg); */
-  }
-/* End Menu */
-
-/*End Header*/
-
-/*Section Start*/
-.scroll-container {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  margin: 0;
-  padding: 0;
-}
-
-.scroll-container section {
-  width: 100%;
-  height: 100%;
-  min-height: 100vh;
-}
-
-.section .container-fluid {
-  margin: 0;
-  padding: 0;
-}
-
-.bg-back {
-    height: 100%;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-}
-
-.txt-title {
-   font-size: 2em;
-    line-height: 56px;
-    font-family: "PT Sans Caption", sans-serif;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    text-shadow: rgb(23 175 255 / 49%) 0px 0px 6px;
-    position: relative;
-    font-weight: 700;
-}
-/*Section End*/
-
-/*Iframe yt Start*/
-.youtube {
-    position:relative;
-    padding-bottom:56.25%;
-    padding-top:30px;
-    height:0;
-    overflow:hidden;
-}
-
-.youtube iframe, .youtube object, .youtube embed {
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-}
-/*End Iframe yt*/
-
-/*Gamplay Start*/
-.gameplay-section {
-  background-image: url(../images/gameplay/gameplay.png);
-  background-repeat: no-repeat;
-  background-size: 100% 100%; 
-}
-
-.gameplay-section::after {
-  position: absolute;
-  content: "";
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  background-image: url(../images/logo/sadow.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.gameplay-iframe img{
-  z-index: 0;
-}
-
-.webgl-content {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.webgl-content::before {
-  content: "";
-  position: absolute;
-  background-image: url(../images/gameplay/iframe.png);
-  background-repeat: no-repeat;
-  background-size:contain;
-  background-position: center;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
-#gameContainer {
-  width: 70%;
-  max-width: 750px;
-  height: 50%;
-  z-index: 10;
-}
-
-.ladies {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-
-.docter-strange {
-  right: 0;
-  bottom: 0;
-  position: absolute;
-}
-
-
-/*Gameplay End*/
-
-/* NFT Start */
-.nft-section {
-  height: 100%;
-  background-image: url(../images/nft/nft_bg.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.nft-section::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 50%;
-  width: 100%;
-  background-image: url(../images/logo/sadow.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.info {
-  background: url(../images/nft/info.png) no-repeat center;
-  background-size: contain;
-}
-
-.info-head {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  background: url(../images/nft/title.png) no-repeat center;
-  background-size: contain;
-}
-
-.info-head h5{
-  font-family: "PT Sans Caption", sans-serif;
-  text-align: center;
-  color: rgb(255, 255, 255);
-  text-shadow: rgb(23 175 255 / 49%) 0px 0px 6px;
-  position: relative;
-  font-weight: 700;
-}
-
-.info-body {
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.nft-carousel .owl-nav{
-  overflow: hidden;
-  height: 0px;
-  display: block !important;
-}
-
-.nft-carousel.owl-theme .owl-dots .owl-dot.active span, 
-.nft-carousel.owl-theme .owl-dots .owl-dot:hover span {
-  background: #2caae1;
-}
-
-.nft-carousel .item {
-  text-align: center;
-}
-
-.nft-carousel .nav-btn{
-  height: 80px;
-  position: absolute;
-  width: 80px;
-  cursor: pointer;
-}
-
-.nft-carousel .owl-prev.disabled,
-.nft-carousel .owl-next.disabled{
-  pointer-events: none;
-  opacity: 0.2;
-}
-
-.nft-carousel .prev-slide{
-  background: url(../images/nft/arr-left.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  left: -100px;
-}
-
-.nft-carousel .next-slide{
-  background: url(../images/nft/arr_right.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  right: -100px;
-}
-
-/* .nft-carousel .owl-item.active.first {
-  width: 100%;
-  height: 100%;
-  background-image: url(../images/nft/border_card.png);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  z-index: 100;
-} */
-
-
-/* END NFT */
-
-
-/*Roadmap Start*/
-.roadmap-section {
-    background: url(../images/roadmap/bg_roadmap.png) no-repeat center;
-    background-size: cover;
-}
-
-.bg-road-map::after {
-  position: absolute;
-  content: "";
-  background-image: url(../images/roadmap/rocket.png);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-position: bottom;
-}
- 
-.road-map-holder {
-  transform: none;
-  margin: auto;
-  position: relative
-}
-
-.road-map-bar {
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  display: flex;
-  margin: auto;
-}
-
-.road-map-content {
-  color: #fff;
-  font-size: 12px;
-  width: 100%;
-}
-
-.road-map-content span {
-  font-size: 1em;
-  color: #f29d0b;
-}
-
-.road-map-time {
-  font-weight: 1000;
-  font-size: 1.2em;
-  color: #f29d0b;
-}
-
-.road-map-partation {
-  position: relative;
-  padding: 0 15px;
-  margin-right: 20px;
-  width: 16%;
-  flex: 0 0 16%;
-  -ms-flex: 0 0 16%;
-}
-
-.road-map-bar .list-item {
-  display: flex;
-  flex-wrap: wrap;
-  position: absolute;
-  width: 100%;
-}
-
-.list-item .road {
-  position: absolute;
-  background: url(../images/roadmap/mark.png);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-
-/* Roadmap End*/
-
-/* Team Start */
-  .team-section {
-    width: 100%;
-    background-image: url(../images/team/bg.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-  }
-
-  .team-section::after {
-    position: absolute;
-    content: "";
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 30%;
-    background-image: url(../images/logo/sadow.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 2;
-  }
-
-  .team-board {
-    width: 100%;
-    height: 100%;
-    background-image: url(../images/team/board1.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-  } 
-
-  .team-header {
-    position: absolute;
-  }
-
-  .team-header .txt-title {
-    padding: 0.3em;
-    background: url(../images/team/btn_core.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-
-  .team-carousel-box {
-    width: 100%;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
-  }
-
-  .carousel-wrap {
-    margin: auto;
-    position: relative;
-  }
-
-  .team-carousel .owl-nav{
-    overflow: hidden;
-    height: 0px;
-    display: block !important;
-  }
-
-  .owl-theme .owl-dots .owl-dot.active span, 
-  .owl-theme .owl-dots .owl-dot:hover span {
-    background: #2caae1;
-  }
-
-  .team-carousel .item {
-    text-align: center;
-  }
-
-  .team-carousel .nav-btn{
-    position: absolute;
-    cursor: pointer;
-  }
-
-  .team-carousel .owl-prev.disabled,
-  .team-carousel .owl-next.disabled{
-    pointer-events: none;
-    opacity: 0.2;
-  }
-
-  .team-carousel .prev-slide{
-    background: url(../images/team/arrow-left.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-
-  .team-carousel .next-slide{
-    background: url(../images/team/arrow-right.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    right: -60px;
-  }
-
-  span.img-text {
-    color: white;
-    text-decoration: none;
-    outline: none;
-    transition: all 0.4s ease;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    cursor: pointer;
-    width: 100%;
-    display: block;
-    text-transform: capitalize;
-  }
- 
-.team-carousel .item {
-    padding: 10px;
-}
-
-.team-carousel .item .role {
-    top: 3px;
-    left: 0;
-    position: absolute;
-    width: 25%;
-    height: 25%;
-    background: url(../images/team/role.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.team-carousel .item  .img-item {
-  margin-top: 20px;
-}
- 
-.team-carousel .item .item-content {
-  padding: 10px;
-  background: url(../images/team/item_bg.png);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-
-/* End Team */
-
-
-/* Partner Start */
-.partner-section {
-  background-image: url(../images/partner/partner_bg.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.partner-section::after {
-    position: absolute;
-    content: "";
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    background-image: url(../images/partner/shadow.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.partner-board {
-  position: relative;
-  background-image: url(../images/partner/board1.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-
-.partner-board img{
-  width: 100%;
-}
-
-.partner-title {
-  position: absolute;
-}
-
-.partner-list {
-  /* display: flex;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 10px auto 0;
-  justify-content: center; */
-}
-
-.partner-item {
-  /* width: 16.666%;
-  padding: 0 12px;
-  margin-bottom: 10px; */
-}
-/* End Partner */
-
-/* Token Start */
-.token-section {
-  background-image: url(../images/token/bg.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  color: white;
-}
-
-.token-section::after {
-  position: absolute;
-  content: "";
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  background-image: url(../images/logo/sadow.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 2;
-}
-
-.token-box {
-  position: relative;
-  background-image: url(../images/token/board.png);
-  background-repeat: no-repeat;
-  z-index: 1;
-}
-
-/* .msm-head {
-  margin-top: 10%;
-} */
-
-.msm-title {
-  padding: 0;
-  margin: 0;
-  line-height: 56px;
-  font-family: "PT Sans Caption", sans-serif;
-  text-align: left;
-  color: rgb(255, 255, 255);
-  text-shadow: rgb(23 175 255 / 49%) 0px 0px 6px;
-  position: relative;
-  font-weight: 700;
-}
-
-.msm-coin {
-  text-align: center;
-}
-.msm-coin img {
-  width: 80%;
-}
-
-.art-left {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-
-.art-right {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
-
-/* End Token */
-
-/*Social Start*/
-.social-btn-group {
-    position: fixed;
-    bottom: 1%;
-    right: 0;
-    width: 50px;
-    background-color: rgba(0,0,0,.6);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    border-radius: 10px 0 0 10px;
-    padding: 10px 0 10px 2px;
-    z-index: 999;
-}
-
-.social-btn-group a {
-    width: 35px;
-    color: #007bff;
-    text-decoration: none;
-    background-color: transparent;
-    -webkit-text-decoration-skip: objects;
-}
-
-.social-btn-group a img {
-    width: 100%;
+  /* End Road map */
+
+  /* Gameplay */
+  .ladies img {
+    width: 80%;
     height: auto;
-    margin: 7px 5px;
-}
-/*Social End*/
+  }
 
-/* Timeline */
-.timeline-mb {
-  position: relative;
-  padding: 100px 0;
+  .docter-strange img {
+    width: 80%;
+    height: auto;
+  }
+
+  .webgl-content::before {
+    max-width: 845px;
+  }
+
+  #gameContainer {
+    max-width: 745px;
+  }
+
+  /* End Gameplay */
+
+  /* Team */
+  .team-header {
+    margin-top: 3%
+  }
+  .team-board {
+    max-width: 1180px;
+  }
+
+  /* End Team */
+
+  /* Partner */
+  .partner-title {
+    margin-top: 8%;
+  }
+
+  /* End Partner */
+
+  /* Token */
+  .art-left img {
+    width: 100%;
+  }
+
+  .art-right {
+    display: flex;
+    justify-content: right;
+  }
+
+  .art-right img {
+  width: 100%;
+  }
+
+  .token-board {
+    width: 45%;
+    align-items: flex-start;
+  }
+
+  .msm-title {
+    font-size: 2em;
+  }
+
+  /* End token */
+}
+@media screen and (min-width: 1680px) {
+  /* Road map */
+  .road-map-bar .list-item {
+    top: 19em;
+  }
+
+  /* END: Road map */
 }
 
-.timeline-mb::before {
-	content: '';
-  background: #FFFFFF;
+/* END: Responsive */
+
+/* Custom scrollbar */
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
   width: 5px;
-  height: 77%;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  background-color: #F5F5F5;
 }
 
-.timeline-item {
-	width: 100%;
-	margin-bottom: 35px;
-}
-
-.timeline-item .timeline-content {
-  float: right;
-  padding: 40px 30px 10px 30px;
-}
-
-.timeline-item .timeline-content .date {
-  right: auto;
-  left: 0;
-}
-
-.timeline-item::after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-.timeline-content {
-	position: relative;
-	width: 45%;
-  padding: 20px 20px 15px;
-	border-radius: 4px;
-  background-color: #064172;
-	box-shadow: 0 20px 25px -15px rgba(0, 0, 0, .3);
+::-webkit-scrollbar-thumb {
   cursor: pointer;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, rgb(122,153,217)), color-stop(0.72, rgb(73,125,189)), color-stop(0.86, rgb(28,58,148)));
 }
 
-.timeline-content::before {
-	position: absolute;
-  content: "";
-  top: 0;
-  left: -16px;
-  right: initial;
-  border-left: 18px solid transparent;
-  border-right: 0;
-  border-top: 18px solid #064172;
-}
-
-.timeline-img {
-	width: 30px;
-	height: 30px;
-	background-image: url(../images/icon/icon-tl.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-	border-radius: 50%;
-	position: absolute;
-	/* left: 50%; */
-	margin-left: -15px;
-  margin-top: -15px;
-}
- 
-.timeline-card {
-	padding: 0!important;
-}
-
-.timeline-card p {
-  padding: 0 20px;
-}
-
-.timeline-card a {
-  margin-left: 20px;
-}
-
-.timeline-item .timeline-img-header {
-  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('https://picsum.photos/1000/800/?random') center center no-repeat;
-  background-size: cover;
-}
-
-.timeline-img-header {
-	height: 200px;
-	position: relative;
-	margin-bottom: 20px;
-}
-
-.timeline-img-header h2 {
-  color: #FFFFFF;
-  position: absolute;
-  bottom: 5px;
-  left: 20px;
-}
-
-.date {
-	background: #FF4081;
-	display: inline-block;
-	color: #FFFFFF;
-	padding: 10px;
-	position: absolute;
-	top: 0;
-	right: 0;
-}
-
-@media screen and (max-width: 768px) {
-  .timeline {
-    display: none;
-  }
-
-  .timeline-mb {
-    display: block;
-  }
-
-  .timeline-mb::before {
-    left: 50px;
-  }
-
-  .timeline-mb .timeline-img {
-    left: 50px;
-  }
-
-  .timeline-mb .timeline-content {
-    max-width: 100%;
-    width: auto;
-    margin-left: 65px;
-  }
-
-  .timeline-mb .timeline-item:nth-child(even) .timeline-content{
-    float: none;
-  }
-}
-
+/* END: Custom scrollbar */
