@@ -224,6 +224,7 @@ li.nav-item.active {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  position: relative;
 }
 
 .info {
@@ -284,25 +285,32 @@ li.nav-item.active {
   opacity: 0.2;
 }
 
-.nft-carousel .prev-slide{
+.nft-carousel .prev-slide,
+.nft-carousel .next-slide {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nft-carousel .prev-slide {
   background: url(../images/nft/arr-left.png);
   background-repeat: no-repeat;
   background-size: contain;
   left: -100px;
 }
 
-.nft-carousel .next-slide{
+.nft-carousel .next-slide {
   background: url(../images/nft/arr_right.png);
   background-repeat: no-repeat;
   background-size: contain;
   right: -100px;
 }
 
-.nft-carousel .owl-item .item {
+.nft-carousel .owl-item .item a {
   position: relative;
+  display: inline-block;
 }
 
-.nft-carousel .owl-item.item-active .item::after {
+.nft-carousel .owl-item.item-active .item a::after {
   width: 100%;
   height: 100%;
   background-image: url(../images/nft/border_card.png);
@@ -311,6 +319,10 @@ li.nav-item.active {
   z-index: 100;
   content: '';
   display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .nft-section .owl-carousel .owl-item img {
@@ -1209,9 +1221,9 @@ span.img-text {
   /* End Gameplay */
 
    /* NFT */
-   .nft-section .carousel-wrap-nft {
+  .nft-section .carousel-wrap-nft {
     width: 70%;
-    margin: auto;
+    margin: 0 auto;
     position: relative;
   }
 
@@ -1221,16 +1233,12 @@ span.img-text {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    height: 105%;
+    height: 50vh;
     width: 100vw;
     background-image: url(../images/nft/owl_bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-  }
-
-  .nft-section .carousel-wrap-nft .nft-carousel {
-    padding-top: 15px;
   }
 
   .nft-info {
@@ -1258,9 +1266,6 @@ span.img-text {
     font-size: 1.2em;
   }
 
-  .nft-carousel .nav-btn {
-    top: 170px;
-  }
   /* End NFT */
 
   /* Team */
@@ -1495,20 +1500,6 @@ span.img-text {
 
   /* NFT */
 
-  .nft-section .carousel-wrap-nft::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 105%;
-    width: 100vw;
-    background-image: url(../images/nft/owl_bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-
   .info-head {
     margin-top: 5%;
     height: 30%;
@@ -1524,9 +1515,6 @@ span.img-text {
     font-size: 1.2em;
   }
 
-  .nft-carousel .nav-btn{
-    top: 170px;
-  }
   /* End NFT */
 
   /* Team */
@@ -1815,40 +1803,17 @@ span.img-text {
   /* End Game Play */
 
   /* NFT */
-  .nft-section {
-    padding: 72px 0 0;
-    position: relative;
-  }
-
   .nft-section .nft-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: auto !important;
-    padding-top: 90px;
-  }
-
-  .nft-section .carousel-wrap-nft::before {
-    content: '';
+    width: 100%;
     position: absolute;
     top: 0;
-    left: 50%;
-    transform: translateX( -50%);
-    height: 100%;
-    width: 100vw;
-    background-image: url(../images/nft/owl_bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 
   .nft-carousel .item {
     padding: 0;
-  }
-
-  .nft-carousel .nav-btn{
-    top: 190px;
   }
 
   .info-head {
@@ -1884,11 +1849,24 @@ span.img-text {
     overflow: auto;
   }
 
-  .nft-carousel .owl-item.item-active .item::after {
+  .nft-info, .nft-list {
+    height: 50vh;
+    align-items: flex-end;
+  }
+
+  .nft-list {
+    align-items: flex-start;
+  }
+
+  .carousel-wrap-nft {
+    height: 50vh;
+  }
+
+  .nft-section .nft-list .owl-carousel.nft-carousel {
     position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateX(62px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   /* End NFT */
@@ -2226,38 +2204,12 @@ span.img-text {
   /* End GamePlay */
 
   /* NFT */
-  .nft-section .carousel-wrap-nft::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX( -50%);
-    height: 100%;
-    width: 100vw;
-    background-image: url(../images/nft/owl_bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
 
   .info-head {
     margin: 0;
     height: 40%;
   }
 
-  .nft-carousel {
-    padding: 2.5em 0;
-  }
-
-  .nft-carousel .nav-btn{
-    top: 130px;
-  }
-
-  .nft-carousel .owl-item.item-active .item::after {
-    top: 0;
-    left: 0;
-    transform: translateX(0);
-  }
 
   /* End NFT */
 
@@ -2344,34 +2296,13 @@ span.img-text {
 }
 @media (min-width: 1280px) and (max-width: 1300px) { 
   /* NFT */
-  .nft-section {
-    padding: 115px 0 0;
-    position: relative;
-  }
-
-  .nft-content {
-    height: auto !important;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -40%);
-  }
-
   .info {
     width: auto;
     height: 285px;
   }
 
-  .nft-info {
-    padding-bottom: 25px;
-  }
-
   .info-img {
     max-width: 645px;
-  }
-
-  .nft-section .carousel-wrap-nft {
-    padding: 35px 0 0;
   }
 
   .nft-section::after {
@@ -2487,34 +2418,13 @@ span.img-text {
   /* End Gameplay */
 
   /* NTF */
-  .nft-section {
-    padding: 115px 0 0;
-    position: relative;
-  }
-
-  .nft-content {
-    height: auto !important;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -40%);
-  }
-
   .info {
     width: auto;
     height: 285px;
   }
 
-  .nft-info {
-    padding-bottom: 25px;
-  }
-
   .info-img {
     max-width: 645px;
-  }
-
-  .nft-section .carousel-wrap-nft {
-    padding: 35px 0 0;
   }
 
   .nft-section::after {

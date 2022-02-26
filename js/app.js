@@ -80,6 +80,9 @@
         600: {
           items: 2,
         },
+        992: {
+          items: 3,
+        },
         1200: {
           items: 4,
         },
@@ -95,6 +98,20 @@
       $(this).addClass("item-active");
     });
   });
+
+  // check height background and item
+  var heightBg = $(".carousel-wrap-nft").height();
+  var heightItem = $(".owl-item").height();
+
+  if (heightBg - heightItem <= 10) {
+    $(".owl-item .item").css({
+      width: "75%",
+      margin: "auto",
+    });
+    $(".nft-list").css({
+      "margin-top": "auto",
+    });
+  }
 
   //Scroll
   $.scrollify({
