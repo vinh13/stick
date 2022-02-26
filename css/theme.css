@@ -23,7 +23,6 @@ body {
     margin-bottom: 0;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
-    background-color: rgb(31, 15, 53,.5);
 }
 
 .nav-sticky.navbar-custom {
@@ -190,7 +189,7 @@ li.nav-item.active {
 
 #gameContainer {
   width: 100%;
-  max-width: 500px;
+  max-width: 435px;
   z-index: 10;
   position: absolute;
   top: 50%;
@@ -355,8 +354,8 @@ li.nav-item.active {
   background-position: center;
   display: inline-block;
   z-index: 0;
-  width: 100%;
-  height: 100%;
+  width: 130%;
+  height: 100vh;
   bottom: 0;
   left: 50%;
 }
@@ -498,6 +497,12 @@ li.nav-item.active {
   opacity: 0.2;
 }
 
+.team-carousel .prev-slide,
+.team-carousel .next-slide {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .team-carousel .prev-slide{
   background: url(../images/team/arrow-left.png);
   background-repeat: no-repeat;
@@ -525,10 +530,6 @@ span.img-text {
   text-transform: capitalize;
 }
 
-.team-carousel .item {
-    padding: 10px;
-}
-
 .team-carousel .item .role {
     top: 3px;
     left: 0;
@@ -547,7 +548,6 @@ span.img-text {
 
 .team-carousel .item .img-item {
   margin-top: 20px;
-  max-width: 260px;
   max-height: 190px;
   overflow: hidden;
 }
@@ -1285,24 +1285,12 @@ span.img-text {
   .team-carousel .nav-btn {
     height: 65px;
     width: 60px;
-    top: 130px;
   }
 
   .team-carousel .prev-slide {
     left: -35px;
   }
   /* End Team */
-
-  /* Roadmap */
-  /* .road-map-bar .list-item {
-    height: 100%;
-  }
-
-  .road-map-partation:not(:first-child) {
-    margin-top: 170px;
-  } */
-
-  /* End Roadmap */
 
   /* Partner */
   .partner-title {
@@ -1546,10 +1534,9 @@ span.img-text {
    }
    
    .road-map-bar .list-item {
-    height: auto;
-    top: 15em;
-    left: -3em;
-    transform: skewY(-25deg);
+    top: 0;
+    left: 0;
+    transform: translate(-5%, 0%) skewY(-20deg);
   }
 
   .list-item .road {
@@ -1873,34 +1860,31 @@ span.img-text {
 
   /* Road map */
   .bg-road-map::after {
-    width: 112%;
-    transform: translate(-50%, 10%);
+    transform: translate(-42%, -2%);
   }
 
   .road-map-bar .list-item {
-    top: 13em;
-    transform: skewY(-20deg);
+    top: 20%;
   }
 
   .list-item .road {
     padding: 10px 10px 60px 15px;
-    transform: skewY(20deg) translateY(35px);
   }
 
-  .road-map-partation.aos-init.aos-animate:nth-child(1) {
-    transform: translateZ(0);
+  .road-map-partation.aos-init.aos-animate:nth-child(1) .road {
+    transform: skewY(20deg) translateY(60px);
   }
-  .road-map-partation.aos-init.aos-animate:nth-child(2) {
-    transform: translateZ(0) translateY(1.5em);
+  .road-map-partation.aos-init.aos-animate:nth-child(2) .road  {
+    transform: skewY(20deg) translateY(105px);
   }
-  .road-map-partation.aos-init.aos-animate:nth-child(3) {
-    transform: translateZ(0) translateY(2em);
+  .road-map-partation.aos-init.aos-animate:nth-child(3) .road  {
+    transform: skewY(20deg) translateY(125px);
   }
-  .road-map-partation.aos-init.aos-animate:nth-child(4) {
-    transform: translateZ(0) translateY(1em);
+  .road-map-partation.aos-init.aos-animate:nth-child(4) .road  {
+    transform: skewY(20deg) translateY(130px);
   }
-  .road-map-partation.aos-init.aos-animate:nth-child(5) {
-    transform: translateZ(0) translateY(-1em);
+  .road-map-partation.aos-init.aos-animate:nth-child(5) .road  {
+    transform: skewY(20deg) translateY(115px);
   }
 
   /* End Road map */
@@ -1915,7 +1899,7 @@ span.img-text {
   }
 
   span.img-text {
-    font-size: 1.2em;
+    font-size: 1em;
   }
 
   .item-title .img-text {
@@ -1926,10 +1910,17 @@ span.img-text {
     -webkit-box-orient: vertical;
   }
 
+  .item-body .img-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+
   .team-carousel .nav-btn{
     height: 80px;
     width: 50px;
-    top: 180px;
   }
 
   .team-carousel-box {
@@ -1939,6 +1930,11 @@ span.img-text {
   .carousel-wrap {
     width: 62%;
   }
+
+  .team-carousel .item .role {
+    left: -5px;
+  }
+
   /* End Team */
 
   /* Partner */
@@ -2007,26 +2003,21 @@ span.img-text {
 @media screen and (min-width: 1024px) {
   /* Road-map */
   .bg-road-map::after {
-    width: 130%;
-    transform: translate(-42%, 8%)
-  }
-  .road-map-partation.aos-init.aos-animate:nth-child(1) {
-    transform: translateZ(0) translateY(-5.5em);
-  }
-  .road-map-partation.aos-init.aos-animate:nth-child(2) {
-    transform: translateZ(0) translateY(-3em);
-  }
-  .road-map-partation.aos-init.aos-animate:nth-child(3) {
-    transform: translateZ(0) translateY(-1em);
-  }
-  .road-map-partation.aos-init.aos-animate:nth-child(4) {
-    transform: translateZ(0) translateY(-1em);
-  }
-  .road-map-partation.aos-init.aos-animate:nth-child(5) {
-    transform: translateZ(0) translateY(-1.5em);
+    transform: translate(-42%, 11%);
   }
 
   /* END: Road-map */
+
+  /* Team */
+  .team-carousel .item {
+    padding: 10px;
+  }
+
+  .team-carousel .item .role {
+    left: 0;
+  }
+
+  /* END: Team */
 }
 @media screen and (min-width: 1200px) {
   /* Home */
@@ -2194,7 +2185,7 @@ span.img-text {
   }
 
   #gameContainer {
-    max-width: 575px;
+    max-width: 495px;
   }
 
   .webgl-content {
@@ -2215,16 +2206,15 @@ span.img-text {
 
   /* Road map */
   .road-map-bar .list-item {
-    top: 14em;
+    top: 17%;
   }
 
   .bg-road-map::after {
-    transform: translate(-42%, 3%);
+    transform: translate(-46%, 9%);
   }
 
   .list-item .road {
     padding: 20px 20px 60px 20px;
-    transform: skewY(20deg) translateY(100px);
   }
 
   /* End Road map */
@@ -2246,10 +2236,8 @@ span.img-text {
     font-size: 1em;
   }
 
-  .team-carousel .nav-btn{
-    height: 80px;
-    width: 50px;
-    top: 140px;
+  .item-body .img-text {
+    -webkit-line-clamp: 3; /* number of lines to show */
   }
 
   /* End Team */
@@ -2313,34 +2301,19 @@ span.img-text {
 
   /* Roadmap */
   .bg-road-map::after {
-    width: 120%;
-    transform: translate(-42%, 0);
-  }
-
-  .road-map-bar .list-item {
-    top: 17em;
-  }
-  /* END: Roadmap */
-
-  /* Token */
-  .msm-content {
-    padding-bottom: 32px;
-  }
-
-  /* END: Token */
-}
-@media screen and (min-width: 1300px) {
-  /* Roadmap */
-  .road-map-bar .list-item {
-    top: 9em;
-  }
-
-  .bg-road-map::after {
     transform: translate(-45%, 9%);
   }
 
   /* END: Roadmap */
 
+  /* Token */
+  .msm-content {
+    padding-bottom: 35px;
+  }
+
+  /* END: Token */
+}
+@media screen and (min-width: 1300px) {
   /* Token */
   .token-board {
     width: 33%;
@@ -2366,35 +2339,14 @@ span.img-text {
 
   /* Road map */
   .road-map-bar .list-item {
-    top: 17em;
-    transform: skewY(-18deg);
+    top: 20%;
   }
 
   .bg-road-map::after {
-    transform: translate(-43%, 1%);
+    transform: translate(-42%, 2%);
     width: 115%;
   }
 
-  .list-item .road {
-    padding: 20px 20px 60px 20px;
-    transform: skewY(18deg) translateY(95px);
-  }
-
-  .road-map-partation.aos-init.aos-animate:nth-child(1) {
-    transform: translateZ(0) translateY(-3em);
-  }
-  .road-map-partation.aos-init.aos-animate:nth-child(2) {
-    transform: translateZ(0) translateY(0);
-  }
-  .road-map-partation.aos-init.aos-animate:nth-child(3) {
-    transform: translateZ(0) translateY(1em);
-  }
-  .road-map-partation.aos-init.aos-animate:nth-child(4) {
-    transform: translateZ(0) translateY(1em);
-  }
-  .road-map-partation.aos-init.aos-animate:nth-child(5) {
-    transform: translateZ(0) translateY(-2.5em);
-  }
   /* End Road map */
 
   /* Gameplay */
@@ -2413,7 +2365,7 @@ span.img-text {
   }
 
   #gameContainer {
-    max-width: 675px;
+    max-width: 575px;
   }
   /* End Gameplay */
 
@@ -2472,17 +2424,7 @@ span.img-text {
 @media screen and (min-width: 1600px) {
   /* Road map */
   .road-map-bar .list-item {
-    top: 14em;
-  }
-
-  .bg-road-map::after {
-    transform: translate(-43%, 1%);
-    width: 100%;
-  }
-
-  .list-item .road {
-    padding: 20px 20px 60px 20px;
-    transform: skewY(18deg) translateY(25px);
+    top: 22%;
   }
 
   /* End Road map */
@@ -2503,7 +2445,7 @@ span.img-text {
   }
 
   #gameContainer {
-    max-width: 745px;
+    max-width: 640px;
   }
 
   /* End Gameplay */
@@ -2553,7 +2495,7 @@ span.img-text {
 @media screen and (min-width: 1680px) {
   /* Road map */
   .road-map-bar .list-item {
-    top: 19em;
+    top: 27%;
   }
 
   /* END: Road map */
