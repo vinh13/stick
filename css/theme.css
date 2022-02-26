@@ -1608,6 +1608,7 @@ span.img-text {
 }
 @media screen and (min-width: 992px) {
   /* Home */
+  .home-section::before,
   .home-section::after {
     position: absolute;
     content: "";
@@ -1619,6 +1620,12 @@ span.img-text {
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 10;
+  }
+
+  .home-section::before {
+    bottom: initial;
+    top: 0;
+    transform: rotate(180deg);
   }
 
   .home-box {
