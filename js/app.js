@@ -80,6 +80,9 @@
         600: {
           items: 2,
         },
+        992: {
+          items: 3,
+        },
         1200: {
           items: 4,
         },
@@ -87,14 +90,28 @@
     });
 
   // even click item
-  var listItems = $(".nft-carousel").find(".owl-item");
-  $(".owl-item.first").addClass("item-active");
+  let listItems = $(".nft-carousel").find(".owl-item");
+  $(".nft-carousel .owl-item.first").addClass("item-active");
   listItems.each(function (item) {
     $(this).click(function () {
-      $(".owl-item").removeClass("item-active");
+      $(".nft-carousel .owl-item").removeClass("item-active");
       $(this).addClass("item-active");
     });
   });
+
+  // check height background and item
+  let heightBg = $(".carousel-wrap-nft").height();
+  let heightItem = $(".nft-carousel .owl-item").height();
+  let checkHeight = heightBg - heightItem;
+  if (checkHeight <= 15) {
+    $(".nft-carousel .owl-item .item").css({
+      width: "75%",
+      margin: "auto",
+    });
+    $(".nft-list").css({
+      "margin-top": "auto",
+    });
+  }
 
   //Scroll
   $.scrollify({

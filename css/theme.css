@@ -23,7 +23,6 @@ body {
     margin-bottom: 0;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
-    background-color: rgb(31, 15, 53,.5);
 }
 
 .nav-sticky.navbar-custom {
@@ -190,7 +189,7 @@ li.nav-item.active {
 
 #gameContainer {
   width: 100%;
-  max-width: 500px;
+  max-width: 435px;
   z-index: 10;
   position: absolute;
   top: 50%;
@@ -224,6 +223,7 @@ li.nav-item.active {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  position: relative;
 }
 
 .info {
@@ -284,25 +284,32 @@ li.nav-item.active {
   opacity: 0.2;
 }
 
-.nft-carousel .prev-slide{
+.nft-carousel .prev-slide,
+.nft-carousel .next-slide {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nft-carousel .prev-slide {
   background: url(../images/nft/arr-left.png);
   background-repeat: no-repeat;
   background-size: contain;
   left: -100px;
 }
 
-.nft-carousel .next-slide{
+.nft-carousel .next-slide {
   background: url(../images/nft/arr_right.png);
   background-repeat: no-repeat;
   background-size: contain;
   right: -100px;
 }
 
-.nft-carousel .owl-item .item {
+.nft-carousel .owl-item .item a {
   position: relative;
+  display: inline-block;
 }
 
-.nft-carousel .owl-item.item-active .item::after {
+.nft-carousel .owl-item.item-active .item a::after {
   width: 100%;
   height: 100%;
   background-image: url(../images/nft/border_card.png);
@@ -311,6 +318,10 @@ li.nav-item.active {
   z-index: 100;
   content: '';
   display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .nft-section .owl-carousel .owl-item img {
@@ -343,8 +354,8 @@ li.nav-item.active {
   background-position: center;
   display: inline-block;
   z-index: 0;
-  width: 100%;
-  height: 100%;
+  width: 130%;
+  height: 100vh;
   bottom: 0;
   left: 50%;
 }
@@ -486,6 +497,12 @@ li.nav-item.active {
   opacity: 0.2;
 }
 
+.team-carousel .prev-slide,
+.team-carousel .next-slide {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .team-carousel .prev-slide{
   background: url(../images/team/arrow-left.png);
   background-repeat: no-repeat;
@@ -513,10 +530,6 @@ span.img-text {
   text-transform: capitalize;
 }
 
-.team-carousel .item {
-    padding: 10px;
-}
-
 .team-carousel .item .role {
     top: 3px;
     left: 0;
@@ -535,7 +548,6 @@ span.img-text {
 
 .team-carousel .item .img-item {
   margin-top: 20px;
-  max-width: 260px;
   max-height: 190px;
   overflow: hidden;
 }
@@ -1209,9 +1221,9 @@ span.img-text {
   /* End Gameplay */
 
    /* NFT */
-   .nft-section .carousel-wrap-nft {
+  .nft-section .carousel-wrap-nft {
     width: 70%;
-    margin: auto;
+    margin: 0 auto;
     position: relative;
   }
 
@@ -1221,16 +1233,12 @@ span.img-text {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    height: 105%;
+    height: 50vh;
     width: 100vw;
     background-image: url(../images/nft/owl_bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-  }
-
-  .nft-section .carousel-wrap-nft .nft-carousel {
-    padding-top: 15px;
   }
 
   .nft-info {
@@ -1258,9 +1266,6 @@ span.img-text {
     font-size: 1.2em;
   }
 
-  .nft-carousel .nav-btn {
-    top: 170px;
-  }
   /* End NFT */
 
   /* Team */
@@ -1280,24 +1285,12 @@ span.img-text {
   .team-carousel .nav-btn {
     height: 65px;
     width: 60px;
-    top: 130px;
   }
 
   .team-carousel .prev-slide {
     left: -35px;
   }
   /* End Team */
-
-  /* Roadmap */
-  /* .road-map-bar .list-item {
-    height: 100%;
-  }
-
-  .road-map-partation:not(:first-child) {
-    margin-top: 170px;
-  } */
-
-  /* End Roadmap */
 
   /* Partner */
   .partner-title {
@@ -1495,20 +1488,6 @@ span.img-text {
 
   /* NFT */
 
-  .nft-section .carousel-wrap-nft::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 105%;
-    width: 100vw;
-    background-image: url(../images/nft/owl_bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-
   .info-head {
     margin-top: 5%;
     height: 30%;
@@ -1524,9 +1503,6 @@ span.img-text {
     font-size: 1.2em;
   }
 
-  .nft-carousel .nav-btn{
-    top: 170px;
-  }
   /* End NFT */
 
   /* Team */
@@ -1558,10 +1534,9 @@ span.img-text {
    }
    
    .road-map-bar .list-item {
-    height: auto;
-    top: 15em;
-    left: -3em;
-    transform: skewY(-25deg);
+    top: 0;
+    left: 0;
+    transform: translate(-5%, 0%) skewY(-20deg);
   }
 
   .list-item .road {
@@ -1608,6 +1583,7 @@ span.img-text {
 }
 @media screen and (min-width: 992px) {
   /* Home */
+  .home-section::before,
   .home-section::after {
     position: absolute;
     content: "";
@@ -1619,6 +1595,12 @@ span.img-text {
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 10;
+  }
+
+  .home-section::before {
+    bottom: initial;
+    top: 0;
+    transform: rotate(180deg);
   }
 
   .home-box {
@@ -1808,40 +1790,17 @@ span.img-text {
   /* End Game Play */
 
   /* NFT */
-  .nft-section {
-    padding: 72px 0 0;
-    position: relative;
-  }
-
   .nft-section .nft-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: auto !important;
-    padding-top: 90px;
-  }
-
-  .nft-section .carousel-wrap-nft::before {
-    content: '';
+    width: 100%;
     position: absolute;
     top: 0;
-    left: 50%;
-    transform: translateX( -50%);
-    height: 100%;
-    width: 100vw;
-    background-image: url(../images/nft/owl_bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 
   .nft-carousel .item {
     padding: 0;
-  }
-
-  .nft-carousel .nav-btn{
-    top: 190px;
   }
 
   .info-head {
@@ -1877,45 +1836,55 @@ span.img-text {
     overflow: auto;
   }
 
-  .nft-carousel .owl-item.item-active .item::after {
+  .nft-info, .nft-list {
+    height: 50vh;
+    align-items: flex-end;
+  }
+
+  .nft-list {
+    align-items: flex-start;
+  }
+
+  .carousel-wrap-nft {
+    height: 50vh;
+  }
+
+  .nft-section .nft-list .owl-carousel.nft-carousel {
     position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateX(62px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   /* End NFT */
 
   /* Road map */
   .bg-road-map::after {
-    width: 112%;
-    transform: translate(-50%, 10%);
+    transform: translate(-42%, -2%);
   }
 
   .road-map-bar .list-item {
-    top: 13em;
-    transform: skewY(-20deg);
+    top: 20%;
   }
 
   .list-item .road {
     padding: 10px 10px 60px 15px;
-    transform: skewY(20deg) translateY(35px);
   }
 
-  .road-map-partation.aos-init.aos-animate:nth-child(1) {
-    transform: translateZ(0);
+  .road-map-partation.aos-init.aos-animate:nth-child(1) .road {
+    transform: skewY(20deg) translateY(60px);
   }
-  .road-map-partation.aos-init.aos-animate:nth-child(2) {
-    transform: translateZ(0) translateY(1.5em);
+  .road-map-partation.aos-init.aos-animate:nth-child(2) .road  {
+    transform: skewY(20deg) translateY(105px);
   }
-  .road-map-partation.aos-init.aos-animate:nth-child(3) {
-    transform: translateZ(0) translateY(2em);
+  .road-map-partation.aos-init.aos-animate:nth-child(3) .road  {
+    transform: skewY(20deg) translateY(125px);
   }
-  .road-map-partation.aos-init.aos-animate:nth-child(4) {
-    transform: translateZ(0) translateY(1em);
+  .road-map-partation.aos-init.aos-animate:nth-child(4) .road  {
+    transform: skewY(20deg) translateY(130px);
   }
-  .road-map-partation.aos-init.aos-animate:nth-child(5) {
-    transform: translateZ(0) translateY(-1em);
+  .road-map-partation.aos-init.aos-animate:nth-child(5) .road  {
+    transform: skewY(20deg) translateY(115px);
   }
 
   /* End Road map */
@@ -1930,7 +1899,7 @@ span.img-text {
   }
 
   span.img-text {
-    font-size: 1.2em;
+    font-size: 1em;
   }
 
   .item-title .img-text {
@@ -1941,10 +1910,17 @@ span.img-text {
     -webkit-box-orient: vertical;
   }
 
+  .item-body .img-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+
   .team-carousel .nav-btn{
     height: 80px;
     width: 50px;
-    top: 180px;
   }
 
   .team-carousel-box {
@@ -1954,6 +1930,11 @@ span.img-text {
   .carousel-wrap {
     width: 62%;
   }
+
+  .team-carousel .item .role {
+    left: -5px;
+  }
+
   /* End Team */
 
   /* Partner */
@@ -2022,26 +2003,21 @@ span.img-text {
 @media screen and (min-width: 1024px) {
   /* Road-map */
   .bg-road-map::after {
-    width: 130%;
-    transform: translate(-42%, 8%)
-  }
-  .road-map-partation.aos-init.aos-animate:nth-child(1) {
-    transform: translateZ(0) translateY(-5.5em);
-  }
-  .road-map-partation.aos-init.aos-animate:nth-child(2) {
-    transform: translateZ(0) translateY(-3em);
-  }
-  .road-map-partation.aos-init.aos-animate:nth-child(3) {
-    transform: translateZ(0) translateY(-1em);
-  }
-  .road-map-partation.aos-init.aos-animate:nth-child(4) {
-    transform: translateZ(0) translateY(-1em);
-  }
-  .road-map-partation.aos-init.aos-animate:nth-child(5) {
-    transform: translateZ(0) translateY(-1.5em);
+    transform: translate(-42%, 11%);
   }
 
   /* END: Road-map */
+
+  /* Team */
+  .team-carousel .item {
+    padding: 10px;
+  }
+
+  .team-carousel .item .role {
+    left: 0;
+  }
+
+  /* END: Team */
 }
 @media screen and (min-width: 1200px) {
   /* Home */
@@ -2209,7 +2185,7 @@ span.img-text {
   }
 
   #gameContainer {
-    max-width: 575px;
+    max-width: 495px;
   }
 
   .webgl-content {
@@ -2219,53 +2195,26 @@ span.img-text {
   /* End GamePlay */
 
   /* NFT */
-  .nft-section .carousel-wrap-nft::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX( -50%);
-    height: 100%;
-    width: 100vw;
-    background-image: url(../images/nft/owl_bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
 
   .info-head {
     margin: 0;
     height: 40%;
   }
 
-  .nft-carousel {
-    padding: 2.5em 0;
-  }
-
-  .nft-carousel .nav-btn{
-    top: 130px;
-  }
-
-  .nft-carousel .owl-item.item-active .item::after {
-    top: 0;
-    left: 0;
-    transform: translateX(0);
-  }
 
   /* End NFT */
 
   /* Road map */
   .road-map-bar .list-item {
-    top: 14em;
+    top: 17%;
   }
 
   .bg-road-map::after {
-    transform: translate(-42%, 3%);
+    transform: translate(-46%, 9%);
   }
 
   .list-item .road {
     padding: 20px 20px 60px 20px;
-    transform: skewY(20deg) translateY(100px);
   }
 
   /* End Road map */
@@ -2287,10 +2236,8 @@ span.img-text {
     font-size: 1em;
   }
 
-  .team-carousel .nav-btn{
-    height: 80px;
-    width: 50px;
-    top: 140px;
+  .item-body .img-text {
+    -webkit-line-clamp: 3; /* number of lines to show */
   }
 
   /* End Team */
@@ -2337,34 +2284,13 @@ span.img-text {
 }
 @media (min-width: 1280px) and (max-width: 1300px) { 
   /* NFT */
-  .nft-section {
-    padding: 115px 0 0;
-    position: relative;
-  }
-
-  .nft-content {
-    height: auto !important;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -40%);
-  }
-
   .info {
     width: auto;
     height: 285px;
   }
 
-  .nft-info {
-    padding-bottom: 25px;
-  }
-
   .info-img {
     max-width: 645px;
-  }
-
-  .nft-section .carousel-wrap-nft {
-    padding: 35px 0 0;
   }
 
   .nft-section::after {
@@ -2375,34 +2301,19 @@ span.img-text {
 
   /* Roadmap */
   .bg-road-map::after {
-    width: 120%;
-    transform: translate(-42%, 0);
-  }
-
-  .road-map-bar .list-item {
-    top: 17em;
-  }
-  /* END: Roadmap */
-
-  /* Token */
-  .msm-content {
-    padding-bottom: 32px;
-  }
-
-  /* END: Token */
-}
-@media screen and (min-width: 1300px) {
-  /* Roadmap */
-  .road-map-bar .list-item {
-    top: 9em;
-  }
-
-  .bg-road-map::after {
     transform: translate(-45%, 9%);
   }
 
   /* END: Roadmap */
 
+  /* Token */
+  .msm-content {
+    padding-bottom: 35px;
+  }
+
+  /* END: Token */
+}
+@media screen and (min-width: 1300px) {
   /* Token */
   .token-board {
     width: 33%;
@@ -2428,35 +2339,14 @@ span.img-text {
 
   /* Road map */
   .road-map-bar .list-item {
-    top: 17em;
-    transform: skewY(-18deg);
+    top: 20%;
   }
 
   .bg-road-map::after {
-    transform: translate(-43%, 1%);
+    transform: translate(-42%, 2%);
     width: 115%;
   }
 
-  .list-item .road {
-    padding: 20px 20px 60px 20px;
-    transform: skewY(18deg) translateY(95px);
-  }
-
-  .road-map-partation.aos-init.aos-animate:nth-child(1) {
-    transform: translateZ(0) translateY(-3em);
-  }
-  .road-map-partation.aos-init.aos-animate:nth-child(2) {
-    transform: translateZ(0) translateY(0);
-  }
-  .road-map-partation.aos-init.aos-animate:nth-child(3) {
-    transform: translateZ(0) translateY(1em);
-  }
-  .road-map-partation.aos-init.aos-animate:nth-child(4) {
-    transform: translateZ(0) translateY(1em);
-  }
-  .road-map-partation.aos-init.aos-animate:nth-child(5) {
-    transform: translateZ(0) translateY(-2.5em);
-  }
   /* End Road map */
 
   /* Gameplay */
@@ -2475,39 +2365,18 @@ span.img-text {
   }
 
   #gameContainer {
-    max-width: 675px;
+    max-width: 575px;
   }
   /* End Gameplay */
 
   /* NTF */
-  .nft-section {
-    padding: 115px 0 0;
-    position: relative;
-  }
-
-  .nft-content {
-    height: auto !important;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -40%);
-  }
-
   .info {
     width: auto;
     height: 285px;
   }
 
-  .nft-info {
-    padding-bottom: 25px;
-  }
-
   .info-img {
     max-width: 645px;
-  }
-
-  .nft-section .carousel-wrap-nft {
-    padding: 35px 0 0;
   }
 
   .nft-section::after {
@@ -2555,17 +2424,7 @@ span.img-text {
 @media screen and (min-width: 1600px) {
   /* Road map */
   .road-map-bar .list-item {
-    top: 14em;
-  }
-
-  .bg-road-map::after {
-    transform: translate(-43%, 1%);
-    width: 100%;
-  }
-
-  .list-item .road {
-    padding: 20px 20px 60px 20px;
-    transform: skewY(18deg) translateY(25px);
+    top: 22%;
   }
 
   /* End Road map */
@@ -2586,7 +2445,7 @@ span.img-text {
   }
 
   #gameContainer {
-    max-width: 745px;
+    max-width: 640px;
   }
 
   /* End Gameplay */
@@ -2636,7 +2495,7 @@ span.img-text {
 @media screen and (min-width: 1680px) {
   /* Road map */
   .road-map-bar .list-item {
-    top: 19em;
+    top: 27%;
   }
 
   /* END: Road map */
